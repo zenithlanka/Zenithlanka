@@ -1,0 +1,295 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - Zenith Lanka</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="author" content="ZenithLanka">
+    <meta name="description" content="@ViewBag.Description">
+    <meta name="keywords" content="@ViewBag.Keywords">
+    <meta property="fb:app_id" content="2133545530215287" />
+    <meta property="og:url" content="@ViewBag.Url" />
+    <meta property="og:site_name" content="@ViewData["Title"]" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ZenithLanka" />
+    <meta property="og:description" content="@ViewBag.Description" />
+    <meta property="og:image" content="@ViewBag.Image" />
+    <meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="315" />
+    <meta name="msapplication-TileColor" content="#eff0f1">
+    <meta name="msapplication-TileImage" content="~/Images/ms-icon-144x144.png">
+    <meta name="theme-color" content="#eff0f1">
+    <link rel="manifest" href="~/manifest.json">
+    <link rel="apple-touch-icon" sizes="57x57" href="~/Images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="~/Images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="~/Images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="~/Images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="~/Images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="~/Images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="~/Images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="~/Images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="~/Images/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="~/Images/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/Images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="~/Images/favicon-96x96.png">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    @*<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>*@
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Livvic&display=swap" rel="stylesheet">
+    @*<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.16/dist/summernote-bs4.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.16/dist/summernote-bs4.min.js"></script>*@
+
+
+<style>
+        .modal-title {
+            display: none;
+        }
+        @@media(min-width: 1200px) {
+            .container{
+                max-width: 1243px;
+            }
+        }
+
+</style>
+    @*@Styles.Render("~/Content/boostrapcss")*@
+    @Styles.Render("~/Content/css")
+    @*@Scripts.Render("~/bundles/modernizr")*@
+
+    @RenderSection("styles", false)
+
+</head>
+<body>
+   
+    @*@if (!User.IsInRole("Admin"))
+                {
+            <div class="navbar navbar-light bg-light sticky-top navbar-expand-lg">
+                <div class="container">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4 text-center">
+                        <a class="navbar-brand" href="@Url.Action("Index","Home")">
+                            <img src="~/Images/logo.png" width="180" height="45" class="d-inline-block align-top" alt="ZenithLanka logo">
+                        </a>
+
+                    </div>
+                    <div class="col-md-4"></div>
+                </div>
+            </div>
+        }*@
+
+
+    <div class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="@Url.Action("Index","Home")">
+                <img src="~/Images/logo.png" width="200" height="45" class="d-inline-block align-top" alt="ZenithLanka logo">
+            </a>
+
+            <button class="navbar-toggler" data-toggle="modal" data-target="#myModal" type="button" onclick="category()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav mr-auto"></ul>
+                <ul class="navbar-nav">
+                    @Html.Partial("_LoginPartial")
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="container py-3">
+        <div class="row pt-3">
+            <div class="col-md-3 mb-2">
+                @Html.ActionLink("Post සිංහල", "Index", "Posts", new { }, new { @class = "btn btn-dark btn-block text-white" })
+                @Html.ActionLink("Post தமிழ்", "Index", "PostsTamil", new { }, new { @class = "btn btn-dark btn-block text-white" })
+                @Html.ActionLink("Post English", "Index", "PostsEnglish", new { }, new { @class = "btn btn-dark btn-block text-white" })
+
+                @Html.ActionLink("Home Notification", "Index", "HomeNotifications", routeValues: null, htmlAttributes: new { title = "High Alerts", @class = "btn btn-info btn-block text-white" })
+                @Html.ActionLink("Authors", "Index", "Authors", new { }, new { @class = "btn btn-info btn-block text-white" })
+                @Html.ActionLink("Categories", "Index", "Categories", new { }, new { @class = "btn btn-info btn-block text-white" })
+            </div>
+            <div class="col-md-9 mb-2">
+                <div class="py-3">
+                    <h1 class="text-center">@ViewBag.Title</h1>
+                    <hr />
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+    
+    <div class="modal" id="myModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                
+                <div class="modal-body">
+                    <div class="py-2 h4">Search</div>
+                    <hr />
+                    <div class="card-header text-center mb-3 h4">
+                        <form method="get">
+                            <div class="row no-gutters">
+                                <div class="col-md-8 pr-2">
+                                    @if (@HttpContext.Current.Request.QueryString.Get("CategoryId") != null)
+                                    {
+                                        <input type="hidden" name="CategoryId" value="@HttpContext.Current.Request.QueryString.Get("CategoryId")" />
+                                    }
+                                    @if (@HttpContext.Current.Request.QueryString.Get("CategoryId") == null)
+                                    {
+                                        <input type="hidden" name="CategoryId" value="0" />
+                                    }
+
+                                    <input id="title" type="text" name="Title" class="form-control mb-2" placeholder="Search" />
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="submit" class="btn btn-primary btn-user btn-block" value="Search" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="pb-2">
+                        @Html.ActionLink("Home", "Index", "Home", new { }, new { @class = "nav-link" })
+                        <a href="https://medialk.com/?CategoryId=52&CatTitle=About%20us&Title=empty" class="nav-link">Advertising</a>
+                        @Html.ActionLink("Contact", "Contact", "Home", new { }, new { @class = "nav-link" })
+                        <div class="nav-link text-primary" onclick="changesinhala()">සිංහල</div>
+                        <div class="nav-link text-primary" onclick="changeenglish()">English</div>
+                        <div class="nav-link text-primary" onclick="changetamil()">தமிழ்</div>
+                        @*@if (Request.IsAuthenticated)
+                        {
+                            if (User.IsInRole("Admin") || User.IsInRole("Staff"))
+                            {
+                                <div class="py-2 h4">Post</div>
+                                @Html.ActionLink("Create Post", "Create", "Posts", routeValues: null, htmlAttributes: new { title = "Post", @class = "nav-link" })
+                                @Html.ActionLink("Post List", "Index", "Posts", new { }, new { @class = "nav-link" })
+                                <div class="py-2 h4">Admin</div>
+                                @Html.ActionLink("Corona", "Index", "HomeNotifications", routeValues: null, htmlAttributes: new { title = "High Alerts", @class = "nav-link" })
+                                @Html.ActionLink("Advertisements", "Index", "Advertisements", new { }, new { @class = "nav-link" })
+                                @Html.ActionLink("Authors", "Index", "Authors", new { }, new { @class = "nav-link" })
+                                @Html.ActionLink("Categories", "Index", "Categories", new { }, new { @class = "nav-link" })
+                                @Html.ActionLink("Comments", "Index", "Comments", new { }, new { @class = "nav-link" })
+                                @Html.ActionLink("Languages", "Index", "Languages", new { }, new { @class = "nav-link" })
+                                @Html.ActionLink("HighAlerts", "Index", "HighAlerts", new { }, new { @class = "nav-link" })
+                            }
+
+                        }*@
+
+                    </div>
+                  
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="myModalCookie">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-body navigationcolor text-center">
+                    <div class="d-none">
+                        <label class="text-white">Select your age</label><br />
+                        <input type="radio" name="age" value="gt" id="rad1"  checked="checked"><label for="rad1" class="text-white h4">25 - 65</label>
+                        <input type="radio" name="age" value="lt" id="rad2" class="ml-3"><label for="rad2" class="text-white h4">13 - 24</label>
+                        <br />
+                        <small id="agedecription">Age between 25 to 65</small><br />
+                    </div>
+
+                    <label class="mt-2 text-white">Language</label><br />
+                    <input type="radio" name="cage" value="english" id="rad3"><label for="rad3" class="text-white h4">English</label>
+                    <input type="radio" name="cage" value="sinhala" id="rad4" class="ml-3"><label for="rad4" class="text-white h4">සිංහල</label>
+                    <input type="radio" name="cage" value="tamil" id="rad5" class="ml-3"><label for="rad5" class="text-white h4">தமிழ்</label>
+                    <br />
+
+                    <button class="btn btn-danger btn-user btn-block mt-3" onclick="age()">Save</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    @*<div class="container body-content">
+
+        <footer>
+            <p>&copy; @DateTime.Now.Year - ZenithLanka</p>
+        </footer>
+    </div>*@
+   
+    @*<script src="~/Scripts/summernote-bs4.min.js"></script>*@
+    <script>
+        var value = readCookie('age');
+        var language = readCookie('language');
+        //if(language == "sinhala"){
+        //    window.location.replace("https://sinhala.medialk.com");
+        //}
+        //if(value == null || value == "initial" || language == null){
+        //    $('#myModalCookie').modal('show');
+        //}
+        if (language == "sinhala") {
+            document.getElementById('loadmore').innerHTML = 'තව කියවන්න';
+            document.getElementById('loadmoremodel').innerHTML = 'තව කියවන්න';
+            document.getElementById('changelanguage').innerHTML = 'භාෂාව වෙනස් කරන්න';
+            document.getElementById('agedecription').innerHTML = 'වයස 13 සිට 24 දක්වා';
+            document.getElementById('areaactivity').innerHTML = 'ඔමගේ ප්‍රදේශයට අදාල තොරතුරු දැනගැනීමට Category මෙනුව වෙත පිවිසෙන්න';
+
+        }
+        function readCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for(var i=0;i < ca.length;i++) {
+                var c = ca[i];
+                while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+            }
+            return null;
+        }
+    </script>
+    <script>
+        var today = new Date();
+        var expiry = new Date(today.getTime() + 1000 * 24 * 3600 * 1000); // plus 30 days
+
+        function setCookie(name, value)
+        {
+            document.cookie=name + "=" + escape(value) + "; path=/; expires=" + expiry.toGMTString();
+        }
+        //alert(value);
+        var value = readCookie('age');
+
+        if(value== null){
+            setCookie("age", "initial");
+        }
+        function age(){
+
+            var strUser = document.querySelector('input[name=age]:checked').value;
+
+
+            var strUser1 = document.querySelector('input[name=cage]:checked').value;
+
+            setCookie("age", strUser);
+            setCookie("language", strUser1);
+
+            window.location = window.location.href.split("?")[0];
+        }
+
+    </script>
+    @*@Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")*@
+    @RenderSection("scripts", required: false)
+  
+
+</body>
+</html>

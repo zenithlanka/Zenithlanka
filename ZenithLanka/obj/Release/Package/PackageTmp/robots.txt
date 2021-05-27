@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /Account/
+
+sitemap: https://medialk.com/sitemap/index

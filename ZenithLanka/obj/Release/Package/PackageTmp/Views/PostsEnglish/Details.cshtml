@@ -1,0 +1,339 @@
+﻿@model ZenithLanka.Models.Post
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Post</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Advertisement.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Advertisement.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Author.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Author.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Category.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnglishTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnglishTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TamilTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TamilTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShortDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShortDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnglishShortDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnglishShortDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TamilShortDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TamilShortDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnglishDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnglishDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TamilDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TamilDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreviewPhotoUrl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreviewPhotoUrl)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageCaptionSinhala)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImageCaptionSinhala)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageCaptionEnglish)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImageCaptionEnglish)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageCaptionTamil)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImageCaptionTamil)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isActive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isActive)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isHighAlert)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isHighAlert)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isTamil)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isTamil)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isEnglish)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isEnglish)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isSinhala)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isSinhala)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isHome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isHome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isHomeEnglish)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isHomeEnglish)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isHomeTamil)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isHomeTamil)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isBarChart)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isBarChart)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoView)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoView)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoViewEnglish)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoViewEnglish)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoViewTamil)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoViewTamil)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Keyword)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Keyword)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PostDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PostDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Min)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Min)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isLocked)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isLocked)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SubCategoryId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubCategoryId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TamilAuthorId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TamilAuthorId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnglishAuthorId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnglishAuthorId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PostDateNew)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PostDateNew)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PostId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

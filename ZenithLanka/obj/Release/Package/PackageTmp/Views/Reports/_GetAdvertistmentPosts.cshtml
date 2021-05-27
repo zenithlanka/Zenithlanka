@@ -1,0 +1,22 @@
+﻿@model IEnumerable<ZenithLanka.ViewModels.PostViewModel>
+
+<div class="py-2 h3">List of posts advertisement support</div>
+<div class="row">
+    @foreach (var item in Model)
+    {
+        if (item.Title != null)
+        {
+            <div class="col-md-3 pb-2">
+                <div class="card">
+                    <img class="card-img-top" src="@item.PreviewPhotoUrl" alt="@item.Title">
+                    <div class="card-body">
+                        <h4 class="card-title">@item.Title</h4>
+                        <a href="@Url.Action("ReadPost","Home",new { id = item.PostViewModelId})" class="btn btn-primary btn-block mb-2" target="_blank">See English post</a>
+                        <a href="@Url.Action("ReadPost","Sinhala",new { id = item.PostViewModelId})" class="btn btn-primary btn-block mb-2" target="_blank">See Sinhala post</a>
+                        <a href="@Url.Action("ReadPost","Tamil",new { id = item.PostViewModelId})" class="btn btn-primary btn-block mb-2" target="_blank">See Tamil post</a>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+</div>

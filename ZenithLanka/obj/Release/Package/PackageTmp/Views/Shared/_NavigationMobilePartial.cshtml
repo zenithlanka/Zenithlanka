@@ -1,0 +1,98 @@
+﻿@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        @Html.AntiForgeryToken()
+        <div class="modal-body">
+            <div class="py-2 h4 desktophide">
+                Menu
+                <hr />
+            </div>
+
+            <div class="pb-2 desktophide" style="margin-left:14%">
+                <div class="pb-3">
+                    @Html.ActionLink("Home", "Index", "Home", new { }, new { @class = "text-dark" })
+                </div>
+                <div class="pb-3">
+                    @Html.ActionLink("සිංහල", "", "Sinhala", new { }, new { @class = "text-dark", onclick = "changesinhala()" })
+                </div>
+                <div class="pb-3">
+                    @Html.ActionLink("English", "", "Home", new { }, new { @class = "text-dark", onclick = "changeenglish()" })
+                </div>
+                <div class="pb-3">
+                    @Html.ActionLink("தமிழ்", "", "Tamil", new { }, new { @class = "text-dark", onclick = "changetamil()" })
+                </div>
+                <div class="pb-3">
+                    @Html.ActionLink("Contact", "Contact", "Home", new { }, new { @class = "text-dark" })
+                </div>
+
+
+                <div class="pb-3">
+                    @Html.ActionLink("Profile", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage", @class = "text-dark" })
+                </div>
+                <div class="pb-3">
+                    <a href="javascript:document.getElementById('logoutForm').submit()" class="text-dark">Log off</a>
+                </div>
+                @if (User.IsInRole("Admin") || User.IsInRole("Staff"))
+                {
+                    @Html.ActionLink("Post සිංහල", "Index", "Posts", new { }, new { @class = "" })
+                    @Html.ActionLink("Post தமிழ்", "Index", "PostsTamil", new { }, new { @class = "" })
+                    @Html.ActionLink("Post English", "Index", "PostsEnglish", new { }, new { @class = "" })
+                }
+
+            </div>
+            <div class="admin">
+                <div class="py-2 h4 mt-3">Categories</div>
+                <hr />
+
+                <ul id="myUL1" style="margin-left:10%">
+                    <div id="ajaxresultcatm"></div>
+                    <div id="progresscat" class="glow pt-3 text-center">
+                        <div class="h4">Loading...</div>
+                    </div>
+                </ul>
+
+            </div>
+        </div>
+    }
+}
+else
+{
+    <div class="modal-body">
+        <div class="py-2 h4 desktophide">
+            Menu
+            <hr />
+        </div>
+
+        <div class="pb-2 desktophide" style="margin-left:14%">
+            <div class="pb-3">
+                @Html.ActionLink("Home", "Index", "Home", new { }, new { @class = "text-dark" })
+            </div>
+            <div class="pb-3">
+                @Html.ActionLink("සිංහල", "", "Sinhala", new { }, new { @class = "text-dark", onclick = "changesinhala()" })
+            </div>
+            <div class="pb-3">
+                @Html.ActionLink("English", "", "Home", new { }, new { @class = "text-dark", onclick = "changeenglish()" })
+            </div>
+            <div class="pb-3">
+                @Html.ActionLink("தமிழ்", "", "Tamil", new { }, new { @class = "text-dark", onclick = "changetamil()" })
+            </div>
+            <div class="pb-3">
+                @Html.ActionLink("Contact", "Contact", "Home", new { }, new { @class = "text-dark" })
+            </div>
+        </div>
+        <div class="admin">
+            <div class="py-2 h4 mt-3">Categories</div>
+            <hr />
+
+            <ul id="myUL1" style="margin-left:10%">
+                <div id="ajaxresultcatm"></div>
+                <div id="progresscat" class="glow pt-3 text-center">
+                    <div class="h4">Loading...</div>
+                </div>
+            </ul>
+
+        </div>
+    </div>
+}

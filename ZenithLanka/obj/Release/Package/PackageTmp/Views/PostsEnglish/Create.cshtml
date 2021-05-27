@@ -1,0 +1,288 @@
+﻿@model ZenithLanka.Models.Post
+
+@{
+    ViewBag.Title = "Post English Create";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@section Styles{
+    <style>
+        .card {
+            border: 2px solid rgba(0,0,0,.125);
+        }
+
+        .admin {
+            display: none;
+        }
+
+        .penglish {
+            margin-top: 0rem !important;
+        }
+
+        .psinhala {
+            display: none;
+        }
+
+        .ptamil {
+            display: none;
+        }
+    </style>
+
+}
+<script src="https://cdn.tiny.cloud/1/07fqwrwjs1e16a09cr6zrlj2d04xjyhybpxpuynhp3l7y0u1/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
+
+@using (Html.BeginForm("Create", "PostsEnglish", null, FormMethod.Post,
+                                                      new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group pt-3">
+            <label class="control-label h5">English title</label>
+            <div>
+                @Html.EditorFor(model => model.EnglishTitle, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.EnglishTitle, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group pt-3">
+            <label class="control-label h5">English short description</label><div>
+                @Html.TextAreaFor(model => model.EnglishShortDescription, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.EnglishShortDescription, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group pt-3">
+            <label class="control-label h5">Photo</label>
+            <div>
+                <input type="file" name="file" id="file" class="form-control p-1" />
+            </div>
+        </div>
+
+        <div class="form-group pt-3">
+            <label class="control-label h5">Photo url</label>
+            <div>
+                @Html.EditorFor(model => model.ImageEnglishUrl, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ImageEnglishUrl, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group pt-3">
+            <label class="control-label h5">Cover image caption</label>
+            <div>
+                @Html.EditorFor(model => model.ImageCaptionEnglish, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ImageCaptionEnglish, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group pt-3">
+            <label class="control-label h5">English short description</label>
+            <div>
+                @Html.TextAreaFor(model => model.EnglishShortDescription, new { @class = "form-control col-md-12 h5" })
+                @Html.ValidationMessageFor(model => model.EnglishShortDescription, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group pt-3">
+            <label class="h5">English description</label>
+            <textarea id="summernote" class="summernote" name="EnglishDescription"></textarea>
+            @Html.ValidationMessageFor(model => model.EnglishDescription, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group pt-3">
+            <label class="h5">Keywords english</label>
+            <div>
+                @Html.EditorFor(model => model.KeywordEnglish, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.KeywordEnglish, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="form-group pt-3">
+            <label class="control-label h5">
+                @Html.EditorFor(model => model.isHighAlertEnglish)
+                @Html.ValidationMessageFor(model => model.isHighAlertEnglish, "", new { @class = "text-danger" })
+                Show on alert box
+            </label>
+
+        </div>
+        <div class="form-group pt-3">
+            <label class="control-label h5">
+                @Html.EditorFor(model => model.isBarChart)
+                @Html.ValidationMessageFor(model => model.isBarChart, "", new { @class = "text-danger" })
+                Chart active
+            </label>
+
+        </div>
+
+        <div class="form-group pt-3">
+            <label class="control-label h5">
+                @Html.EditorFor(model => model.isCityEnglish)
+                @Html.ValidationMessageFor(model => model.isCityEnglish, "", new { @class = "text-danger" })
+                Don't show on home page
+            </label>
+
+        </div>
+
+        <div class="border p-3 bg-danger mb-3 mb-3 text-white">
+
+            <div class="form-group pt-3">
+                <label class="control-label h5">
+                    @Html.EditorFor(model => model.isEnglish)
+                    @Html.ValidationMessageFor(model => model.isEnglish, "", new { @class = "text-danger" })
+                    Active
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group pt-3">
+            <label class="control-label h5">Category</label><div>
+                @Html.DropDownList("CategoryId", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.CategoryId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group pt-3">
+            <label class="control-label h5">Sub Category</label><div>
+                @Html.DropDownList("SubCategoryId", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.CategoryId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group pt-3">
+            <label class="control-label h5">English Author</label><div>
+                @Html.DropDownList("AuthorId", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.EnglishAuthorId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        
+        <div class="form-group pt-3">
+            <label class="control-label h5">Date and Time</label>
+            <div>
+                @Html.EditorFor(model => model.PostDateNew, new { htmlAttributes = new { @class = "form-control", Type = "datetime-local", @required = "required" } })
+                @Html.ValidationMessageFor(model => model.PostDateNew, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group pt-3 d-none">
+            <label class="control-label h5">Time</label>
+            <input type="text" name="Time" id="mtime" class="form-control" />
+        </div>
+        <div class="form-group pt-3">
+            <div class="col-md-offset-2">
+                <input type="submit" value="Create" class="btn btn-dark text-white" /> |  @Html.ActionLink("Back to List", "Index")
+            </div>
+        </div>
+    </div>
+}
+
+
+<hr />
+<button type="button" class="btn btn-danger mb-3" data-toggle="collapse" data-target="#demo">Codes</button>
+<div id="demo" class="collapse mt-2 mb-4">
+    <textarea class="form-group pt-3" style="width:100%;height: 160px;"></textarea>
+    <b>Use this code for add any video(on src past link)</b>
+    <textarea class="form-group pt-3" style="width:100%;height: 160px;">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/aPyq4cEpyqs"></iframe>
+        </div>
+    </textarea>
+    <br />
+    <b>Use this code for add paragraph for long article(on src past link)</b>
+    <textarea class="form-group pt-3" style="width:100%;height: 160px;">
+        <section class="clearfix">
+            <img src="https://i.ibb.co/VtXgsmd/1.jpg" alt="diwayina" class="img-fluid float-right float-sm-right float-md-right float-lg-right float-xl-right p-3 col-md-6" />
+            <p></p>
+        </section>
+    </textarea>
+
+</div>
+@section scripts{
+    <script>
+
+        tinymce.init({
+            selector: '#summernote',
+            plugins: 'print preview paste importcss searchreplace autolink autosave save directionality code visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount imagetools textpattern noneditable help charmap emoticons',
+            imagetools_cors_hosts: ['picsum.photos'],
+            menubar: 'file edit view insert format tools table help',
+            toolbar: 'undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist | forecolor backcolor removeformat | pagebreak | charmap emoticons | fullscreen  preview save print | insertfile image media template link anchor codesample | ltr rtl',
+            toolbar_sticky: true,
+            autosave_ask_before_unload: true,
+            autosave_interval: "30s",
+            autosave_prefix: "{path}{query}-{id}-",
+            autosave_restore_when_empty: false,
+            autosave_retention: "2m",
+            image_advtab: true,
+            content_css: '//www.tiny.cloud/css/codepen.min.css',
+            link_list: [
+              { title: 'My page 1', value: 'http://www.tinymce.com' },
+              { title: 'My page 2', value: 'http://www.moxiecode.com' }
+            ],
+            image_list: [
+              { title: 'My page 1', value: 'http://www.tinymce.com' },
+              { title: 'My page 2', value: 'http://www.moxiecode.com' }
+            ],
+            image_class_list: [
+              { title: 'None', value: '' },
+              { title: 'Some class', value: 'class-name' }
+            ],
+            importcss_append: true,
+            height: 400,
+            file_picker_callback: function (callback, value, meta) {
+                /* Provide file and text for the link dialog */
+                if (meta.filetype === 'file') {
+                    callback('https://www.google.com/logos/google.jpg', { text: 'My text' });
+                }
+
+                /* Provide image and alt text for the image dialog */
+                if (meta.filetype === 'image') {
+                    callback('https://www.google.com/logos/google.jpg', { alt: 'My alt text' });
+                }
+
+                /* Provide alternative source and posted for the media dialog */
+                if (meta.filetype === 'media') {
+                    callback('movie.mp4', { source2: 'alt.ogg', poster: 'https://www.google.com/logos/google.jpg' });
+                }
+            },
+            templates: [
+                  { title: 'New Table', description: 'creates a new table', content: '<div class="mceTmpl"><table width="98%%"  border="0" cellspacing="0" cellpadding="0"><tr><th scope="col"> </th><th scope="col"> </th></tr><tr><td> </td><td> </td></tr></table></div>' },
+              { title: 'Starting my story', description: 'A cure for writers block', content: 'Once upon a time...' },
+              { title: 'New list with dates', description: 'New List with dates', content: '<div class="mceTmpl"><span class="cdate">cdate</span><br /><span class="mdate">mdate</span><h2>My List</h2><ul><li></li><li></li></ul></div>' }
+            ],
+            mobile: {
+                menubar: true
+            },
+            template_cdate_format: '[Date Created (CDATE): %m/%d/%Y : %H:%M:%S]',
+            template_mdate_format: '[Date Modified (MDATE): %m/%d/%Y : %H:%M:%S]',
+            height: 600,
+            image_caption: true,
+            quickbars_selection_toolbar: 'bold italic | quicklink h2 h3 blockquote quickimage quicktable',
+            noneditable_noneditable_class: "mceNonEditable",
+            toolbar_mode: 'sliding',
+            contextmenu: "image imagetools table",
+            paste_as_text: true
+
+        });
+
+    </script>
+
+    <script>
+        var d = new Date(),
+            h = (d.getHours() < 10 ? '0' : '') + d.getHours(),
+            m = (d.getMinutes() < 10 ? '0' : '') + d.getMinutes();
+        var now = new Date();
+        var hours = now.getHours() % 12 || 12;
+        var ampm;
+        if (h < 12) {
+            ampm = "am";
+        }
+        if (h > 12) {
+            ampm = "pm";
+        }
+        if (h == 12 || h == 0) {
+            ampm = " ";
+        }
+        $("#mtime").val(hours + '.' + m + ampm);
+    </script>
+
+}

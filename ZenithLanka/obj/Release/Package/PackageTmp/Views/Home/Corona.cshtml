@@ -1,0 +1,381 @@
+﻿
+@{
+    ViewBag.Title = "Corona";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-2 mb-4">
+    <h1 class="h3 py-2">Corona (COVID-19)</h1>
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://infographics.channelnewsasia.com/covid-19/map.html?fbclid=IwAR0OgTCGhA1fOBLFwb56SZJrsh3AEzQBXFgIuqfvOkt8V7VVwiKv4nyQ3Ng"></iframe>
+    </div>
+</div>
+
+
+<div class="container pb-2 mt-3">
+
+
+    <div class="row">
+    
+        <div class="col-md-12 nopaddinglr pb-4">
+           
+
+
+            <div id="container"></div>
+            <div id="error" class="h4 text-center"></div>
+            <div class="p-3">
+                <button id="loadmore" onclick="load()" class="btn btn-danger btn-user btn-block glow character" style="display:none">Load More</button>
+                @*<div class="cricket btn btn-block btn-warning" data-toggle="modal" data-target="#myModalalert" onclick="highalert()" style="display:none">Cricket Alert</div>*@
+
+            </div>
+
+            <div class="d-flex align-items-center justify-content-center mt-4 mb-4">
+                <div id="progress" class="loader"></div>
+            </div>
+            
+        </div>
+
+
+      
+
+    </div>
+</div>
+
+
+
+<div class="modal" id="myModalpost">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+
+            <!-- Modal body -->
+            <div class="modal-body navigationcolor">
+                <div class="h4 text-center text-white">No Post</div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="readpost">
+    <div class="modal-dialog modal-lg modal-lgnew modal-dialog-centered">
+        <div class="modal-content">
+
+            <div id="progresspost" style="display:none" class="glow pt-3 text-center">
+                <img class="img-fluid" src="https://cdn.dribbble.com/users/107759/screenshots/2436386/copper-loader.gif" alt="loader" />
+            </div>
+            <div id="ajaxresultreadpost"></div>
+
+
+
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="clearurl()">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="modal" id="loadmorepost">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+
+            <!-- Modal body -->
+            <div class="modal-body p-3 navigationcolor">
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6"><button id="loadmoremodel" onclick="load()" class="btn btn-danger btn-user btn-block glow">More Post (Click Here)</button></div>
+                    <div class="col-md-3"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+@section scripts{
+    
+    <script>
+        $(document).ready(function(){
+          $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+    <script>
+        $('#readpost').on('hidden.bs.modal', function () {
+            if (history.pushState) {
+                window.history.pushState("Medialk", "Title", "/");
+            } else {
+                document.location.href = "/";
+            }
+        })
+    </script>
+
+
+    <script>
+
+        var pageSize = 10;
+        var pageIndex = 0;
+        $(document).ready(function () {
+            GetData();
+        });
+
+        function load(){
+
+            GetData();
+        }
+
+        @if(HttpContext.Current.Request.QueryString.Get("CategoryId") != null)
+        {
+            <text>
+
+
+
+        var catid = 61;
+
+        function GetData(title) {
+            $('#loadmorepost').modal('hide');
+            var xhr =  $.ajax({
+                type: 'GET',
+                url: '/home/GetPosts',
+                data: { "pageindex": pageIndex, "pagesize": pageSize,"CategoryId": catid, "Title": "@HttpContext.Current.Request.QueryString.Get("Title")" },
+                dataType: 'json',
+                success: function (data) {
+                    if(data == null){
+                        xhr.abort();
+                        alert("no result");
+                    }
+                    if (data != null) {
+                        for (var i = 0; i < data.length; i++) {
+                            var desc = data[i].ShortDescription;
+                            var previewphoto = data[i].PreviewPhotoUrl;
+                            var link = "@Url.Action("ReadPost","Home")";
+                            var date = data[i].PostDate;
+                            var catid = data[i].CategoryId;
+                            var noview = data[i].NoView;
+
+                            if (date != null) {
+                                date = "<i class='fa fa-calendar' aria-hidden='true'></i>" + data[i].PostDate+
+                                    "<i class='fa fa-clock-o' aria-hidden='true'></i>" + data[i].Time;
+
+                            }
+                            if(date == null){
+                                date = "";
+                            }
+                            if(noview <100){
+                                noview = date;
+                            }
+                            if(noview >=100){
+                                //"<i class='fa fa-eye' aria-hidden='true'></i>"+data[i].NoView+
+                                noview = date;
+                            }
+
+                            if (desc != null && catid != 4) {
+                                desc = "<div class='p-2'>" +
+                                "<p class='card-text'>" + data[i].ShortDescription + " - <b>Read More</b><br/>"+noview+"</p>";
+                                var url = desc;
+                                var view = ""
+                            }
+                            if (desc != null && catid == 4) {
+                                desc = "<div class='p-2'><small class='bg-danger p-1 text-white py-2'>Breaking News</small>" +
+                                "<p class='card-text py-1'>" + data[i].ShortDescription + " - <b>Read More</b><br/>"+noview+"</p>";
+                                var url = desc;
+                                var view = ""
+                            }
+                            if (previewphoto != null) {
+                                previewphoto = "<img class='card-img-bottom' src='" + data[i].PreviewPhotoUrl + "'/>";
+                            }
+
+                            ////////////
+
+                            if (desc == null) {
+                                desc = "";
+                                url = "";
+                            }
+                            if (previewphoto == null) {
+                                previewphoto = "";
+                            }
+                            $("#container").append(
+                                "<div class='card mb-3 pointer rounded bg-white shadow-lg mobilemargin' onclick='loadpost(" + data[i].PostViewModelId + ")'>" +
+                                "<div class='card-header text-center'><div class='h4'><b>" + data[i].Title + "</b></div></div>" +
+                               "<div class='row no-gutters'>"+
+                                "<div class='col-md-3'>"+
+                                previewphoto +
+                                "</div><div class='col-md-9'>"+
+                                url +
+                                "</div></div></div>");
+                        }
+                        pageIndex++;
+                    }
+                },
+                beforeSend: function () {
+                    $("#progress").show();
+
+                },
+                complete: function () {
+                    $(".cricket").show();
+                    $("#progress").hide();
+                    $("#loadmore").show();
+                    $("#sideadvertistment").show();
+                    $("#catsearchhome").show();
+                },
+                error: function () {
+                    $(".cricket").show();
+                    $("#error").text("No Post");
+                    $("#loadmore").addClass("d-none");
+                    $('#loadmorepost').modal('hide');
+                    $("#sideadvertistment").show();
+                    $("#catsearchhome").show();
+                    $('#myModalpost').modal('show');
+                    setTimeout(function() {
+                        $('#myModalpost').modal('hide');
+                    }, 1000);
+
+                }
+            });
+
+        }
+
+        </text>
+        }
+
+        @if(HttpContext.Current.Request.QueryString.Get("CategoryId") == null)
+        {
+
+            <text>
+
+        function GetData() {
+            $('#loadmorepost').modal('hide');
+            var xhr = $.ajax({
+                type: 'GET',
+                url: '/home/GetPosts',
+                data: { "pageindex": pageIndex, "pagesize": pageSize,"CategoryId": 0},
+                dataType: 'json',
+                success: function (data) {
+                    if(data == null){
+                        xhr.abort();
+                        alert("no result");
+                    }
+                    if (data != null) {
+                        for (var i = 0; i < data.length; i++) {
+                            var desc = data[i].ShortDescription;
+                            var previewphoto = data[i].PreviewPhotoUrl;
+                            var link = "@Url.Action("ReadPost","Home")";
+                            var title = data[i].Title;
+                            var date = data[i].PostDate;
+                            var catid = data[i].CategoryId;
+                            var noview = data[i].NoView;
+
+                            if (date != null) {
+                                date = data[i].PostDate+" | "+ data[i].Time;
+
+                            }
+                            if(date == null){
+                                noview = "";
+                            }
+                            if(noview < 100){
+                                noview = date;
+                            }
+                            if(noview >=  100){
+                                //"<i class='fa fa-eye' aria-hidden='true'></i>"+data[i].NoView+
+                                noview = date;
+                            }
+
+                            if (title != null) {
+                                title = "<div class='card-header text-center'><div class='h4'><b>" + data[i].Title + "</b></div></div>";
+                            }
+                            if (desc != null && catid != 4) {
+                                desc = "<div>" +
+                                "<p class='card-text mb-0 p-2'>" + data[i].ShortDescription + " - <b>Read More</b><br/>"+noview+"</p>";
+                                var url = desc;
+                            }
+                            if (desc != null && catid == 4) {
+                                desc = "<div>" +
+                                "<p class='card-text mb-0 p-2'>" + data[i].ShortDescription + " - <b class='text-danger'>Breaking News | Read More </b><br/>"+noview+"</p>";
+                                var url = desc;
+                            }
+                            if (previewphoto != null) {
+                                previewphoto = "<img class='img-fluid' src='" + data[i].PreviewPhotoUrl + "'/>";
+                            }
+
+                            ////////////
+                            if (title == null) {
+                                title = "";
+                            }
+
+                            if (desc == null) {
+                                desc = "";
+                                url = "";
+                            }
+                            if (previewphoto == null) {
+                                previewphoto = "";
+                            }
+                            $("#container").append(
+                                "<div class='card pointer rounded bg-white shadow-lg  mt-3 mobilemargin' onclick='loadpost(" + data[i].PostViewModelId + ")'>" +
+                                title +
+                                "<div class='row no-gutters'>"+
+                                "<div class='col-md-12'>"+
+                                url +
+                                previewphoto +
+                                "</div></div>");
+                        }
+                        pageIndex++;
+                    }
+
+                },
+                beforeSend: function () {
+                    $("#progress").show();
+
+                },
+                complete: function () {
+                    $("#progress").hide();
+                    $("#loadmore").show();
+                    $(".cricket").show();
+                    $("#sideadvertistment").show();
+                    $("#catsearchhome").show();
+                },
+                error: function () {
+                    $("#error").text("No Post");
+                    $("#loadmore").addClass("d-none");
+                    $(".cricket").addClass("d-none");
+                    $('#loadmorepost').modal('hide');
+                    $("#sideadvertistment").show();
+                    $("#catsearchhome").show();
+                    $('#myModalpost').modal('show');
+                    setTimeout(function() {
+                        $('#myModalpost').modal('hide');
+                    }, 1000);
+
+
+
+                }
+            });
+
+        }
+
+
+        </text>
+
+        }
+    </script>
+
+    <script>
+        function loadpost(pid){
+
+            $('#readpost').modal('show');
+            $("#progresspost").show();
+            $.ajax({
+                data: { "id": pid},
+                url: '@Url.Action("GetPost", "Home")',
+                type: 'GET',
+                cache: true,
+            }).done(function (result) {
+                $('#ajaxresultreadpost').html(result);
+                $("#progresspost").hide();
+            });
+        }
+
+    </script>
+   
+}

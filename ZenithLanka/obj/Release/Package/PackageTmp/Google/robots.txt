@@ -1,0 +1,13 @@
+User-agent: Googlebot
+Disallow: /Account/
+Disallow: /Home/GetPostComment/*
+Disallow: /Home/GetPost/*
+Disallow: /Home/GetPosts/*
+
+User-agent: *
+Disallow: /Account/
+Disallow: /Home/GetPostComment/*
+Disallow: /Home/GetPost/*
+Disallow: /Home/GetPosts/*
+
+sitemap: https://medialk.com/sitemap/index

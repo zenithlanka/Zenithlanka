@@ -1,0 +1,1122 @@
+﻿@model IEnumerable<ZenithLanka.ViewModels.PostViewModel>
+@{
+    ViewBag.Url = Request.Url.GetLeftPart(UriPartial.Path);
+}
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+@section Styles{
+    <style>
+        body {
+            background-color: #f1f1f1 !important;
+        }
+
+        .img-hover-zoom {
+            overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+        }
+
+            /* [2] Transition property for smooth transformation of images */
+            .img-hover-zoom img {
+                transition: transform .5s ease;
+            }
+
+            /* [3] Finally, transforming the image when container gets hovered */
+            .img-hover-zoom:hover img {
+                transform: scale(1.2);
+            }
+
+        h4 {
+            word-wrap: break-word !important;
+        }
+
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.67);
+        }
+
+        .cta-corona {
+            background: url(https://i.ibb.co/hZCthc9/corona.jpg) center center;
+            width: 100%;
+            position: relative;
+            padding: 4%;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.6);
+        }
+
+        a {
+            font-family: 'Livvic', sans-serif;
+            word-wrap: break-word !important;
+            color: #000;
+        }
+
+            a:hover {
+                color: #2026a0 !important;
+            }
+
+        img:hover {
+            filter: saturate(0.5);
+            transition: 0.5s;
+        }
+
+        .link:hover {
+            color: #ffc107 !important;
+        }
+
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .bottom-left {
+            position: absolute;
+            bottom: 8px;
+            left: 16px;
+            background-color: rgba(0, 0, 0, 0.67);
+        }
+
+        @@media screen and (max-width: 770px) and (min-width: 760px) {
+            .h4, h4 {
+                font-size: 18px !important;
+                line-height: 1.5 !important;
+                font-family: 'Livvic',sans-serif;
+            }
+        }
+
+        @@media (max-width: 992px) {
+            .codiv {
+                font-size: 1.3rem !important;
+            }
+
+            .h4, h4 {
+                font-size: 20px !important;
+                line-height: 1.5 !important;
+                font-family: 'Livvic',sans-serif;
+            }
+        }
+
+        @@media (min-width: 1200px) {
+            .h4, h4 {
+                font-size: 20px;
+                line-height: 1.3;
+                font-family: 'Livvic',sans-serif;
+            }
+        }
+
+        @@media (min-width: 1300px) {
+            .containernew {
+                max-width: 1270px !important;
+            }
+
+            .h4, h4 {
+                font-size: 20px !important;
+                line-height: 1.3;
+                font-family: 'Livvic',sans-serif;
+            }
+        }
+
+        @@media (min-width: 1900px) {
+            .containernew {
+                max-width: 1700px !important;
+            }
+
+            .h4, h4 {
+                font-size: 20px !important;
+                line-height: 1.3;
+                font-family: 'Livvic',sans-serif;
+            }
+        }
+    </style>
+}
+
+
+<div class="container-fluid marquebar">
+    <div class="row desktophide no-gutters pb-2 pl-2 pr-2">
+        <div class="col-md-6 col-6">
+            <a href="@Url.Action("","Sinhala")" class="btn marquebar text-white  btn-block border" onclick="changesinhala()">සිංහල</a>
+        </div>
+        <div class="col-md-6 col-6">
+            <a href="@Url.Action("","Tamil")" class="btn marquebar text-white btn-block border" onclick="changetamil()">தமிழ்</a>
+        </div>
+    </div>
+</div>
+
+
+@if (ViewBag.highlight != null)
+{
+    <div class="container-fluid p-3">
+        <div class="row no-gutters">
+            <div class="col-md-6">
+                <div id="demo" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        @{
+                            int highlightcount = 1;
+                            foreach (var highlight in ViewBag.highlight)
+                            {
+                                if (highlightcount < 5)
+                                {
+                                    if (highlightcount == 1)
+                                    {
+                                        <div class="carousel-item active">
+                                            <a href="@Url.Action("ReadPost", "Home")/@highlight.PostViewModelId">
+                                                <div class="img-hover-zoom">
+                                                    @if (highlight.PreviewPhotoUrl != null)
+                                                    {
+                                                        <img class="card-img-top zoom pointer img-hover-zoom rounded-0" data-lazysrc="@highlight.PreviewPhotoUrl" alt="@highlight.Title">
+
+                                                    }
+                                                    @if (highlight.PreviewPhotoUrl == null)
+                                                    {
+                                                        <img class="card-img-top zoom pointer img-hover-zoom rounded-0" data-lazysrc="@highlight.ImageEnglishUrl" alt="@highlight.Title">
+
+                                                    }
+                                                </div>
+                                                <div class="carousel-caption text-white">
+                                                    <h3 class="h4">@highlight.Title</h3>
+                                                    <span>Read More</span> |
+                                                    @if (highlight.PostDateNew != null)
+                                                    {
+                                                        <small>@highlight.PostDateNew</small>
+                                                    }
+                                                    @if (highlight.Time != null)
+                                                    {
+                                                        <small>@highlight.PostDate | @highlight.Time</small>
+                                                    }
+                                                </div>
+                                            </a>
+                                        </div>
+                                    }
+                                    if (highlightcount != 1)
+                                    {
+                                        <div class="carousel-item">
+                                            <a href="@Url.Action("ReadPost", "Home")/@highlight.PostViewModelId">
+                                                <div class="img-hover-zoom">
+                                                    @if (highlight.PreviewPhotoUrl != null)
+                                                    {
+                                                        <img class="card-img-top zoom pointer img-hover-zoom rounded-0" data-lazysrc="@highlight.PreviewPhotoUrl" alt="@highlight.Title">
+
+                                                    }
+                                                    @if (highlight.PreviewPhotoUrl == null)
+                                                    {
+                                                        <img class="card-img-top zoom pointer img-hover-zoom rounded-0" data-lazysrc="@highlight.ImageEnglishUrl" alt="@highlight.Title">
+
+                                                    }
+                                                </div>
+
+                                                <div class="carousel-caption">
+                                                    <h3 class="h4">@highlight.Title</h3>
+                                                    <span>Read More</span> |
+                                                    @if (highlight.PostDateNew != null)
+                                                    {
+                                                        <small>@highlight.PostDateNew</small>
+                                                    }
+                                                    @if (highlight.Time != null)
+                                                    {
+                                                        <small>@highlight.PostDate | @highlight.Time</small>
+                                                    }
+                                                </div>
+                                            </a>
+                                        </div>
+                                    }
+
+                                }
+                                highlightcount++;
+                            }
+                        }
+                    </div>
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row no-gutters">
+                    @{
+                        int highlightcount1 = 1;
+                        foreach (var highlight1 in ViewBag.highlight)
+                        {
+                            if (highlightcount1 > 4)
+                            {
+                                <div class="col-md-6">
+                                    <div class="img-hover-zoom">
+                                        @if (highlight1.PreviewPhotoUrl != null)
+                                        {
+                                            <img class="card-img-top zoom pointer img-hover-zoom rounded-0" data-lazysrc="@highlight1.PreviewPhotoUrl" alt="@highlight1.Title">
+
+                                        }
+                                        @if (highlight1.PreviewPhotoUrl == null)
+                                        {
+                                            <img class="card-img-top zoom pointer img-hover-zoom rounded-0" data-lazysrc="@highlight1.ImageEnglishUrl" alt="@highlight1.Title">
+                                        }
+
+                                    </div>
+
+                                    <div class="bottom-left text-white p-2">
+                                        @highlight1.Title
+                                        <span>
+                                            | Read More |
+                                        </span>
+                                        @if (highlight1.PostDateNew != null)
+                                        {
+                                            <small>@highlight1.PostDateNew</small>
+                                        }
+                                        @if (highlight1.Time != null)
+                                        {
+                                            <small>@highlight1.PostDate | @highlight1.Time</small>
+                                        }
+                                    </div>
+
+                                </div>
+                            }
+                            highlightcount1++;
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@if (Model != null)
+{
+    <div class="container-fluid pt-3 p-3">
+        <div class="bg-dark mb-0 rounded-0 p-2 mobilehide"></div>
+        <div class="row no-gutters">
+            <div class="col-md-3 bg-dark">
+                <h2 class="text-center text-white h1 p-4"><strong>News</strong></h2>
+                <div class="text-center d-none"><a href="">ReadMore</a></div>
+            </div>
+            @{
+                int newscount = 1;
+                foreach (var news1 in Model)
+                {
+                    if (newscount < 4)
+                    {
+                        <div class="col-md-3">
+                                        <div class="card h-100 rounded-0">
+                                            @if (news1.PreviewPhotoUrl != null)
+                                            {
+
+                                                <a href="@Url.Action("ReadPost","Home")/@news1.PostViewModelId">
+                                                    <div class="img-hover-zoom">
+                                                        <img class="card-img-top zoom pointer rounded-0" data-lazysrc="@news1.PreviewPhotoUrl" alt="@news1.Title">
+                                                    </div>
+                                                </a>
+                                            }
+                                            @if (news1.PreviewPhotoUrl == null && news1.ImageEnglishUrl != null)
+                                            {
+
+                                                <a href="@Url.Action("ReadPost","Home")/@news1.PostViewModelId">
+                                                    <div class="img-hover-zoom">
+                                                        <img class="card-img-top zoom pointer rounded-0" data-lazysrc="@news1.ImageEnglishUrl" alt="@news1.Title">
+                                                    </div>
+                                                </a>
+                                            }
+                                        <div class="bottom-left text-white p-2">
+                                            @news1.Title | <small>Read More</small>
+                                                                                    @if (news1.PostDateNew != null)
+                                                                                    {
+                                                                                        <small>@news1.PostDateNew</small>
+                                                                                    }
+                                                                                    @if (news1.Time != null)
+                                                                                    {
+                                                                                        <small>@news1.PostDate | @news1.Time</small>
+                                                                                    }
+                                                                                </div>
+                                            
+
+                                        </div>
+                        </div>
+                    }
+                    newscount++;
+                }
+            }
+        </div>
+    </div>
+    <div class="text-center py-2 desktophide">
+        <a href="">Read More</a>
+    </div>
+}
+
+@if (ViewBag.post2 != null)
+{
+    <div class="container-fluid pt-3 p-3">
+        <div class="bg-warning mb-0 rounded-0 p-2 mobilehide"></div>
+        <div class="row no-gutters">
+            <div class="col-md-3 bg-warning">
+                <h2 class="text-center text-white h1 p-4"><strong>Unity</strong></h2>
+                <div class="text-center d-none"><a href="">ReadMore</a></div>
+            </div>
+            @{
+                int newscount = 1;
+                foreach (var news1 in ViewBag.post2)
+                {
+                    if (newscount < 4)
+                    {
+                        <div class="col-md-3">
+                            <div class="card h-100 rounded-0">
+                                @if (news1.PreviewPhotoUrl != null)
+                                {
+
+                                    <a href="@Url.Action("ReadPost","Home")/@news1.PostViewModelId">
+                                        <div class="img-hover-zoom">
+                                            <img class="card-img-top zoom pointer rounded-0" data-lazysrc="@news1.PreviewPhotoUrl" alt="@news1.Title">
+                                        </div>
+                                    </a>
+                                }
+                                @if (news1.PreviewPhotoUrl == null && news1.ImageEnglishUrl != null)
+                                {
+
+                                    <a href="@Url.Action("ReadPost","Home")/@news1.PostViewModelId">
+                                        <div class="img-hover-zoom">
+                                            <img class="card-img-top zoom pointer rounded-0" data-lazysrc="@news1.ImageEnglishUrl" alt="@news1.Title">
+                                        </div>
+                                    </a>
+                                }
+                            <div class="bottom-left text-white p-2">
+                                @news1.Title
+                                | <small>Read More</small>
+                                @if (news1.PostDateNew != null)
+                                {
+                                    <small>@news1.PostDateNew</small>
+                                }
+                                @if (news1.Time != null)
+                                {
+                                    <small>@news1.PostDate | @news1.Time</small>
+                                }
+                            </div>
+
+                            </div>
+                        </div>
+                    }
+                    newscount++;
+                }
+            }
+        </div>
+    </div>
+}
+
+@if (ViewBag.post3 != null)
+{
+    <div class="container-fluid pt-3">
+        <div class="alert navigationcolor mb-0 rounded-0">
+            <h2 class="text-center text-white"><strong>Policies</strong></h2>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row p-3">
+            @{
+                int highlightcount1 = 1;
+                foreach (var highlight1 in ViewBag.post3)
+                {
+                    if (highlightcount1 == 1)
+                    {
+                        <div class="col-md-3">
+                            <h3 class="h3 p-4">
+                                @highlight1.Title
+                            </h3>
+                            <div class="pl-4">
+                                Read More
+                                @if (highlight1.PostDateNew != null)
+                                {
+                                    <small>@highlight1.PostDateNew</small>
+                                }
+                                @if (highlight1.Time != null)
+                                {
+                                    <small>@highlight1.PostDate | @highlight1.Time</small>
+                                }
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            @if (highlight1.PreviewPhotoUrl != null)
+                            {
+                                <img class="card-img-top zoom pointer img-hover-zoom rounded-0" data-lazysrc="@highlight1.PreviewPhotoUrl" alt="@highlight1.Title">
+
+                            }
+                            @if (highlight1.PreviewPhotoUrl == null)
+                            {
+                                <img class="card-img-top zoom pointer img-hover-zoom rounded-0" data-lazysrc="@highlight1.ImageEnglishUrl" alt="@highlight1.Title">
+                            }
+
+                        </div>
+
+                    }
+                    if (highlightcount1 != 1)
+                    {
+                        <div class="col-md-3 mt-3">
+                            @if (highlight1.PreviewPhotoUrl != null)
+                            {
+                                <img class="card-img-top zoom pointer img-hover-zoom rounded-0" data-lazysrc="@highlight1.PreviewPhotoUrl" alt="@highlight1.Title">
+
+                            }
+                            @if (highlight1.PreviewPhotoUrl == null)
+                            {
+                                <img class="card-img-top zoom pointer img-hover-zoom rounded-0" data-lazysrc="@highlight1.ImageEnglishUrl" alt="@highlight1.Title">
+                            }
+                        <div class="card-body">
+                            <h4 class="card-title"> @highlight1.Title</h4>
+                            <div class="pl-4">
+                                Read More
+                                @if (highlight1.PostDateNew != null)
+                                {
+                                    <small>@highlight1.PostDateNew</small>
+                                }
+                                @if (highlight1.Time != null)
+                                {
+                                    <small>@highlight1.PostDate | @highlight1.Time</small>
+                                }
+                            </div>
+                        </div>
+            
+                        </div>
+                    }
+                    highlightcount1++;
+                }
+            }
+        </div>
+    </div>
+}
+
+@if (ViewBag.post4 != null)
+{
+    <div class="container-fluid pt-3">
+        <div class="alert navigationcolor mb-0 rounded-0">
+            <h2 class="text-center text-white"><strong>The Truth</strong></h2>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row p-3">
+            @{
+                int highlightcount1 = 1;
+                foreach (var highlight1 in ViewBag.post4)
+                {
+                    if (highlightcount1 == 1)
+                    {
+                        <div class="col-md-3">
+                            <h3 class="h3 p-4">
+                                @highlight1.Title
+                            </h3>
+                            <div class="pl-4">
+                                <span>Read More</span>
+                                @if (highlight1.PostDateNew != null)
+                                {
+                                    <small>@highlight1.PostDateNew</small>
+                                }
+                                @if (highlight1.Time != null)
+                                {
+                                    <small>@highlight1.PostDate | @highlight1.Time</small>
+                                }
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            @if (highlight1.PreviewPhotoUrl != null)
+                            {
+                                <img class="card-img-top zoom pointer img-hover-zoom rounded-0" data-lazysrc="@highlight1.PreviewPhotoUrl" alt="@highlight1.Title">
+
+                            }
+                            @if (highlight1.PreviewPhotoUrl == null)
+                            {
+                                <img class="card-img-top zoom pointer img-hover-zoom rounded-0" data-lazysrc="@highlight1.ImageEnglishUrl" alt="@highlight1.Title">
+                            }
+
+                        </div>
+
+                    }
+                    if (highlightcount1 != 1)
+                    {
+                        <div class="col-md-3 mt-3">
+                            @if (highlight1.PreviewPhotoUrl != null)
+                            {
+                                <img class="card-img-top zoom pointer img-hover-zoom rounded-0" data-lazysrc="@highlight1.PreviewPhotoUrl" alt="@highlight1.Title">
+
+                            }
+                            @if (highlight1.PreviewPhotoUrl == null)
+                            {
+                                <img class="card-img-top zoom pointer img-hover-zoom rounded-0" data-lazysrc="@highlight1.ImageEnglishUrl" alt="@highlight1.Title">
+                            }
+                        <div class="card-body">
+                            <h4 class="card-title"> @highlight1.Title</h4>
+                            <span>Read More | </span>
+                            @if (highlight1.PostDateNew != null)
+                            {
+                                <small>@highlight1.PostDateNew</small>
+                            }
+                            @if (highlight1.Time != null)
+                            {
+                                <small>@highlight1.PostDate | @highlight1.Time</small>
+                            }
+                        </div>
+
+                        </div>
+                    }
+                    highlightcount1++;
+                }
+            }
+        </div>
+    </div>
+}
+
+@if (ViewBag.post5 != null)
+{
+    <div class="container-fluid pt-3">
+        <div class="alert navigationcolor mb-0 rounded-0">
+            <h2 class="text-center text-white"><strong>Citizen</strong></h2>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row no-gutters p-3">
+            @{
+                int highlightcount1 = 1;
+                foreach (var highlight1 in ViewBag.post5)
+                {
+                    <div class="col-md-3 mb-3">
+                        @if (highlight1.PreviewPhotoUrl != null)
+                        {
+                            <img class="card-img-top zoom pointer img-hover-zoom rounded-0" data-lazysrc="@highlight1.PreviewPhotoUrl" alt="@highlight1.Title">
+
+                        }
+                        @if (highlight1.PreviewPhotoUrl == null)
+                        {
+                            <img class="card-img-top zoom pointer img-hover-zoom rounded-0" data-lazysrc="@highlight1.ImageEnglishUrl" alt="@highlight1.Title">
+                        }
+                    <div class="card-body">
+                        <h4 class="card-title"> @highlight1.Title</h4>
+                        <span>Read More</span>
+                        @if (highlight1.PostDateNew != null)
+                        {
+                            <small>@highlight1.PostDateNew</small>
+                        }
+                        @if (highlight1.Time != null)
+                        {
+                            <small>@highlight1.PostDate | @highlight1.Time</small>
+                        }
+                    </div>
+                    </div>
+                    highlightcount1++;
+                }
+            }
+        </div>
+    </div>
+}
+
+@if (ViewBag.post6 != null)
+{
+    <div class="container-fluid pt-3">
+        <div class="alert navigationcolor mb-0 rounded-0">
+            <h2 class="text-center text-white"><strong>Expression</strong></h2>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row p-3">
+            @{
+                int highlightcount1 = 1;
+                foreach (var highlight1 in ViewBag.post6)
+                {
+                    if (highlightcount1 == 1)
+                    {
+                        <div class="col-md-3">
+                            <h3 class="h3 p-4">
+                                @highlight1.Title
+                            </h3>
+                            <div class="pl-4">
+                                <span>Read More</span>
+                                @if (highlight1.PostDateNew != null)
+                                {
+                                    <small>@highlight1.PostDateNew</small>
+                                }
+                                @if (highlight1.Time != null)
+                                {
+                                    <small>@highlight1.PostDate | @highlight1.Time</small>
+                                }
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            @if (highlight1.PreviewPhotoUrl != null)
+                            {
+                                <img class="card-img-top zoom pointer img-hover-zoom rounded-0" data-lazysrc="@highlight1.PreviewPhotoUrl" alt="@highlight1.Title">
+
+                            }
+                            @if (highlight1.PreviewPhotoUrl == null)
+                            {
+                                <img class="card-img-top zoom pointer img-hover-zoom rounded-0" data-lazysrc="@highlight1.ImageEnglishUrl" alt="@highlight1.Title">
+                            }
+
+                        </div>
+
+                    }
+                    if (highlightcount1 != 1)
+                    {
+                        <div class="col-md-3 mt-3">
+                            @if (highlight1.PreviewPhotoUrl != null)
+                            {
+                                <img class="card-img-top zoom pointer img-hover-zoom rounded-0" data-lazysrc="@highlight1.PreviewPhotoUrl" alt="@highlight1.Title">
+
+                            }
+                            @if (highlight1.PreviewPhotoUrl == null)
+                            {
+                                <img class="card-img-top zoom pointer img-hover-zoom rounded-0" data-lazysrc="@highlight1.ImageEnglishUrl" alt="@highlight1.Title">
+                            }
+                        <div class="card-body">
+                            <h4 class="card-title"> @highlight1.Title</h4>
+                            <span>Read More</span>
+                            @if (highlight1.PostDateNew != null)
+                            {
+                                <small>@highlight1.PostDateNew</small>
+                            }
+                            @if (highlight1.Time != null)
+                            {
+                                <small>@highlight1.PostDate | @highlight1.Time</small>
+                            }
+                        </div>
+                        </div>
+                    }
+                    highlightcount1++;
+                }
+            }
+        </div>
+    </div>
+}
+
+@if (ViewBag.post7 != null)
+{
+    <div class="container-fluid pt-3">
+        <div class="alert navigationcolor mb-0 rounded-0">
+            <h2 class="text-center text-white"><strong>Anti Corruption</strong></h2>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row p-3">
+            @{
+                int highlightcount1 = 1;
+                foreach (var highlight1 in ViewBag.post7)
+                {
+                    <div class="col-md-4 mt-3">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                @if (highlight1.PreviewPhotoUrl != null)
+                                {
+                                    <img class="card-img-top zoom pointer img-hover-zoom rounded-0" data-lazysrc="@highlight1.PreviewPhotoUrl" alt="@highlight1.Title">
+
+                                }
+                                @if (highlight1.PreviewPhotoUrl == null)
+                                {
+                                    <img class="card-img-top zoom pointer img-hover-zoom rounded-0" data-lazysrc="@highlight1.ImageEnglishUrl" alt="@highlight1.Title">
+                                }
+                            </div>
+                            <div class="col-md-8">
+                                <h4 class="p-3"> @highlight1.Title</h4>
+                                <span>Read More</span>
+                                @if (highlight1.PostDateNew != null)
+                                {
+                                    <small>@highlight1.PostDateNew</small>
+                                }
+                                @if (highlight1.Time != null)
+                                {
+                                    <small>@highlight1.PostDate | @highlight1.Time</small>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    highlightcount1++;
+                }
+            }
+        </div>
+    </div>
+}
+
+@if (ViewBag.post8 != null)
+{
+    <div class="container-fluid pt-3">
+        <div class="alert navigationcolor mb-0 rounded-0">
+            <h2 class="text-center text-white"><strong>Democracy</strong></h2>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row p-3">
+            @{
+                int highlightcount1 = 1;
+                foreach (var highlight1 in ViewBag.post8)
+                {
+                    if (highlightcount1 == 1)
+                    {
+                        <div class="col-md-6">
+                            @if (highlight1.PreviewPhotoUrl != null)
+                            {
+                                <img class="card-img-top zoom pointer img-hover-zoom rounded-0" data-lazysrc="@highlight1.PreviewPhotoUrl" alt="@highlight1.Title">
+
+                            }
+                            @if (highlight1.PreviewPhotoUrl == null)
+                            {
+                                <img class="card-img-top zoom pointer img-hover-zoom rounded-0" data-lazysrc="@highlight1.ImageEnglishUrl" alt="@highlight1.Title">
+                            }
+
+                        </div>
+                        <div class="col-md-3">
+                            <h3 class="h3 p-4">
+                                @highlight1.Title
+                            </h3>
+                            <span>Read More</span>
+                            @if (highlight1.PostDateNew != null)
+                            {
+                                <small>@highlight1.PostDateNew</small>
+                            }
+                            @if (highlight1.Time != null)
+                            {
+                                <small>@highlight1.PostDate | @highlight1.Time</small>
+                            }
+                        </div>
+
+
+                    }
+                    if (highlightcount1 != 1)
+                    {
+                        <div class="col-md-3 mt-3">
+                            @if (highlight1.PreviewPhotoUrl != null)
+                            {
+                                <img class="card-img-top zoom pointer img-hover-zoom rounded-0" data-lazysrc="@highlight1.PreviewPhotoUrl" alt="@highlight1.Title">
+
+                            }
+                            @if (highlight1.PreviewPhotoUrl == null)
+                            {
+                                <img class="card-img-top zoom pointer img-hover-zoom rounded-0" data-lazysrc="@highlight1.ImageEnglishUrl" alt="@highlight1.Title">
+                            }
+                            <div class="card-body">
+                                <h4 class="card-title"> @highlight1.Title</h4>
+                            </div>
+                        </div>
+                    }
+                    highlightcount1++;
+                }
+            }
+        </div>
+    </div>
+}
+
+@if (ViewBag.post9 != null)
+{
+    <div class="container-fluid pt-3">
+        <div class="alert navigationcolor mb-0 rounded-0">
+            <h2 class="text-center text-white"><strong>The Generation</strong></h2>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row p-3">
+            @{
+                int highlightcount1 = 1;
+                foreach (var highlight1 in ViewBag.post9)
+                {
+                    <div class="col-md-4 mt-3">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                @if (highlight1.PreviewPhotoUrl != null)
+                                {
+                                    <img class="card-img-top zoom pointer img-hover-zoom rounded-0" data-lazysrc="@highlight1.PreviewPhotoUrl" alt="@highlight1.Title">
+
+                                }
+                                @if (highlight1.PreviewPhotoUrl == null)
+                                {
+                                    <img class="card-img-top zoom pointer img-hover-zoom rounded-0" data-lazysrc="@highlight1.ImageEnglishUrl" alt="@highlight1.Title">
+                                }
+                            </div>
+                            <div class="col-md-8">
+                                <h4 class="pl-3 pt-3"> @highlight1.Title</h4>
+                                <div class="pl-3">
+                                    <span>Read More</span>
+                                    @if (highlight1.PostDateNew != null)
+                                    {
+                                        <small>@highlight1.PostDateNew</small>
+                                    }
+                                    @if (highlight1.Time != null)
+                                    {
+                                        <small>@highlight1.PostDate | @highlight1.Time</small>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    highlightcount1++;
+                }
+            }
+        </div>
+    </div>
+}
+
+@if (ViewBag.post10 != null)
+{
+    <div class="container-fluid pt-3">
+        <div class="alert navigationcolor mb-0 rounded-0">
+            <h2 class="text-center text-white"><strong>The Opinion</strong></h2>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row p-3">
+            @{
+                int highlightcount1 = 1;
+                foreach (var highlight1 in ViewBag.post10)
+                {
+                    <div class="col-md-4 mt-3">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                @if (highlight1.PreviewPhotoUrl != null)
+                                {
+                                    <img class="card-img-top zoom pointer img-hover-zoom rounded-0" data-lazysrc="@highlight1.PreviewPhotoUrl" alt="@highlight1.Title">
+
+                                }
+                                @if (highlight1.PreviewPhotoUrl == null)
+                                {
+                                    <img class="card-img-top zoom pointer img-hover-zoom rounded-0" data-lazysrc="@highlight1.ImageEnglishUrl" alt="@highlight1.Title">
+                                }
+                            </div>
+                            <div class="col-md-8">
+                                <h4 class="pl-3 pt-3"> @highlight1.Title</h4>
+                                <div class="pl-3">
+                                    <span>Read More</span>
+                                    @if (highlight1.PostDateNew != null)
+                                    {
+                                        <small>@highlight1.PostDateNew</small>
+                                    }
+                                    @if (highlight1.Time != null)
+                                    {
+                                        <small>@highlight1.PostDate | @highlight1.Time</small>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    highlightcount1++;
+                }
+            }
+        </div>
+    </div>
+}
+<div class="modal" id="myModalpost">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+
+            <!-- Modal body -->
+            <div class="modal-body navigationcolor">
+                <div class="h4 text-center text-white">No Post</div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="readpost">
+    <div class="modal-dialog modal-lg modal-lgnew modal-dialog-centered">
+        <div class="modal-content">
+
+            <div id="progresspost" style="display:none" class="glow pt-3 text-center">
+                <img data-lazysrc="https://cdn.dribbble.com/users/107759/screenshots/2436386/copper-loader.gif" class="img-fluid" alt="loader" />
+            </div>
+            <div id="ajaxresultreadpost"></div>
+
+
+
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="clearurl()">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="modal" id="loadmorepost">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+
+            <!-- Modal body -->
+            <div class="modal-body p-3 navigationcolor">
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6"><button id="loadmoremodel" onclick="load()" class="btn btn-danger btn-user btn-block glow">More Post (Click Here)</button></div>
+                    <div class="col-md-3"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+    <script>
+        $('#readpost').on('hidden.bs.modal', function () {
+            if (history.pushState) {
+                window.history.pushState("Medialk", "Title", "/");
+            } else {
+                document.location.href = "/";
+            }
+        })
+    </script>
+    @*<script>
+            var container containernew = $('.sidebar-inner');
+            var element = $('.filter-panel');
+            var ScrollTop = 0;
+            var lastScrollVal = 0;
+            var headerHeight = $('.header').height();
+
+            $(window).scroll(function (event) {
+
+                var scrollVal = $(this).scrollTop();
+                if (scrollVal > lastScrollVal) {
+
+                    if (scrollVal == $(element).offset().top) {
+                        $(element).css({
+                            'top': $(element).offset().top - $(container containernew).offset().top,
+                            'left': 'auto',
+                            'bottom': 'auto',
+                            'width': '100%',
+                            'position': 'absolute'
+                        });
+                    }
+
+                    if (scrollVal > element.offset().top + element.height() - $(window).height()) {
+                        $(element).css({
+                            'top': 'auto',
+                            'left': $(element).offset().left,
+                            'bottom': 0,
+                            'width': $(container containernew).innerWidth(),
+                            'position': 'fixed'
+                        });
+                    }
+                } else {
+                    //if (scrollVal != $(element).offset().top) {
+                    //    $(element).css({
+                    //        'top': $(element).offset().top - $(container containernew).offset().top,
+                    //        'left': 'auto',
+                    //        'bottom': 'auto',
+                    //        'width': '100%',
+                    //        'position': 'absolute'
+                    //    });
+                    //}
+                    if (scrollVal < $(element).offset().top) {
+                        $(element).css({
+                            'top': headerHeight,
+                            'left': $(element).offset().left,
+                            'bottom': 'auto',
+                            'width': $(container containernew).innerWidth(),
+                            'position': 'fixed'
+                        });
+
+                    }
+                    if (scrollVal < $(container containernew).offset().top) {
+                        $(element).css({
+                            'top': '',
+                            'left': '',
+                            'bottom': '',
+                            'width': '',
+                            'position': ''
+                        });
+                    }
+                }
+                lastScrollVal = scrollVal;
+            });
+
+        </script>*@
+
+    <script>
+        function myFunction() {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+    @*<script>
+            window.onscroll = function(ev) {
+                if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
+                   load();
+                }
+            };
+        </script>*@
+
+
+
+    @*<script>
+            $.ajax({
+                url: '@Url.Action("GetCategories", "Home")',
+                type: 'GET',
+                cache: false,
+            }).done(function (result) {
+                $('#ajaxresult').html(result);
+            });
+        </script>*@
+
+
+
+    <script>
+        function loadpost(pid) {
+
+            $('#readpost').modal('show');
+            $("#progresspost").show();
+            $.ajax({
+                data: { "id": pid },
+                url: '@Url.Action("GetPost", "Home")',
+                type: 'GET',
+                cache: true,
+            }).done(function (result) {
+                $('#ajaxresultreadpost').html(result);
+                $("#progresspost").hide();
+            });
+        }
+
+    </script>
+    @*<script data-lazysrc="~/Scripts/slippry.min.js"></script>*@
+    <script>
+        jQuery('#news-demo').slippry({
+            // general elements & wrapper
+            slippryWrapper: '<div class="sy-box news-slider" />', // wrapper to wrap everything, including pager
+            elements: 'article', // elments cointaining slide content
+
+            // options
+            adaptiveHeight: false, // height of the sliders adapts to current
+            captions: false,
+
+            // pager
+            pager: false,
+            pagerClass: 'news-pager',
+
+            // transitions
+            transition: 'horizontal', // fade, horizontal, kenburns, false
+            speed: 2500,
+            pause: 1200,
+
+            // slideshow
+            autoDirection: 'prev'
+        });
+    </script>
+
+}

@@ -1,0 +1,42 @@
+﻿@model IEnumerable<ZenithLanka.Models.Category>
+
+@*<small class="mobilehide">Category</small>*@
+
+
+<div class="pt-2 pointer">
+    
+    
+    <li>
+        <i class="fa fa-home"></i>
+        <a href="@Url.Action("Index","Home")" class="text-dark">Home</a>
+    </li>
+
+
+    @foreach (var item in Model)
+            {
+        <li class="english">
+            <i class="@item.Icon"></i>
+            <a href="@Url.Action("Search","Home",new { @CategoryId = item.CategoryId })&CatTitle=@item.Name&Title=empty" class="text-dark">@Html.DisplayFor(modelItem => item.Name)</a>
+        </li>
+        <li class="tamil">
+            <i class="@item.Icon"></i>
+            <a href="@Url.Action("Search","Tamil",new { @CategoryId = item.CategoryId })&CatTitle=@item.Name&Title=empty" class="text-dark">@Html.DisplayFor(modelItem => item.Name)</a>
+        </li>
+        <li class="sinhala">
+            <i class="@item.Icon"></i>
+            <a href="@Url.Action("Search","Sinhala",new { @CategoryId = item.CategoryId })&CatTitle=@item.Name&Title=empty" class="text-dark">@Html.DisplayFor(modelItem => item.Name)</a>
+        </li>
+
+    }
+</div>
+
+<script>
+    function language() {
+        $('#myModal').modal('hide');
+    }
+</script>
+
+
+
+
+

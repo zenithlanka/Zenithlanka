@@ -1,0 +1,384 @@
+﻿@*@model IEnumerable<ZenithLanka.Models.Post>*@
+
+@{
+    ViewBag.Title = "Post English";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@section Styles{
+    <style>
+        .card {
+            border: 2px solid rgba(0,0,0,.125);
+        }
+
+        .admin {
+            display: none;
+        }
+        .penglish{
+                margin-top: 0rem !important;
+        }
+        .psinhala {
+            display: none;
+        }
+
+        .ptamil {
+            display: none;
+        }
+    </style>
+
+}
+<div class="container pb-2">
+
+
+    <div class="row">
+        <div class="col-md-12 nopaddinglr pb-4">
+            <div class="mt-3 mb-3">
+                <div class="row">
+                    <div class="col-md-4 col-6">
+                        @Html.ActionLink("Create New post", "Create", null, new { @class = "btn btn-dark text-white btn-block" })
+                    </div>
+                    <div class="col-md-8">
+                        <form method="get" action="@Url.Action("Index","Posts")">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    @if (@HttpContext.Current.Request.QueryString.Get("CategoryId") != null)
+                                    {
+                                        <input type="hidden" name="CategoryId" value="@HttpContext.Current.Request.QueryString.Get("CategoryId")" />
+                                    }
+                                    @if (@HttpContext.Current.Request.QueryString.Get("CategoryId") == null)
+                                    {
+                                        <input type="hidden" name="CategoryId" value="0" />
+                                    }
+
+                                    <input id="title" type="text" name="Title" class="form-control mb-2" placeholder="Search" />
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="submit" class="btn btn-warning btn-user btn-block" value="Search" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="container"></div>
+            <div id="error" class="h4 text-center"></div>
+            <div class="p-3">
+                <button id="loadmore" onclick="load()" class="btn btn-danger btn-user btn-block glow character" style="display:none">Load More</button>
+                @*<div class="cricket btn btn-block btn-warning" data-toggle="modal" data-target="#myModalalert" onclick="highalert()" style="display:none">Cricket Alert</div>*@
+
+            </div>
+
+            <div class="d-flex align-items-center justify-content-center mt-4 mb-4">
+                <div id="progress" class="loader"></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+@section scripts{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script>
+
+        var pageSize = 20;
+        var pageIndex = 0;
+        $(document).ready(function () {
+            GetData();
+        });
+
+        function currenttime(){
+            var d = new Date(),
+                h = d.getHours(),
+                m = d.getMinutes();
+            //$("#mtime").val(h+m);
+            setCookie("hour", h);
+            setCookie("min", m);
+        }
+
+        function setCookie(name, value) {
+            document.cookie = name + "=" + escape(value) + "; path=/; expires=" + expiry.toGMTString();
+        }
+
+        function load(){
+            GetData();
+        }
+
+        @if(HttpContext.Current.Request.QueryString.Get("CategoryId") != null)
+        {
+            <text>
+
+
+
+        var catid = @HttpContext.Current.Request.QueryString.Get("CategoryId");
+
+        function GetData(title) {
+            $('#loadmorepost').modal('hide');
+            var xhr =  $.ajax({
+                type: 'GET',
+                url: 'PostsEnglish/GetPosts',
+                data: { "pageindex": pageIndex, "pagesize": pageSize,"CategoryId": catid, "Title": "@HttpContext.Current.Request.QueryString.Get("Title")" },
+                dataType: 'json',
+                success: function (data) {
+                    if(data == null){
+                        xhr.abort();
+                        alert("no result");
+                    }
+                    if (data != null) {
+                        for (var i = 0; i < data.length; i++) {
+                            var desc = data[i].ShortDescription;
+                            var previewphoto = data[i].PreviewPhotoUrl;
+                            var imageEnglish = data[i].ImageEnglishUrl;
+                            var link = "@Url.Action("ReadPost","Home")";
+                            var date = data[i].PostDate;
+                            var catid = data[i].CategoryId;
+                            var noview = data[i].NoView;
+                            var postId = data[i].PostViewModelId;
+                            var sinhalarul = "<div><b>Sinhala Url</b> - https://medialk.com/Sinhala/ReadPost/"+postId+"</div>";
+                            var englishrul = "<div><b>English Url</b> - https://medialk.com/Home/ReadPost/"+postId+"</div>";
+                            var tamilrul = "<div><b>Tamil Url</b> - https://medialk.com/Tamil/ReadPost/"+postId+"</div>";
+                            var editbutton = "<div class='col-md-2 mb-3 mt-3'><a href='PostsEnglish/Edit/" + postId + "' class='btn btn-outline-success btn-user btn-block' onclick='currenttime()'>Edit</a></div>";
+                            var deletebutton = "<div class='col-md-2 mb-3 mt-3'><a href='PostsEnglish/Delete/" + postId + "' class='btn btn-outline-danger btn-user btn-block'>Delete</a></div>";
+                            var barchartbutton = "<div class='col-md-2 mb-3 mt-3'><a href='BarCharts/Index/" + postId + "' class='btn btn-outline-info btn-user btn-block'>Bar Chart</a></div>";
+
+
+                            if (date != null) {
+                                date = "<i class='fa fa-calendar' aria-hidden='true'></i>" + data[i].PostDate+
+                                    "<i class='fa fa-clock-o' aria-hidden='true'></i>" + data[i].Time;
+
+                            }
+                            if(date == null){
+                                date = "";
+                            }
+                            if(noview <100){
+                                noview = date;
+                            }
+                            if(noview >=100){
+                                //"<i class='fa fa-eye' aria-hidden='true'></i>"+data[i].NoView+
+                                noview = date;
+                            }
+
+
+                            if (previewphoto != null) {
+
+                                previewphoto = "<img class='img-fluid' src='" + data[i].PreviewPhotoUrl + "'/>";
+                            }
+                            if (previewphoto == null && imageEnglish != null) {
+                                previewphoto = "<img class='img-fluid' src='" + data[i].ImageEnglishUrl + "'/>";
+                            }
+
+                            ////////////
+
+                            if (desc == null) {
+                                desc = "";
+                                url = "";
+                            }
+                            if (previewphoto == null) {
+                                previewphoto = "";
+                            }
+                            $("#container").append(
+                                "<div class='card mb-3 rounded bg-white shadow-lg mobilemargin' onclick='loadpost(" + data[i].PostViewModelId + ")'>" +
+                               "<div class='row no-gutters'>"+
+                                "<div class='col-md-3'>"+
+                                previewphoto +
+                                "</div><div class='col-md-9'>"+
+                                "<div class='card-header'><div class='h4'><b>" + data[i].Title + "</b></div></div>" +
+                                "<div class='p-3'>"+
+                                sinhalarul+
+                                englishrul+
+                                tamilrul+
+                                "<div class='row'>"+
+                                editbutton +
+                                deletebutton +
+                                barchartbutton +
+                                "</div></div></div></div></div>");
+                        }
+                        pageIndex++;
+                    }
+                },
+                beforeSend: function () {
+                    $("#progress").show();
+
+                },
+                complete: function () {
+                    $(".cricket").show();
+                    $("#progress").hide();
+                    $("#loadmore").show();
+                    $("#sideadvertistment").show();
+                    $("#catsearchhome").show();
+                },
+                error: function () {
+                    $(".cricket").show();
+                    $("#error").text("No Post");
+                    $("#loadmore").addClass("d-none");
+                    $('#loadmorepost').modal('hide');
+                    $("#sideadvertistment").show();
+                    $("#catsearchhome").show();
+                    $('#myModalpost').modal('show');
+                    setTimeout(function() {
+                        $('#myModalpost').modal('hide');
+                    }, 1000);
+
+                }
+            });
+
+        }
+
+        </text>
+        }
+
+        @if(HttpContext.Current.Request.QueryString.Get("CategoryId") == null)
+        {
+
+            <text>
+        function GetData() {
+            $('#loadmorepost').modal('hide');
+            var xhr = $.ajax({
+                type: 'GET',
+                url: '/PostsEnglish/GetPosts',
+                data: { "pageindex": pageIndex, "pagesize": pageSize,"CategoryId": 0},
+                dataType: 'json',
+                success: function (data) {
+                    if(data == null){
+                        xhr.abort();
+                        alert("no result");
+                    }
+                    if (data != null) {
+                        for (var i = 0; i < data.length; i++) {
+                            var desc = data[i].ShortDescription;
+                            var previewphoto = data[i].PreviewPhotoUrl;
+                            var imageEnglish = data[i].ImageEnglishUrl;
+                            var link = "@Url.Action("ReadPost","Home")";
+                            var title = data[i].Title;
+                            var englishtitle = data[i].EnglishTitle;
+                            var tamiltitle = data[i].TamilTitle;
+                            var date = data[i].PostDate;
+                            var catid = data[i].CategoryId;
+                            var noview = data[i].NoView;
+                            var postId = data[i].PostViewModelId;
+                            var sinhalarul = "<div> https://medialk.com/Sinhala/ReadPost/"+postId;
+                            var englishrul = "<div class='pb-2'> https://medialk.com/Home/ReadPost/"+postId;
+                            var tamilrul = "<div class='pb-2'> https://medialk.com/Tamil/ReadPost/"+postId;
+                            var editbutton = "<div class='col-md-2 mt-3 mb-3'><a href='PostsEnglish/Edit/" + postId + "' class='btn btn-outline-success btn-user btn-block'  onclick='currenttime()'>Edit</a></div>";
+                            var deletebutton = "<div class='col-md-2 mt-3 mb-3'><a href='PostsEnglish/Delete/" + postId + "' class='btn btn-outline-danger btn-user btn-block'>Delete</a></div>";
+                            var barchartbutton = "<div class='col-md-2 mt-3 mb-3'><a href='BarCharts/Index/" + postId + "' class='btn btn-outline-info btn-user btn-block'>Bar Chart</a></div>";
+
+                            if (title != null) {
+                                title = "<div class='h4 pt-3'><b>" + data[i].Title + "</b></div>";
+                            }
+                            if (englishtitle != null) {
+                                englishtitle = "<div class='h4 pt-3'><b>" + data[i].EnglishTitle + "</b></div>";
+                            }
+                            if (tamiltitle != null) {
+                                tamiltitle = "<div class='h4 pt-3'><b>" + data[i].TamilTitle + "</b></div>";
+                            }
+
+                            if (title == null) {
+                                title = "";
+                                sinhalarul = "";
+                            }
+                            if (englishtitle == null) {
+                                englishtitle = "";
+                                englishrul = "";
+                            }
+                            if (tamiltitle == null) {
+                                tamiltitle = "";
+                                tamilrul = "";
+                            }
+
+                            if (desc != null && catid != 4) {
+                                desc = "<div>" +
+                                "<p class='card-text mb-0 p-2'>" + data[i].ShortDescription + " - <b>Read More</b><br/>"+noview+"</p>";
+                                var url = desc;
+                            }
+                            if (desc != null && catid == 4) {
+                                desc = "<div>" +
+                                "<p class='card-text mb-0 p-2'>" + data[i].ShortDescription + " - <b class='text-danger'>Breaking News | Read More </b><br/>"+noview+"</p>";
+                                var url = desc;
+                            }
+                            if (previewphoto != null) {
+
+                                previewphoto = "<img class='img-fluid' src='" + data[i].PreviewPhotoUrl + "'/>";
+                            }
+                            if (previewphoto == null && imageEnglish != null) {
+                                previewphoto = "<img class='img-fluid' src='" + data[i].ImageEnglishUrl + "'/>";
+                            }
+
+                            ////////////
+                            if (title == null) {
+                                title = "";
+                            }
+
+                            if (desc == null) {
+                                desc = "";
+                                url = "";
+                            }
+                            if (previewphoto == null) {
+                                previewphoto = "";
+                            }
+                            $("#container").append(
+                                "<div class='card rounded bg-white mt-3'>" +
+                               "<div class='row'>"+
+                                "<div class='col-md-3'>"+
+                                previewphoto +
+                                "</div><div class='col-md-9 p-4'>"+
+                                title +
+                                sinhalarul+
+                                englishtitle +
+                                englishrul+
+                                tamiltitle +
+                                tamilrul+
+                                "<div class='row'>"+
+                                editbutton +
+                                deletebutton +
+                                barchartbutton +
+                                "</div></div></div>");
+                        }
+                        pageIndex++;
+                    }
+
+                },
+                beforeSend: function () {
+                    $("#progress").show();
+
+                },
+                complete: function () {
+                    $("#progress").hide();
+                    $("#loadmore").show();
+                    $(".cricket").show();
+                    $("#sideadvertistment").show();
+                    $("#catsearchhome").show();
+                },
+                error: function () {
+                    $("#error").text("No Post");
+                    $("#loadmore").addClass("d-none");
+                    $(".cricket").addClass("d-none");
+                    $('#loadmorepost').modal('hide');
+                    $("#sideadvertistment").show();
+                    $("#catsearchhome").show();
+                    $('#myModalpost').modal('show');
+                    setTimeout(function() {
+                        $('#myModalpost').modal('hide');
+                    }, 1000);
+
+
+
+                }
+            });
+
+        }
+
+
+        </text>
+
+        }
+    </script>
+
+}

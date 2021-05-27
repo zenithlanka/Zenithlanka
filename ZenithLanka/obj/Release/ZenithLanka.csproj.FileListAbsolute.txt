@@ -1,0 +1,462 @@
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\ApplicationInsights.config
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\roslyn\csc.exe
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\roslyn\System.Collections.Immutable.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\roslyn\System.Reflection.Metadata.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\roslyn\vbc.exe
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\roslyn\VBCSCompiler.exe
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\roslyn\VBCSCompiler.exe.config
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\ZenithLanka.dll.config
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\ZenithLanka.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\ZenithLanka.pdb
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Antlr3.Runtime.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\EntityFramework.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\EntityFramework.SqlServer.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.AI.Agent.Intercept.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.AI.DependencyCollector.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.AI.Web.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.AI.WindowsServer.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.ApplicationInsights.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.AspNet.Identity.Core.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Cookies.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Facebook.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Google.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.OAuth.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Twitter.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.Web.Infrastructure.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Newtonsoft.Json.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Owin.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\System.Web.Helpers.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\System.Web.Mvc.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\System.Web.Optimization.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\System.Web.Razor.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\System.Web.WebPages.Deployment.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\System.Web.WebPages.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\System.Web.WebPages.Razor.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\WebGrease.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.AI.DependencyCollector.xml
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.AI.Web.xml
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.AI.WindowsServer.xml
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.ApplicationInsights.xml
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.AspNet.Identity.Core.xml
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.xml
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.xml
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Cookies.xml
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Facebook.xml
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Google.xml
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.OAuth.xml
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Twitter.xml
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\System.Web.Helpers.xml
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\System.Web.Mvc.xml
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\System.Web.Optimization.xml
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\System.Web.Razor.xml
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\System.Web.WebPages.xml
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\System.Web.WebPages.Deployment.xml
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\System.Web.WebPages.Razor.xml
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Antlr3.Runtime.pdb
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\EntityFramework.xml
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\EntityFramework.SqlServer.xml
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.csprojResolveAssemblyReference.cache
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.csproj.GenerateResource.Cache
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.pdb
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\BouncyCastle.Crypto.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\MimeKit.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\MimeKit.xml
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.initial.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.Project.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.Notification.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.slider.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.sliderUpdate.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.katapatha.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.katapathaUpdate.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.zenithstore.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.zenithstoreupdate.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothtypeupdate.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothtoptobottomupdate.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothtoptobottomupdate1.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothtoptobottomupdatedatatypechange.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.bodymeasurementupdate.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.bodymeasurementupdatenew.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothtopbottomvation.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothtopbottomvationupdate.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothtopbottomvationnew.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothtopbottomvationnewUpdate.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothtopbottomvationnewUpdate1.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothtopbottomvationnewUpdate2.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.zenithstoreremove.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothandphoto.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothgenderadd.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothpriceadd.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothisactiveadd.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.review.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.album.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.shoutout.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.albumdescription.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.albumfburl.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.albumphoto.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.book.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.bookisactive.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.bookprice.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.bookauther.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.bookauthername.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\CloudinaryDotNet.dll
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.companytype.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.companytypeupdate.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.food.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.photosupdate.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.companycity.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.menuremovevideo.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.companyreview.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.companyreviewupdate.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.foodreviewupdate.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.foodreviewremoverating.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothactivefitonroom.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.promotion.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.shoutoutcount.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.shoutoutremove.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.photovideo.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothremovefiton.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.removevideo.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.albumurl.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.userdetials.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.userdetialsupdate.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.userdetialsupdate1.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.userdetialspublicid.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.photovideo1.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothtypeisactive.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.category.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.removebook.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.categoryseo.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.story.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.storyupdateremove.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.story1.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.photovideo2.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.payment.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.item.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.tag.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.user.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.user1.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.katapatha1.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.attention.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.attention1.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.album1.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothtype.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothtoptobottom.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.review1.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.review2.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.category1.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.category2.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.managepackage.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothtype1.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.projectsinhala.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.userdetailsbody.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.promotionremove.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.magnetapi.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.treasure.resources
+E:\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.treasureremove.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\ApplicationInsights.config
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\roslyn\csc.exe
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\roslyn\System.Collections.Immutable.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\roslyn\System.Reflection.Metadata.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\roslyn\vbc.exe
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\roslyn\VBCSCompiler.exe
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\roslyn\VBCSCompiler.exe.config
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\ZenithLanka.dll.config
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\ZenithLanka.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\ZenithLanka.pdb
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Antlr3.Runtime.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\BouncyCastle.Crypto.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\CloudinaryDotNet.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\EntityFramework.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\EntityFramework.SqlServer.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.AI.DependencyCollector.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.AI.Web.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.AI.WindowsServer.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.ApplicationInsights.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Google.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.Web.Infrastructure.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\MimeKit.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Newtonsoft.Json.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Owin.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\System.Web.Helpers.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\System.Web.Mvc.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\System.Web.Optimization.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\System.Web.Razor.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\System.Web.WebPages.Deployment.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\System.Web.WebPages.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\System.Web.WebPages.Razor.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\WebGrease.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.AI.DependencyCollector.xml
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.AI.Web.xml
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.AI.WindowsServer.xml
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.ApplicationInsights.xml
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.xml
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.xml
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Google.xml
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\MimeKit.xml
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\System.Web.Helpers.xml
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\System.Web.Mvc.xml
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\System.Web.Optimization.xml
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\System.Web.Razor.xml
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\System.Web.WebPages.xml
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\System.Web.WebPages.Deployment.xml
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\System.Web.WebPages.Razor.xml
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Antlr3.Runtime.pdb
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\EntityFramework.xml
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\EntityFramework.SqlServer.xml
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.initial.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.Project.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.Notification.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.slider.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.sliderUpdate.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.katapatha.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.katapathaUpdate.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.zenithstore.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.zenithstoreupdate.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothtypeupdate.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothtoptobottomupdate.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothtoptobottomupdate1.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothtoptobottomupdatedatatypechange.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.bodymeasurementupdate.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.bodymeasurementupdatenew.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothtopbottomvation.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothtopbottomvationupdate.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothtopbottomvationnew.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothtopbottomvationnewUpdate.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothtopbottomvationnewUpdate1.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothtopbottomvationnewUpdate2.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.zenithstoreremove.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothandphoto.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothgenderadd.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothpriceadd.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothisactiveadd.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.review.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.album.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.shoutout.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.albumdescription.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.albumfburl.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.albumphoto.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.book.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.bookisactive.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.bookprice.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.bookauther.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.bookauthername.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.companytype.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.companytypeupdate.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.food.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.photosupdate.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.companycity.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.menuremovevideo.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.companyreview.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.companyreviewupdate.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.foodreviewupdate.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.foodreviewremoverating.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothactivefitonroom.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.promotion.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.shoutoutcount.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.shoutoutremove.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.photovideo.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothremovefiton.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.removevideo.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.albumurl.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.userdetials.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.userdetialsupdate.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.userdetialsupdate1.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.userdetialspublicid.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.photovideo1.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothtypeisactive.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.category.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.removebook.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.categoryseo.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.story.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.storyupdateremove.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.story1.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.photovideo2.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.payment.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.item.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.tag.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.user.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.user1.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.katapatha1.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.attention.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.attention1.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.album1.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothtype.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothtoptobottom.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.review1.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.review2.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.category1.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.category2.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.managepackage.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.clothtype1.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.projectsinhala.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.userdetailsbody.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.promotionremove.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.magnetapi.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.treasure.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.treasureremove.resources
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.csproj.GenerateResource.cache
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.dll
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.pdb
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.csprojResolveAssemblyReference.cache
+E:\Zenith Lanka Company\zenithlanka\projects\zenith project\ZenithLanka Project\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.newstart.resources
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\ApplicationInsights.config
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\roslyn\csc.exe
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\roslyn\System.Collections.Immutable.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\roslyn\System.Reflection.Metadata.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\roslyn\vbc.exe
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\roslyn\VBCSCompiler.exe
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\roslyn\VBCSCompiler.exe.config
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\ZenithLanka.dll.config
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\ZenithLanka.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\ZenithLanka.pdb
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Antlr3.Runtime.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\BouncyCastle.Crypto.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\CloudinaryDotNet.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\EntityFramework.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\EntityFramework.SqlServer.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Microsoft.AI.DependencyCollector.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Microsoft.AI.Web.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Microsoft.AI.WindowsServer.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Microsoft.ApplicationInsights.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Google.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Microsoft.Web.Infrastructure.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\MimeKit.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Newtonsoft.Json.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Owin.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\System.Web.Helpers.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\System.Web.Mvc.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\System.Web.Optimization.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\System.Web.Razor.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\System.Web.WebPages.Deployment.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\System.Web.WebPages.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\System.Web.WebPages.Razor.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\WebGrease.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Microsoft.AI.DependencyCollector.xml
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Microsoft.AI.Web.xml
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Microsoft.AI.WindowsServer.xml
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Microsoft.ApplicationInsights.xml
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.xml
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.xml
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Google.xml
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\MimeKit.xml
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\System.Web.Helpers.xml
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\System.Web.Mvc.xml
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\System.Web.Optimization.xml
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\System.Web.Razor.xml
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\System.Web.WebPages.xml
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\System.Web.WebPages.Deployment.xml
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\System.Web.WebPages.Razor.xml
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Antlr3.Runtime.pdb
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\EntityFramework.xml
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\EntityFramework.SqlServer.xml
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.csprojResolveAssemblyReference.cache
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.initial.resources
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.initial1.resources
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.updatepost.resources
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.updatenews.resources
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.removenoofview.resources
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.removepostdate.resources
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.categoryaddicon.resources
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.keyword.resources
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.postiscity.resources
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.isallage.resources
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.removeallage.resources
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.csproj.GenerateResource.Cache
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.dll
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.pdb
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.languageupdate.resources
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.removelanguage.resources
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.newsdescription.resources
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.author.resources
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.removevideourl.resources
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.advertisement.resources
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.postdate.resources
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.highalert.resources
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.highalertupdate.resources
+E:\Zenith Lanka Company\zenithlanka\projects\Medialk\ZenithLanka\ZenithLanka\obj\Release\ZenithLanka.Migrations.removenews.resources

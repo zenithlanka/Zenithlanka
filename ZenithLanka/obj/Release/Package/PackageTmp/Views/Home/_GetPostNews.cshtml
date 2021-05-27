@@ -1,0 +1,72 @@
+﻿@model IEnumerable<ZenithLanka.ViewModels.PostViewModel>
+
+
+<div class="mb-2">
+    @foreach (var item in Model)
+    {
+        if (ViewBag.Breaking == "true")
+        {
+            <a href="@Url.Action("ReadPost","Home")/@item.PostViewModelId?Language=@ViewBag.Language&@item.Title.Replace(" ", "-")">
+                <div class="card mb-2">
+                    <div class="row no-gutters pointer">
+                        <div class="col-md-12 col-3">
+                            <img class="img-fluid" src="@item.PreviewPhotoUrl" alt="@item.Title" />
+                        </div>
+                        <div class="col-md-12 col-9">
+                            <div class="p-2">
+                                <div class="h4">@item.Title</div>
+                                @*<i class='fa fa-eye' aria-hidden='true'></i>@item.NoView |*@ 
+                                <small>Read More | @item.PostDate</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </a>
+
+        }
+        if (ViewBag.Breaking == "false")
+        {
+
+            if (ViewBag.Location == "Home")
+            {
+                <div class="card mb-2">
+                    <div class="row no-gutters pointer" onclick="loadpost(@item.PostViewModelId)">
+                        <div class="col-md-12 col-3">
+                            <img class="img-fluid" src="@item.PreviewPhotoUrl" alt="@item.Title" />
+                        </div>
+                        <div class="col-md-12 col-9">
+                            <div class="p-2">
+                                <div class="h4">@item.Title</div>
+                                @*<i class='fa fa-eye' aria-hidden='true'></i>@item.NoView |*@ 
+                                <small>Read More | @item.PostDate</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            }
+            if (ViewBag.Location == "NotHome")
+            {
+                <a href="@Url.Action("ReadPost","Home")/@item.PostViewModelId?Language=@ViewBag.Language&@item.Title.Replace(" ", "-")">
+                    <div class="card mb-2">
+                        <div class="row no-gutters">
+                            <div class="col-md-12 col-3">
+                                <img class="img-fluid" src="@item.PreviewPhotoUrl" alt="@item.Title" />
+                            </div>
+                            <div class="col-md-12 col-9">
+                                <div class="p-2">
+                                    <div class="h4">@item.Title</div>
+                                    @*<i class='fa fa-eye' aria-hidden='true'></i>@item.NoView |*@ 
+                                    <small>Read More | @item.PostDate</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </a>
+            }
+
+        }
+    }
+</div>

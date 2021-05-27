@@ -1,0 +1,706 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutSinhala.cshtml";
+    ViewBag.Url = Request.Url.GetLeftPart(UriPartial.Path);
+}
+
+@section Styles{
+    <style>
+        footer {
+            display: none !important;
+        }
+        @@media screen and (max-width: 770px) and (min-width: 760px) {
+            .h4, h4 {
+                font-size: 12px !important;
+                line-height: 1.5 !important;
+                font-family: Noto Sans Sinhala,Verdana,Arial !important;
+            }
+            .card-text{
+                font-size: 15px !important;
+                font-family: Noto Sans Sinhala,Verdana,Arial !important;
+            }
+        }
+
+        @@media (max-width: 992px) {
+            .codiv {
+                font-size: 1.3rem !important;
+            }
+            .card-text{
+                font-size: 15px !important;
+                font-family: Noto Sans Sinhala,Verdana,Arial !important;
+            }
+        }
+
+        @@media (min-width: 1200px){
+            .h4, h4 {
+                font-size: 18px;
+                line-height: 1.7;
+                font-family: Noto Sans Sinhala,Verdana,Arial !important;
+            }
+            .card-text{
+                font-size: 15px !important;
+                font-family: Noto Sans Sinhala,Verdana,Arial !important;
+            }
+        }
+
+        @@media (min-width: 1300px) {
+            .containernew {
+                max-width: 1270px !important;
+            }
+            .h4, h4 {
+                font-family: Noto Sans Sinhala,Verdana,Arial !important;
+                 line-height: 1.7;
+            }
+            .card-text{
+                font-size: 15px !important;
+                font-family: Noto Sans Sinhala,Verdana,Arial !important;
+            }
+        }
+        
+
+        @@media (min-width: 1900px) {
+            .containernew {
+                max-width: 1700px !important;
+            }
+            .h4, h4 {
+                font-family: Noto Sans Sinhala,Verdana,Arial !important;
+                 line-height: 1.7;
+            }
+            .card-text{
+                font-size: 15px !important;
+                font-family: Noto Sans Sinhala,Verdana,Arial !important;
+            }
+        }
+    </style>
+
+}
+<div class="container pb-2">
+
+
+    <div class="row">
+        <div class="col-md-2"></div>
+
+        <div class="col-md-7 pb-4">
+            @*<div class="row no-gutters desktophide">
+                <div class="col-md-3 col-3 mlogowidth">
+                    <div class="cta-sectionrti cricket pointer hover logonewsize" onclick="mrti()" data-toggle="tooltip" title="Right to Information - Sri Lanka">
+
+                    </div>
+                </div>
+                <div class="col-md-3 col-3 mlogowidth">
+                    <div class="cta-sectionguru cricket pointer hover logonewsize" style="display:none" onclick="mguru()" data-toggle="tooltip" title="A/L, O/L, University Lectures, Past Papers, etc">
+
+                    </div>
+                </div>
+                <div class="col-md-3 col-3 mlogowidth">
+                    <div class="cta-sectiontravel cricket pointer hover logonewsize" style="display:none" onclick="mtravel()" data-toggle="tooltip" title="Life is a journey. Make the best of it.">
+
+                    </div>
+                </div>
+                <div class="col-md-3 col-3 mlogowidth">
+                    <div class="cta-sectioncraft cricket pointer hover logonewsize" style="display:none" onclick="mcraft()" data-toggle="tooltip" title="Best I can do it! DYI projects">
+
+                    </div>
+                </div>
+                <div class="col-md-3 col-3 mlogowidth">
+                    <div class="cta-sectionexplorer cricket pointer hover logonewsize" style="display:none" onclick="mexplorer()" data-toggle="tooltip" title="The truth is out there">
+
+                    </div>
+                </div>
+            </div>*@
+            @*<form method="get" class="cricket p-2" style="display:none">
+                    <div class="row no-gutters">
+                        <div class="col-md-8 p-1 ">
+                            @if (@HttpContext.Current.Request.QueryString.Get("CategoryId") != null)
+                            {
+                                <input type="hidden" name="CategoryId" value="@HttpContext.Current.Request.QueryString.Get("CategoryId")" />
+                            }
+                            @if (@HttpContext.Current.Request.QueryString.Get("CategoryId") == null)
+                            {
+                                <input type="hidden" name="CategoryId" value="0" />
+                            }
+
+                            <input id="title" type="text" name="Title" class="form-control mb-2" placeholder="Search" />
+                        </div>
+                        <div class="col-md-4 p-1">
+                            <input type="submit" class="btn btn-primary btn-user btn-block mb-2" value="Search" />
+                        </div>
+                    </div>
+                </form>*@
+
+            @*@if (@HttpContext.Current.Request.QueryString.Get("Title") == null)
+                {
+                    <div class="cricket btn btn-block btn-warning py-2 pointer mb-3"  onclick="highalert()" style="display:none">Watch Cricket Alerts click here</div>
+                    <div id="slider" class="pb-2"></div>
+                }*@
+
+
+            @*<div class="card mb-3 p-2">
+                   <p class="card-text p-2 text-center" id="areaactivity">All area related activities you can find from category</p>
+                    <button id="changelanguage" type="button" class="btn btn-primary btn-user btn-block" data-toggle="modal" data-target="#myModalCookie" onclick="category()">
+                        Change Language
+                    </button>
+                </div>*@
+
+            @if (@HttpContext.Current.Request.QueryString.Get("CategoryId") != null)
+            {
+
+                if (@HttpContext.Current.Request.QueryString.Get("CatTitle") != null)
+                {
+                    <div class="alert alert-primary mb-2 text-center h4">
+                        <strong>@HttpContext.Current.Request.QueryString.Get("CatTitle")</strong>
+                    </div>
+
+                }
+                if (@HttpContext.Current.Request.QueryString.Get("Title") != "empty")
+                {
+                    <div class="alert alert-primary mb-2 text-center h4">
+                        <strong>@HttpContext.Current.Request.QueryString.Get("Title")</strong>
+                    </div>
+
+                }
+            }
+            
+            <div id="container"></div>
+            <div id="error" class="h4 text-center"></div>
+            <div class="p-3">
+                <button id="loadmore" onclick="load()" class="btn btn-danger btn-user btn-block glow character" style="display:none">Load More</button>
+                @*<div class="cricket btn btn-block btn-warning" data-toggle="modal" data-target="#myModalalert" onclick="highalert()" style="display:none">Cricket Alert</div>*@
+
+            </div>
+
+            <div class="d-flex align-items-center justify-content-center mt-4 mb-4">
+                <div id="progress" class="loader"></div>
+            </div>
+
+        </div>
+
+        <div class="col-md-3 mobilehide">
+            <div class="sidebar-inner" id="catsearchhome">
+                <div class="filter-panel">
+                    @*<input type="text" id="myInput" class="form-control" onkeyup="myFunction()" placeholder="Search Services" title="Type in a name">*@
+
+                    <ul id="myUL" style="margin-left:20%">
+                        <div id="ajaxresult"></div>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
+</div>
+
+
+
+<div class="modal" id="myModalpost">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+
+            <!-- Modal body -->
+            <div class="modal-body navigationcolor">
+                <div class="h4 text-center text-white">No Post</div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="readpost">
+    <div class="modal-dialog modal-lg modal-lgnew modal-dialog-centered">
+        <div class="modal-content">
+
+            <div id="progresspost" style="display:none" class="glow pt-3 text-center">
+                <img class="img-fluid" src="https://cdn.dribbble.com/users/107759/screenshots/2436386/copper-loader.gif" alt="loader" />
+            </div>
+            <div id="ajaxresultreadpost"></div>
+
+
+
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="clearurl()">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="modal" id="loadmorepost">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+
+            <!-- Modal body -->
+            <div class="modal-body p-3 navigationcolor">
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6"><button id="loadmoremodel" onclick="load()" class="btn btn-danger btn-user btn-block glow">More Post (Click Here)</button></div>
+                    <div class="col-md-3"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script>
+        function market(){
+            location.href = "https://medialk.com/?CategoryId=51&CatTitle=Market%20Price&Title=empty";
+        }
+        function mguru(){
+            location.href = "https://www.youtube.com/channel/UC-JBetvuq3pnk8of8PWiNkw";
+        }
+        function mtravel(){
+            location.href = "https://www.youtube.com/channel/UC3Ox72FWYTIQwXI15Yxx0MQ";
+        }
+        function mexplorer(){
+            location.href = "https://www.youtube.com/channel/UCpIwINUxN3mZKb82o_LQyTA";
+        }
+        function mcraft(){
+            location.href = "https://www.youtube.com/channel/UCVKDHGka3p4tP5lTELUYBVw";
+        }
+        function mrti(){
+            location.href = "https://medialk.com/?CategoryId=55&CatTitle=RTI&Title=empty";
+        }
+        function ia(){
+            location.href = "https://docs.google.com/forms/u/2/d/e/1FAIpQLSfGArShiBdtpEhjWilHKV4VmWEKyWfbY9HXEt6vKzokio-dVg/viewform";
+        }
+        function ado(){
+            location.href = "https://docs.google.com/forms/d/e/1FAIpQLSdsR91Mnsze3yact_N07ukjMO2NLhIwmxVTqyCoa9oG3aRL_Q/viewform";
+        }
+        function arc(){
+            location.href = "#";
+        }
+    </script>
+    <script>
+        $(document).ready(function(){
+          $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+    <script>
+            $('#readpost').on('hidden.bs.modal', function () {
+                if (history.pushState) {
+                    window.history.pushState("Medialk", "Title", "@Url.Action("Search","Sinhala")?CategoryId=@HttpContext.Current.Request.QueryString.Get("CategoryId")&CatTitle=@HttpContext.Current.Request.QueryString.Get("CatTitle")&Title=empty");
+                } else {
+                    document.location.href = "/";
+                }
+            })
+    </script>
+    <script>
+        var container = $('.sidebar-inner');
+        var element = $('.filter-panel');
+        var ScrollTop = 0;
+        var lastScrollVal = 0;
+        var headerHeight = $('.header').height();
+
+        $(window).scroll(function(event) {
+
+            var scrollVal = $(this).scrollTop();
+            if (scrollVal > lastScrollVal) {
+
+                if (scrollVal == $(element).offset().top) {
+                    $(element).css({
+                        'top': $(element).offset().top - $(container).offset().top,
+                        'left': 'auto',
+                        'bottom': 'auto',
+                        'width': '100%',
+                        'position': 'absolute'
+                    });
+                }
+
+                if (scrollVal > element.offset().top + element.height() - $(window).height()) {
+                    $(element).css({
+                        'top': 'auto',
+                        'left': $(element).offset().left,
+                        'bottom': 0,
+                        'width': $(container).innerWidth(),
+                        'position': 'fixed'
+                    });
+                }
+            } else {
+                //if (scrollVal != $(element).offset().top) {
+                //    $(element).css({
+                //        'top': $(element).offset().top - $(container).offset().top,
+                //        'left': 'auto',
+                //        'bottom': 'auto',
+                //        'width': '100%',
+                //        'position': 'absolute'
+                //    });
+                //}
+                if (scrollVal < $(element).offset().top) {
+                    $(element).css({
+                        'top': headerHeight,
+                        'left': $(element).offset().left,
+                        'bottom': 'auto',
+                        'width': $(container).innerWidth(),
+                        'position': 'fixed'
+                    });
+
+                }
+                if (scrollVal < $(container).offset().top) {
+                    $(element).css({
+                        'top': '',
+                        'left': '',
+                        'bottom': '',
+                        'width': '',
+                        'position': ''
+                    });
+                }
+            }
+            lastScrollVal = scrollVal;
+        });
+
+    </script>
+
+    <script>
+        function myFunction() {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+    <script>
+        function myFunctionnew() {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById("myInput1");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL1");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+    @*<script>
+            window.onscroll = function(ev) {
+                if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
+                   load();
+                }
+            };
+        </script>*@
+
+
+
+    <script>
+        $.ajax({
+            url: '@Url.Action("GetCategories", "Home")',
+            type: 'GET',
+            cache: false,
+        }).done(function (result) {
+            $('#ajaxresult').html(result);
+        });
+    </script>
+
+
+
+    <script>
+
+        var pageSize = 10;
+        var pageIndex = 0;
+        $(document).ready(function () {
+            GetData();
+        });
+
+        function load(){
+
+            GetData();
+        }
+
+        @if(HttpContext.Current.Request.QueryString.Get("CategoryId") != null)
+        {
+            <text>
+
+
+
+        var catid = @HttpContext.Current.Request.QueryString.Get("CategoryId");
+
+        function GetData(title) {
+            $('#loadmorepost').modal('hide');
+            var xhr =  $.ajax({
+                type: 'GET',
+                url: '/Sinhala/GetPosts',
+                data: { "pageindex": pageIndex, "pagesize": pageSize,"CategoryId": catid, "Title": "@HttpContext.Current.Request.QueryString.Get("Title")" },
+                dataType: 'json',
+                success: function (data) {
+                    if(data == null){
+                        xhr.abort();
+                        alert("no result");
+                    }
+                    if (data != null) {
+                        for (var i = 0; i < data.length; i++) {
+                            var desc = data[i].ShortDescription;
+                            var previewphoto = data[i].PreviewPhotoUrl;
+                            var link = "@Url.Action("ReadPost","Sinhala")";
+                            //var date = data[i].PostDate;
+                            var catid = data[i].CategoryId;
+                            var noview = data[i].NoView;
+
+                            if (data[i].Time != "") {
+                                date = "<i class='fa fa-calendar' aria-hidden='true'></i>" + data[i].PostDate+
+                                    "<i class='fa fa-clock-o' aria-hidden='true'></i>" + data[i].Time;
+
+                            }
+                            if (data[i].PostDateNew != null) {
+                                date = data[i].PostDateNew;
+
+                            }
+                            if(date == null){
+                                date = "";
+                            }
+                            if(noview <100){
+                                noview = date;
+                            }
+                            if(noview >=100){
+                                //"<i class='fa fa-eye' aria-hidden='true'></i>"+data[i].NoView+
+                                //noview = date;
+                            }
+
+                            if (desc != null && catid != 4) {
+                                desc = "<div class='p-2'>" +
+                                "<p class='card-text text-dark'>" + data[i].ShortDescription + " - <b>Read More</b><br/></p>";
+                                var url = desc;
+                                var view = ""
+                            }
+                            if (desc != null && catid == 4) {
+                                desc = "<div class='p-2'><small class='bg-danger p-1 text-white py-2'>Breaking News</small>" +
+                                "<p class='card-text py-1 text-dark'>" + data[i].ShortDescription + " - <b>Read More</b><br/></p>";
+                                var url = desc;
+                                var view = ""
+                            }
+                            if (previewphoto != null) {
+                                previewphoto = "<img class='card-img-bottom' src='" + data[i].PreviewPhotoUrl + "'/>";
+                            }
+
+                            ////////////
+
+                            if (desc == null) {
+                                desc = "";
+                                url = "";
+                            }
+                            if (previewphoto == null) {
+                                previewphoto = "";
+                            }
+                            $("#container").append(
+                                  "<a href='@Url.Action("ReadPost","Sinhala")/"+data[i].PostViewModelId+"' target='_blank'><div class='card mb-3 pointer rounded bg-white shadow-lg mobilemargin'>" +
+                                  "<div class='card-header text-dark'><div class='h4'><b>" + data[i].Title + "</b></div></div>" +
+                                 "<div class='row no-gutters'>"+
+                                  "<div class='col-md-6'>"+
+                                  previewphoto +
+                                  "</div><div class='col-md-6'>"+
+                                  url +
+                                  "</div></div></div></a>");
+                        }
+                        pageIndex++;
+                    }
+                },
+                beforeSend: function () {
+                    $("#progress").show();
+
+                },
+                complete: function () {
+                    $(".cricket").show();
+                    $("#progress").hide();
+                    $("#loadmore").show();
+                    $("#sideadvertistment").show();
+                    $("#catsearchhome").show();
+                },
+                error: function () {
+                    $(".cricket").show();
+                    $("#error").text("No Post");
+                    $("#loadmore").addClass("d-none");
+                    $('#loadmorepost').modal('hide');
+                    $("#sideadvertistment").show();
+                    $("#catsearchhome").show();
+                    $('#myModalpost').modal('show');
+                    setTimeout(function() {
+                        $('#myModalpost').modal('hide');
+                    }, 1000);
+
+                }
+            });
+
+        }
+
+        </text>
+        }
+
+        @if(HttpContext.Current.Request.QueryString.Get("CategoryId") == null)
+        {
+
+            <text>
+
+        function GetData() {
+            $('#loadmorepost').modal('hide');
+            var xhr = $.ajax({
+                type: 'GET',
+                url: '/Sinhala/GetPosts',
+                data: { "pageindex": pageIndex, "pagesize": pageSize,"CategoryId": 0},
+                dataType: 'json',
+                success: function (data) {
+                    if(data == null){
+                        xhr.abort();
+                        alert("no result");
+                    }
+                    if (data != null) {
+                        for (var i = 0; i < data.length; i++) {
+                            var desc = data[i].ShortDescription;
+                            var previewphoto = data[i].PreviewPhotoUrl;
+                            var link = "@Url.Action("ReadPost","Sinhala")";
+                            var title = data[i].Title;
+                            //var date = data[i].PostDate;
+                            var catid = data[i].CategoryId;
+                            //var noview = data[i].NoView;
+
+                            //if (data[i].Time != "") {
+                            //    date = data[i].PostDate+" | "+ data[i].Time;
+
+                            //}
+                            //if (data[i].PostDateNew != null) {
+                            //    date = data[i].PostDateNew;
+
+                            //}
+                            //if(date == null){
+                            //    noview = "";
+                            //}
+                            //if(noview < 100){
+                            //    noview = date;
+                            //}
+                            //if(noview >=  100){
+                            //    "<i class='fa fa-eye' aria-hidden='true'></i>"+data[i].NoView+
+                            //    noview = date;
+                            //}
+
+                            if (title != null) {
+                                title = "<div class='card-header text-dark'><div class='h4'><b>" + data[i].Title + "</b></div></div>";
+                            }
+                            if (desc != null && catid != 4) {
+                                desc = "<div>" +
+                                "<p class='card-text mb-0 p-2 text-dark'>" + data[i].ShortDescription + " - <b>Read More</b><br/></p>";
+                                var url = desc;
+                            }
+                            if (desc != null && catid == 4) {
+                                desc = "<div>" +
+                                "<p class='card-text mb-0 p-2 text-dark'>" + data[i].ShortDescription + " - <b class='text-danger'>Breaking News | Read More </b><br/></p>";
+                                var url = desc;
+                            }
+                            if (previewphoto != null) {
+                                previewphoto = "<img class='img-fluid' src='" + data[i].PreviewPhotoUrl + "'/>";
+                            }
+
+                            ////////////
+                            if (title == null) {
+                                title = "";
+                            }
+
+                            if (desc == null) {
+                                desc = "";
+                                url = "";
+                            }
+                            if (previewphoto == null) {
+                                previewphoto = "";
+                            }
+                            $("#container").append(
+                                 "<a href='@Url.Action("ReadPost","Sinhala")/"+data[i].PostViewModelId+"' target='_blank'><div class='card pointer rounded bg-white shadow-lg  mt-3 mobilemargin'>" +
+                                 title +
+                                 "<div class='row no-gutters'>"+
+                                 "<div class='col-md-12  text-dark'>"+
+                                 url +
+                                 previewphoto +
+                                 "</div></div></a>");
+                        }
+                        pageIndex++;
+                    }
+
+                },
+                beforeSend: function () {
+                    $("#progress").show();
+
+                },
+                complete: function () {
+                    $("#progress").hide();
+                    $("#loadmore").show();
+                    $(".cricket").show();
+                    $("#sideadvertistment").show();
+                    $("#catsearchhome").show();
+                },
+                error: function () {
+                    $("#error").text("No Post");
+                    $("#loadmore").addClass("d-none");
+                    $(".cricket").addClass("d-none");
+                    $('#loadmorepost').modal('hide');
+                    $("#sideadvertistment").show();
+                    $("#catsearchhome").show();
+                    $('#myModalpost').modal('show');
+                    setTimeout(function() {
+                        $('#myModalpost').modal('hide');
+                    }, 1000);
+
+
+
+                }
+            });
+
+        }
+
+
+        </text>
+
+        }
+    </script>
+
+
+    <script>
+        function loadpost(pid){
+
+            $('#readpost').modal('show');
+            $("#progresspost").show();
+            $.ajax({
+                data: { "id": pid},
+                url: '@Url.Action("GetPost", "Sinhala")',
+                type: 'GET',
+                cache: true,
+            }).done(function (result) {
+                $('#ajaxresultreadpost').html(result);
+                $("#progresspost").hide();
+            });
+        }
+
+    </script>
+    @*@if (@HttpContext.Current.Request.QueryString.Get("Title") == null)
+        {
+            <script>
+                $.ajax({
+                    url: '@Url.Action("GetSlider", "Home")',
+                    type: 'GET',
+                    cache: true,
+                }).done(function (result) {
+                    $('#slider').html(result);
+                });
+            </script>
+        }*@
+
+}

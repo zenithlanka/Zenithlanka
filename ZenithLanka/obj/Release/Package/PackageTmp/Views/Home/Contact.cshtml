@@ -1,0 +1,264 @@
+﻿@model ZenithLanka.ViewModels.EmailFormModel
+@{
+    Layout = "~/Views/Shared/_LayoutContact.cshtml";
+    ViewBag.Title = "Contact";
+}
+@section Styles{
+    <style>
+        .admin{
+            display:none;
+        }
+    </style>
+}
+
+<section id="hero" class="d-flex align-items-center">
+
+    <div class="container d-flex flex-column align-items-center justify-content-center" data-aos="fade-up">
+        <h1 class="mt-5 d-none">About Us</h1>
+        <p class="pt-3">MediaLK.com is a website in Sri Lanka which
+        open the truth to the public through impartial and exploratory reporting without any political and racist filters.
+        Our main goals as Medialk.com website are as follows,
+        Disclosure of facts and information not covered by major media outlets.
+        Disclosure of high alerted information by making RTI applications.
+        Reporting on issues, trends, ethics violations in the media industry in Sri Lanka, and developmental aspects in this field.
+        To minimize the spread of false news on social media networks specially with our tools of Fake News and Fact Checking.
+        All together we are dedicated to help Sri Lankans learn the truth.</p>
+      
+        <img src="~/Images/hero-img.png" class="img-fluid hero-img" alt="" data-aos="zoom-in" data-aos-delay="150">
+    </div>
+
+</section><!-- End Hero -->
+
+<main id="main">
+
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features" data-aos="fade-up">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Advertising</h2>
+                <p>Powerful Solutions For Successful Online Advertising.oin our high performing advertising network and start promoting your products or services.</p>
+            </div>
+
+            <div class="row content mt-3">
+                <div class="col-md-5" data-aos="fade-right" data-aos-delay="100">
+                    <img src="~/Images/features-1.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-7 pt-4" data-aos="fade-left" data-aos-delay="100">
+                    <h3>Quality Traffic</h3>
+                    <p class="font-italic">
+                        Constantly monitoring and
+                        analyzing our traffic quality in
+                        order to ensure a bot free traffic.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row content">
+                <div class="col-md-5 order-1 order-md-2" data-aos="fade-left">
+                    <img src="~/Images/features-2.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-7 pt-5 order-2 order-md-1" data-aos="fade-right">
+                    <h3>AdBlock Bypassing</h3>
+                    <p class="font-italic">
+                        Your ads are delivered even if users
+                        have Adblock plugins installed.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row content">
+                <div class="col-md-5" data-aos="fade-right">
+                    <img src="~/Images/features-3.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-7 pt-5" data-aos="fade-left">
+                    <h3>Self-Serve Platform</h3>
+                    <p class="font-italic">Easily manage your campaigns
+with our self-serve platform for advertisers.</p>
+                </div>
+            </div>
+
+            <div class="row content">
+                <div class="col-md-5 order-1 order-md-2" data-aos="fade-left">
+                    <img src="~/Images/features-4.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-7 pt-5 order-2 order-md-1" data-aos="fade-right">
+                    <h3>Instant Account Approval</h3>
+                    <p class="font-italic">
+                        Easily launch your campaigns through
+                        our user friendly interface
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End Features Section -->
+    <!-- ======= Steps Section ======= -->
+    <section id="steps" class="steps">
+        <div class="container">
+
+            <div class="row no-gutters" data-aos="fade-up">
+
+                <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="100">
+                    <span>01</span>
+                    <h4>We offer pay as you go for every ads</h4>
+                    <p>Hectic work is now over. All you have to do is wait and see how your business grow with MediaLK.com. We give you the most simplest and the fastest way to monitor your advertisements. Our advertisement support in three languages (English, Sinhala & Tamil).</p>
+                </div>
+
+                <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="200">
+                    <span>02</span>
+                    <h4>Choose your objective</h4>
+                    <p>To choose the right ad objective, answer the question "what's the most important outcome you want from this ad?" - It could be sales on your website, download links to your apps or increased brand awareness.</p>
+                </div>
+
+                <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="300">
+                    <span>03</span>
+                    <h4>Pick a format</h4>
+                    <p>Which audience you want? (English, Sinhala or Tamil you have to select) Pick an age format. Your targeted audience age criteria (ex-21 years to 45 years)</p>
+                </div>
+
+                <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="100">
+                    <span>04</span>
+                    <h4>Pick an audience location</h4>
+                    <p>In which region you want to run your add (ex-In Gampaha District).</p>
+                </div>
+
+                <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="200">
+                    <span>05</span>
+                    <h4>Set your budget</h4>
+                    <p>Enter your daily or lifetime budget, and the time period which you want your ads to run. (Eg-03 days or 7 days) These limits mean that you'll never spend more than you're comfortable with.</p>
+                </div>
+
+                <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="300">
+                    <span>06</span>
+                    <h4>Select your audience</h4>
+                    <p>Based on your requirements, we choose your audience – such as age, location and other details – choose the demographics, interests and behaviors that represent your audience at its best.</p>
+                </div>
+
+                <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="300">
+                    <span>07</span>
+                    <h4>Decide where to run your ad</h4>
+                    <p>Next, We select where your advertisement want to run. Based on your goals we select right audience.</p>
+                </div>
+
+                <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="300">
+                    <span>08</span>
+                    <h4>Measure and manage your ad</h4>
+                    <p>When your ad is running, you can track performance and edit your campaign by contacting us. See if one version of your ad is working better than another, or if your ad is being delivered efficiently, and make tweaks and adjustments as needed.</p>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section><!-- End Steps Section -->
+ 
+    <!-- ======= Pricing Section ======= -->
+    <section id="pricing" class="pricing section-bg">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Pricing</h2>
+                <p>MediaLKAds is a full and self-service advertising network providing comprehensive and industry leading ad-serving and optimization technologies for online marketers.</p>
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="box">
+                        <h3>Basic</h3>
+                        <h4><sup>$</sup>5</h4>
+                        <ul>
+                            <li>Estimated reach 5000</li>
+                            <li>Your ad will run till esitmated reach</li>
+                        </ul>
+                        <div class="btn-wrap">
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf_PUTmuoGUGbjd2dZzYO9EbK-nvMC3yBqzYqGADkusUPXmMw/viewform" target="_blank" class="btn-buy">Contact us</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="box featured">
+                        <h3>Advanced</h3>
+                        <h4><sup>$</sup>10<span> / month</span></h4>
+                        <ul>
+                            <li>Estimated reach 10000</li>
+                            <li>Your ad will run till esitmated reach</li>
+                        </ul>
+                        <div class="btn-wrap">
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf_PUTmuoGUGbjd2dZzYO9EbK-nvMC3yBqzYqGADkusUPXmMw/viewform" target="_blank" class="btn-buy">Contact us</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="box">
+                        <h3>Custom</h3>
+                        
+                        <ul>
+                            <li>For those who are interested in more than 10000 reach</li>
+                            <li>Best package for more brand engagement</li>
+                            <li>Best package for more brand awareness</li>
+                        </ul>
+                        <div class="btn-wrap">
+                            <a href="https://docs.google.com/forms/d/19RF0kCLmG3rYosRyC56GaAi6rCqQWS7gRhcYlv0YkBw/edit" target="_blank" class="btn-buy">Contact us</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Pricing Section -->
+   
+   
+    <section id="contact" class="contact section-bg">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Contact</h2>
+                <p>Please fill out this simple form and we will respond to you shortly.</p>
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-6">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="info-box">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <h3>Our Address</h3>
+                                <p>23A, Gampaha Road, Yakkala, Sri Lanka</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-box mt-4">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                <h3>Email Us</h3>
+                                <p>info@medialk.com<br>medialknews@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-box mt-4">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <h3>Call Us</h3>
+                                <p>+94 70 1000 809<br>+94 70 1000 803</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6 mt-4 mt-md-0">
+                    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+                    <div class="elfsight-app-db5c4742-2cc6-459a-b62a-af86a2413fd9"></div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>

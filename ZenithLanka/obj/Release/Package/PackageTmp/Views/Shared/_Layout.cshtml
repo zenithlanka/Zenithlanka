@@ -1,0 +1,354 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="author" content="Medialk">
+    <meta name="description" content="@ViewBag.Description">
+    <meta name="keywords" content="@ViewBag.Keywords">
+    <meta name="theme-color" content="#2026a0">
+    <meta property="fb:app_id" content="363540574262798" />
+    <meta property="og:url" content="@ViewBag.Url" />
+    <meta property="og:site_name" content="Medialk" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="@ViewData["Title"]" />
+    <meta property="og:description" content="@ViewBag.Description" />
+    <meta property="og:image" content="@ViewBag.Image" />
+    <meta property="og:image:width" content="700" />
+    <meta property="og:image:height" content="400" />
+    <meta name="msapplication-TileColor" content="#4267b2">
+    <meta name="msapplication-TileImage" content="~/Images/ms-icon-144x144.png">
+    <meta name="theme-color" content="#4267b2">
+    <link rel="manifest" href="~/manifest.json">
+    <link rel="apple-touch-icon" sizes="57x57" href="~/Images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="~/Images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="~/Images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="~/Images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="~/Images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="~/Images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="~/Images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="~/Images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="~/Images/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="~/Images/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/Images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="~/Images/favicon-96x96.png">
+
+    <link href="https://fonts.googleapis.com/css?family=Livvic&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+    <style>
+       .tamil{
+            display:none;
+        }
+       .sinhala{
+            display:none;
+        }
+    </style>
+
+    @*@Styles.Render("~/Content/boostrapcss")*@
+    @Styles.Render("~/Content/css")
+    @RenderSection("styles", false)
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        function ReLoadImages(){
+            $('img[data-lazysrc]').each( function(){
+                //* set the img src from data-src
+                $( this ).attr( 'src', $( this ).attr( 'data-lazysrc' ) );
+                }
+            );
+        }
+
+        document.addEventListener('readystatechange', event => {
+            if (event.target.readyState === "interactive") {  //or at "complete" if you want it to execute in the most last state of window.
+                ReLoadImages();
+            }
+        });
+    </script>
+    <script>
+
+        var today = new Date();
+        var expiry = new Date(today.getTime() + 1000 * 24 * 3600 * 1000); // plus 30 days
+
+        function setCookie(name, value) {
+            document.cookie = name + "=" + escape(value) + "; path=/; expires=" + expiry.toGMTString();
+        }
+        function readCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        function changesinhala() {
+            setCookie("language", "sinhala");
+        }
+        function changeenglish() {
+            setCookie("language", "english");
+        }
+        function changetamil() {
+            setCookie("language", "tamil");
+        }
+        var value = readCookie('language');
+
+        if (value == "sinhala") {
+            location.href = "@Url.Action("", "Sinhala")";
+        }
+        if (value == "tamil") {
+
+            location.href = "@Url.Action("", "Tamil")";
+        }
+        if (value == "english") {
+        }
+        if (value == null) {
+
+            $('#lan').modal('show');
+        }
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137773058-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-137773058-1');
+    </script>
+    <script data-ad-client="ca-pub-8947286232708936" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+<body>
+    @if (ViewBag.marque != null)
+    {
+        <div class="container-fluid bg-dark py-1">
+            <marquee direction="left" scrollamount="7">
+                @foreach (var marquebar in ViewBag.marque)
+                {
+                    <span class="pointer text-white"><a href="@Url.Action("ReadPost","Home")/@marquebar.PostViewModelId" class="text-white link">@marquebar.Title</a> |</span>
+                }
+            </marquee>
+        </div>
+    }
+    <div class="container-flued navigationcolor">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4 text-center">
+                <a class="navbar-brand" href="@Url.Action("","Home")">
+                    <img src="~/Images/logo.png" class="d-inline-block align-top logo" alt="ZenithLanka logo">
+                </a>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+    <div class="navbar bg-light navbar-light sticky-top navbar-expand-lg shadow p-1">
+        <div class="container containernew">
+            <button class="navbar-toggler" data-toggle="modal" data-target="#myModal" type="button" onclick="category()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+                <ul class="navbar-nav">
+                    @Html.Partial("_LoginPartial")
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    @*<div class="container-fluid navigationcolor">
+            <div class="row">
+                @if (ViewBag.Categories != null)
+                {
+                    foreach (var categories1 in ViewBag.Categories)
+                    {
+                        <div class="col-md-2">
+                            <a href="@Url.Action("ReadPost", "Home")/@categories1.CategoryId">
+                                @categories1.Name
+                            </a>
+                        </div>
+                    }
+                }
+            </div>
+        </div>*@
+
+    <div id="main" onclick="hidenav()" style="background-color:#fff">
+        @RenderBody()
+    </div>
+    <div class="modal" id="lan">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <h4 class="py-3 text-center">Choose your preferred language</h4>
+                    @Html.ActionLink("සිංහල", "", "Sinhala", new { }, new { @class = "btn btn-light btn-block py-3", onclick = "changesinhala()" })
+                    @Html.ActionLink("English", "", "Home", new { }, new { @class = "btn btn-light btn-block py-3", onclick = "changeenglish()" })
+                    @Html.ActionLink("தமிழ்", "", "Tamil", new { }, new { @class = "btn btn-light btn-block py-3", onclick = "changetamil()" })
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    @Html.Partial("_FooterPartialEnglish")
+    <div class="modal" id="myModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                @*<div class="py-2 h4">Search</div>
+                    <hr />
+                    <div class="text-center mb-3 h4">
+                        <form method="get" action="@Url.Action("Search","Home")">
+                            <div class="row no-gutters">
+                                <div class="col-md-8 pr-2">
+                                    @if (@HttpContext.Current.Request.QueryString.Get("CategoryId") != null)
+                                    {
+                                        <input type="hidden" name="CategoryId" value="@HttpContext.Current.Request.QueryString.Get("CategoryId")" />
+                                    }
+                                    @if (@HttpContext.Current.Request.QueryString.Get("CategoryId") == null)
+                                    {
+                                        <input type="hidden" name="CategoryId" value="0" />
+                                    }
+
+                                    <input id="title" type="text" name="Title" class="form-control mb-2" placeholder="Search" />
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="submit" class="btn btn-primary btn-user btn-block" value="Search" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>*@
+                @Html.Partial("_NavigationMobilePartial")
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script>
+
+        var today = new Date();
+        var expiry = new Date(today.getTime() + 1000 * 24 * 3600 * 1000); // plus 30 days
+
+        function setCookie(name, value) {
+            document.cookie = name + "=" + escape(value) + "; path=/; expires=" + expiry.toGMTString();
+        }
+        function readCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        function changesinhala() {
+            setCookie("language", "sinhala");
+        }
+        function changeenglish() {
+            setCookie("language", "english");
+        }
+        function changetamil() {
+            setCookie("language", "tamil");
+        }
+        var value = readCookie('language');
+
+        if (value == "sinhala") {
+            location.href = "@Url.Action("", "Sinhala")";
+        }
+        if (value == "tamil") {
+
+            location.href = "@Url.Action("", "Tamil")";
+        }
+        if (value == "english") {
+        }
+        if (value == null) {
+
+            $('#lan').modal('show');
+        }
+    </script>
+    <script>
+
+        function category() {
+            $.ajax({
+                url: '@Url.Action("GetCategories", "Home")',
+                type: 'GET',
+                cache: false,
+            }).done(function (result) {
+                $("#progresscat").hide();
+                $('#ajaxresultcatm').html(result);
+            });
+        }
+    </script>
+
+
+    <script>
+        $('[id*="tab-"]').click(function (e) {
+            e.preventDefault()
+            $('body').css('background', 'red');
+        });
+    </script>
+    <script>
+        var images = document.getElementsByTagName("img");
+        var i;
+
+        for (i = 0; i < images.length; i++) {
+            images[i].className += " img-fluid";
+
+        }
+
+    </script>
+
+    <script>
+        function hidenav() {
+            $(".navbar-collapse.show").collapse("hide");
+        }
+
+    </script>
+    <script>
+        let previousScrollY = 0;
+
+        $(document).on('show.bs.modal', () => {
+            previousScrollY = window.scrollY;
+            $('html').addClass('modal-open').css({
+                marginTop: -previousScrollY,
+                overflow: 'hidden',
+                left: 0,
+                right: 0,
+                top: 0,
+                bottom: 0,
+                position: 'fixed',
+            });
+        }).on('hidden.bs.modal', () => {
+            $('html').removeClass('modal-open').css({
+                marginTop: 0,
+                overflow: 'visible',
+                left: 'auto',
+                right: 'auto',
+                top: 'auto',
+                bottom: 'auto',
+                position: 'static',
+            });
+            window.scrollTo(0, previousScrollY);
+        });
+    </script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

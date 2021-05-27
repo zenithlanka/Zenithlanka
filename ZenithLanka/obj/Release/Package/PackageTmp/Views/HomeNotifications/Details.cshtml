@@ -1,0 +1,51 @@
+﻿@model ZenithLanka.Models.HomeNotification
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>HomeNotification</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalCases)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalCases)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActiveCases)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActiveCases)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Deaths)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Deaths)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Recovered)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Recovered)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.HomeNotificationId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

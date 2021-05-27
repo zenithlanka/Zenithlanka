@@ -1,0 +1,1280 @@
+﻿@model IEnumerable<ZenithLanka.ViewModels.PostViewModel>
+@{
+    Layout = "~/Views/Shared/_LayoutSinhala.cshtml";
+    ViewBag.Url = Request.Url.GetLeftPart(UriPartial.Path);
+}
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+@section Styles{
+    <style>
+        body {
+            background-color: #fff !important;
+        }
+
+        .img-hover-zoom {
+            overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+        }
+
+            /* [2] Transition property for smooth transformation of images */
+            .img-hover-zoom img {
+                transition: transform .5s ease;
+            }
+
+            /* [3] Finally, transforming the image when container gets hovered */
+            .img-hover-zoom:hover img {
+                transform: scale(1.2);
+            }
+
+        h4 {
+            font-family: Noto Sans Sinhala,Verdana,Arial !important;
+            word-wrap: break-word !important;
+        }
+
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.67);
+            border-radius: 25px;
+        }
+
+        .cta-corona {
+            background: url(https://i.ibb.co/hZCthc9/corona.jpg) center center;
+            width: 100%;
+            position: relative;
+            padding: 4%;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.6);
+        }
+
+        a {
+            font-family: 'Livvic', sans-serif;
+            word-wrap: break-word !important;
+            color: #000;
+        }
+
+            a:hover {
+                color: #2026a0 !important;
+            }
+
+        img:hover {
+            filter: saturate(0.5);
+            transition: 0.5s;
+        }
+
+        .link:hover {
+            color: #ffc107 !important;
+        }
+
+        .jumbotron {
+            margin-bottom: 0px !important;
+            border-radius: 0px !important;
+        }
+        .newpadding{
+            padding: 2rem 3.5rem;
+        }
+
+        .ipcs {
+            background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ),url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/skyscrapers.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .cardbg {
+            background-color: #f1f1f1 !important;
+        }
+
+        @@media screen and (max-width: 770px) and (min-width: 760px) {
+            .h4, h4 {
+                font-size: 12px !important;
+                line-height: 1.5 !important;
+                font-family: Noto Sans Sinhala,Verdana,Arial !important;
+            }
+        }
+
+        @@media (max-width: 992px) {
+            .codiv {
+                font-size: 1.3rem !important;
+            }
+        }
+
+        @@media (min-width: 1200px) {
+            .h4, h4 {
+                font-size: 18px;
+                line-height: 1.3;
+                font-family: Noto Sans Sinhala,Verdana,Arial !important;
+            }
+
+            .coverpadding {
+                padding: 9rem 2rem;
+            }
+        }
+
+        @@media (min-width: 1300px) {
+            .containernew {
+                max-width: 1270px !important;
+            }
+
+            .h4, h4 {
+                font-family: Noto Sans Sinhala,Verdana,Arial !important;
+            }
+
+            .coverpadding {
+                padding: 9rem 2rem;
+            }
+        }
+
+
+        @@media (min-width: 1900px) {
+            .containernew {
+                max-width: 1700px !important;
+            }
+
+            .h4, h4 {
+                font-family: Noto Sans Sinhala,Verdana,Arial !important;
+            }
+
+            .coverpadding {
+                padding: 9rem 2rem;
+            }
+        }
+    </style>
+}
+
+<div class="container-fluid marquebar py-1">
+    <marquee direction="left" scrollamount="7">
+        <span class="text-white">
+            <strong class="h4">COVID-19 Situation Report in Sri Lanka - </strong>
+        </span>
+        <span class="text-warning">
+            <strong class="h4">@ViewBag.HomeNotification.TotalCases</strong>  Suspected Patients |
+        </span>
+        <span class="text-warning">
+            <strong class="h4">@ViewBag.HomeNotification.ActiveCases</strong>  Confirmed Cases |
+        </span>
+        <span class="text-warning">
+            <strong class="h4">@ViewBag.HomeNotification.Deaths</strong>  Confirmed Deaths |
+        </span>
+        <span class="text-warning">
+            <strong class="h4">@ViewBag.HomeNotification.Recovered</strong>  Cured Patients |
+        </span>
+        @foreach (var item0 in Model)
+            {
+            <span class="pointer text-white"><a href="@Url.Action("ReadPost", "Sinhala")/@item0.PostViewModelId" class="text-white link">@item0.Title</a> |</span>
+        }
+    </marquee>
+</div>
+<div class="container-fluid marquebar">
+    <div class="row desktophide no-gutters pb-2 pl-2 pr-2">
+        <div class="col-md-6 col-6">
+            <a href="@Url.Action("","Tamil")" class="btn marquebar text-white btn-block border" onclick="changetamil()">தமிழ்</a>
+        </div>
+        <div class="col-md-6 col-6">
+            <a href="@Url.Action("","Home")" class="btn marquebar text-white btn-block border" onclick="changeenglish()">English</a>
+        </div>
+    </div>
+</div>
+<div class="container containernew">
+    <div class="row pt-4">
+        <div class="col-md-6">
+            <div class="jumbotron ipcs">
+                <h1 class="h4 text-white">LOREM IPSUM</h1>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-6 mb-2">
+                    <div class="jumbotron ipcs">
+                        <h2 class="h4 text-white">LOREM IPSUM</h2>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-2">
+                    <div class="jumbotron ipcs">
+                        <h3 class="h4 text-white">LOREM IPSUM</h3>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container containernew">
+
+    <div class="row pt-4">
+        @{
+            int count = 1;
+            foreach (var item1 in Model)
+            {
+                if (count < 4)
+                {
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            @if (item1.PreviewPhotoUrl != null)
+                            {
+
+                                <a href="@Url.Action("ReadPost","Sinhala")/@item1.PostViewModelId">
+                                    <div class="img-hover-zoom">
+                                        <img class="card-img-top zoom pointer" data-lazysrc="@item1.PreviewPhotoUrl" alt="@item1.Title">
+                                    </div>
+                                </a>
+                            }
+                            @if (item1.PreviewPhotoUrl == null && item1.ImageSinhalaUrl != null)
+                            {
+
+                                <a href="@Url.Action("ReadPost","Sinhala")/@item1.PostViewModelId">
+                                    <div class="img-hover-zoom">
+                                        <img class="card-img-top zoom pointer" data-lazysrc="@item1.ImageSinhalaUrl" alt="@item1.Title">
+                                    </div>
+                                </a>
+                            }
+                            <div class="card-body cardbg">
+                                <a href="@Url.Action("ReadPost","Sinhala")/@item1.PostViewModelId">
+                                    <h4 class="h4 card-title pointer">@item1.Title</h4>
+                                </a>
+                                <a href="@Url.Action("ReadPost","Sinhala")/@item1.PostViewModelId">
+                                    <small>Read More</small>
+                                </a>
+
+                                @if (@item1.PostDateNew != null)
+                                {
+                                    <small>@item1.PostDateNew</small>
+                                }
+                                @if (@item1.Time != null)
+                                {
+                                    <small>@item1.PostDate | @item1.Time</small>
+                                }
+                            </div>
+
+                        </div>
+                    </div>
+                }
+                count++;
+            }
+        }
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            @{
+                int countbreaking1 = 1;
+                foreach (var item3 in Model)
+                {
+
+                    if (countbreaking1 > 4 && countbreaking1 < 9)
+                    {
+                        <div data-aos="fade-up">
+                            <div class="row cardbg no-gutters mb-4 homecard">
+                                <div class="col-md-6 col-7 p-3">
+                                    <a href="@Url.Action("ReadPost","Sinhala")/@item3.PostViewModelId">
+                                        <h4 class="h4 card-title pointer">@item3.Title</h4>
+                                    </a>
+                                    @if (@item3.PostDateNew != null)
+                                    {
+                                        <div class="small">@item3.PostDateNew</div>
+                                    }
+                                    @if (@item3.Time != null)
+                                    {
+                                        <div class="small">@item3.PostDate | @item3.Time</div>
+                                    }
+                                </div>
+                                <div class="col-md-6 col-5">
+                                    @if (item3.PreviewPhotoUrl != null)
+                                    {
+                                        <a href="@Url.Action("ReadPost","Sinhala")/@item3.PostViewModelId">
+                                            <div class="img-hover-zoom">
+                                                <img data-lazysrc="@item3.PreviewPhotoUrl" alt="@item3.Title" class="img-fluid" />
+                                            </div>
+                                        </a>
+                                    }
+                                    @if (item3.PreviewPhotoUrl == null && item3.ImageSinhalaUrl != null)
+                                    {
+                                        <a href="@Url.Action("ReadPost","Sinhala")/@item3.PostViewModelId">
+                                            <div class="img-hover-zoom">
+                                                <img data-lazysrc="@item3.ImageSinhalaUrl" alt="@item3.Title" class="img-fluid" />
+                                            </div>
+                                        </a>
+                                    }
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    }
+                    countbreaking1++;
+                }
+
+            }
+        </div>
+
+        <div class="col-md-6">
+            @if (@HttpContext.Current.Request.QueryString.Get("Title") == null)
+            {
+                <div data-aos="fade-up">
+                    <div id="demo" class="carousel slide pointer mb-4" data-ride="carousel">
+                        <div class="carousel-inner">
+                            @{
+                                int i = 0;
+                                foreach (var items in ViewBag.slider)
+                                {
+                                    if (i == 0)
+                                    {
+                                        <div class="carousel-item active">
+                                            <a href="@Url.Action("ReadPost","Sinhala")/@items.PostViewModelId">
+                                                @if (items.PreviewPhotoUrl != null)
+                                                {
+                                                    <img src="@items.PreviewPhotoUrl" alt="@items.Title" width="1100" height="500">
+                                                }
+                                                @if (items.PreviewPhotoUrl == null && items.ImageSinhalaUrl != null)
+                                                {
+                                                    <img src="@items.ImageSinhalaUrl" alt="@items.Title" width="1100" height="500">
+                                                }
+                                                <div class="carousel-caption">
+                                                    <h3 class="mobiltfont h5">@items.Title</h3>
+                                                    <p>Read More</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    }
+                                    if (i != 0)
+                                    {
+                                        <div class="carousel-item">
+                                            <a href="@Url.Action("ReadPost","Sinhala")/@items.PostViewModelId">
+                                                @if (items.PreviewPhotoUrl != null)
+                                                {
+                                                    <img src="@items.PreviewPhotoUrl" alt="@items.Title" width="1100" height="500">
+                                                }
+                                                @if (items.PreviewPhotoUrl == null && items.ImageSinhalaUrl != null)
+                                                {
+                                                    <img src="@items.ImageSinhalaUrl" alt="@items.Title" width="1100" height="500">
+                                                }
+                                                <div class="carousel-caption">
+                                                    <h3 class="mobiltfont h5">@items.Title</h3>
+                                                    <p>Read More</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    }
+
+                                    i++;
+                                }
+                            }
+                        </div>
+                        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#demo" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                    </div>
+                </div>
+
+                                }
+
+            @{
+                int countbreaking3 = 1;
+                foreach (var item5 in Model)
+                {
+                    if (countbreaking3 > 8 && countbreaking3 < 11)
+                    {
+                        <div data-aos="fade-up">
+                            <div class="row cardbg no-gutters mb-4 homecard">
+                                <div class="col-md-6 col-5">
+                                    @if (item5.PreviewPhotoUrl != null)
+                                    {
+                                        <a href="@Url.Action("ReadPost","Sinhala")/@item5.PostViewModelId">
+                                            <div class="img-hover-zoom">
+                                                <img data-lazysrc="@item5.PreviewPhotoUrl" alt="@item5.Title" class="img-fluid" />
+                                            </div>
+                                        </a>
+                                    }
+                                    @if (item5.PreviewPhotoUrl == null && item5.ImageSinhalaUrl != null)
+                                    {
+                                        <a href="@Url.Action("ReadPost","Sinhala")/@item5.PostViewModelId">
+                                            <div class="img-hover-zoom">
+                                                <img data-lazysrc="@item5.PreviewPhotoUrl" alt="@item5.Title" class="img-fluid" />
+                                            </div>
+                                        </a>
+                                    }
+
+                                </div>
+                                <div class="col-md-6 col-7 p-3">
+                                    <a href="@Url.Action("ReadPost","Sinhala")/@item5.PostViewModelId">
+                                        <h4 class="h4 card-title pointer">@item5.Title</h4>
+                                    </a>
+                                    @if (@item5.PostDateNew != null)
+                                    {
+                                        <div class="small">@item5.PostDateNew</div>
+                                    }
+                                    @if (@item5.Time != null)
+                                    {
+                                        <div class="small">@item5.PostDate | @item5.Time</div>
+                                    }
+                                </div>
+
+                            </div>
+                        </div>
+
+                    }
+                    countbreaking3++;
+                }
+
+            }
+
+
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div data-aos="flip-left">
+                <div class="pb-4 pt-2 text-center">
+                    <a href="@Url.Action("ReadMore","Sinhala")" class="h5 text-alert">-- Read More --</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+
+</div>
+
+<div class="container containernew">
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="alert alert-primary mb-2 text-center h4">
+                <strong> Fake News Altert</strong>
+            </div>
+            <div class="row mt-4">
+                @foreach (var item8 in ViewBag.FakeNewsAltert)
+                            {
+                            <div class="col-md-4 mb-4">
+                                <div class="card h-100">
+                                    @if (item8.PreviewPhotoUrl != null)
+                                        {
+                                    <a href="@Url.Action("ReadPost","Sinhala")/@item8.PostViewModelId">
+                                        <div class="img-hover-zoom">
+                                            <img data-lazysrc="@item8.PreviewPhotoUrl" alt="@item8.Title" class="img-fluid" />
+                                        </div>
+                                    </a>
+                                        }
+                                    @if (item8.PreviewPhotoUrl == null && item8.ImageSinhalaUrl != null)
+                                        {
+                                    <a href="@Url.Action("ReadPost","Sinhala")/@item8.PostViewModelId">
+                                        <div class="img-hover-zoom">
+                                            <img data-lazysrc="@item8.PreviewPhotoUrl" alt="@item8.Title" class="img-fluid" />
+                                        </div>
+                                    </a>
+                                        }
+
+                                    <div class="card-body cardbg">
+                                        <div data-aos="fade-right">
+                                            <a href="@Url.Action("ReadPost","Sinhala")/@item8.PostViewModelId">
+                                                <h4 class="h4 card-title pointer">@item8.Title</h4>
+                                            </a>
+                                            <a href="@Url.Action("ReadPost","Sinhala")/@item8.PostViewModelId">
+                                                <small class="pointer">Read More</small>
+                                            </a>
+
+                                            @if (@item8.PostDateNew != null)
+                                                {
+                                            <small>@item8.PostDateNew</small>
+                                                }
+                                            @if (@item8.Time != null)
+                                                {
+                                            <small>@item8.PostDate | @item8.Time</small>
+                                                }
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            }
+            </div>
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <div class="pb-4 pt-2 text-center">
+                        <a href="@Url.Action("Search", "Sinhala")?CategoryId=57&CatTitle=Fake%20News%20Alert&Title=empty" class="h5 text-alert">-- Read More --</a>
+                    </div>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<div class="jumbotron ipcs mt-3 newpadding">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="alert alert-primary mb-2 text-center h4">
+                <strong>Fact Checking</strong>
+            </div>
+            <div class="row mt-4">
+                @foreach (var item6 in ViewBag.FactChecking)
+                {
+                    <div class="col-md-3 mb-4">
+                        <div class="card h-100">
+
+                            @if (item6.PreviewPhotoUrl != null)
+                            {
+                                <a href="@Url.Action("ReadPost","Sinhala")/@item6.PostViewModelId">
+                                    <div class="img-hover-zoom">
+                                        <img data-lazysrc="@item6.PreviewPhotoUrl" alt="@item6.Title" class="img-fluid" />
+                                    </div>
+                                </a>
+                            }
+                            @if (item6.PreviewPhotoUrl == null && item6.ImageSinhalaUrl != null)
+                            {
+                                <a href="@Url.Action("ReadPost","Sinhala")/@item6.PostViewModelId">
+                                    <div class="img-hover-zoom">
+                                        <img data-lazysrc="@item6.PreviewPhotoUrl" alt="@item6.Title" class="img-fluid" />
+                                    </div>
+                                </a>
+                            }
+
+                            <div class="card-body cardbg">
+                                <div data-aos="fade-right">
+                                    <a href="@Url.Action("ReadPost","Sinhala")/@item6.PostViewModelId">
+                                        <h4 class="h4 card-title pointer">@item6.Title</h4>
+                                    </a>
+                                    <a href="@Url.Action("ReadPost","Sinhala")/@item6.PostViewModelId">
+                                        <small class="pointer">Read More</small>
+                                    </a>
+
+                                    @if (@item6.PostDateNew != null)
+                                    {
+                                        <small>@item6.PostDateNew</small>
+                                    }
+                                    @if (@item6.Time != null)
+                                    {
+                                        <small>@item6.PostDate | @item6.Time</small>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="pb-4 pt-2 text-center">
+                <a href="@Url.Action("Search", "Sinhala")?CategoryId=58&CatTitle=Fact%20Checking&Title=empty" class="h5 text-white">-- Read More --</a>
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>
+
+<div class="container containernew mt-5">
+    <div class="alert alert-primary mb-2 text-center h4">
+        <strong> Foreign News</strong>
+    </div>
+    <div class="row mt-4">
+        @foreach (var item9 in ViewBag.ForeignNews)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card mb-4 h-100">
+
+                    @if (item9.PreviewPhotoUrl != null)
+                    {
+                        <a href="@Url.Action("ReadPost","Sinhala")/@item9.PostViewModelId">
+                            <div class="img-hover-zoom">
+                                <img data-lazysrc="@item9.PreviewPhotoUrl" alt="@item9.Title" class="img-fluid" />
+                            </div>
+                        </a>
+                    }
+                    @if (item9.PreviewPhotoUrl == null && item9.ImageSinhalaUrl != null)
+                    {
+                        <a href="@Url.Action("ReadPost","Sinhala")/@item9.PostViewModelId">
+                            <div class="img-hover-zoom">
+                                <img data-lazysrc="@item9.PreviewPhotoUrl" alt="@item9.Title" class="img-fluid" />
+                            </div>
+                        </a>
+                    }
+
+                    <div class="card-body cardbg">
+                        <div data-aos="fade-right">
+                            <a href="@Url.Action("ReadPost","Sinhala")/@item9.PostViewModelId">
+                                <h4 class="h4 card-title pointer">@item9.Title</h4>
+                            </a>
+                            <a href="@Url.Action("ReadPost","Sinhala")/@item9.PostViewModelId">
+                                <small class="pointer">Read More</small>
+                            </a>
+                            @*<p class="card-text">@item9.ShortDescription</p>*@
+
+                            @if (@item9.PostDateNew != null)
+                            {
+                                <small>@item9.PostDateNew</small>
+                            }
+                            @if (@item9.Time != null)
+                            {
+                                <small>@item9.PostDate | @item9.Time</small>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        }
+    </div>
+
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="pb-4 pt-2 text-center">
+                <a href="@Url.Action("Search", "Sinhala")?CategoryId=44&CatTitle=Foreign%20News&Title=empty" class="h5 text-alert">-- Read More --</a>
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>
+
+<div class="container containernew">
+    <div class="alert marquebar mb-4 text-center h4">
+        <strong>Sample Heading</strong>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-4">
+            @{
+                int countbreaking5 = 1;
+                foreach (var item5 in Model)
+                {
+                    if (countbreaking5 > 8 && countbreaking5 < 11)
+                    {
+                        <div data-aos="fade-up">
+                            <div class="row cardbg no-gutters mb-4 homecard">
+                                <div class="col-md-6 col-5">
+                                    @if (item5.PreviewPhotoUrl != null)
+                                    {
+                                        <a href="@Url.Action("ReadPost","Sinhala")/@item5.PostViewModelId">
+                                            <div class="img-hover-zoom">
+                                                <img data-lazysrc="@item5.PreviewPhotoUrl" alt="@item5.Title" class="img-fluid" />
+                                            </div>
+                                        </a>
+                                    }
+                                    @if (item5.PreviewPhotoUrl == null && item5.ImageSinhalaUrl != null)
+                                    {
+                                        <a href="@Url.Action("ReadPost","Sinhala")/@item5.PostViewModelId">
+                                            <div class="img-hover-zoom">
+                                                <img data-lazysrc="@item5.PreviewPhotoUrl" alt="@item5.Title" class="img-fluid" />
+                                            </div>
+                                        </a>
+                                    }
+
+                                </div>
+                                <div class="col-md-6 col-7 p-3">
+                                    <a href="@Url.Action("ReadPost","Sinhala")/@item5.PostViewModelId">
+                                        <h4 class="h4 card-title pointer">@item5.Title</h4>
+                                    </a>
+                                    @if (@item5.PostDateNew != null)
+                                    {
+                                        <div class="small">@item5.PostDateNew</div>
+                                    }
+                                    @if (@item5.Time != null)
+                                    {
+                                        <div class="small">@item5.PostDate | @item5.Time</div>
+                                    }
+                                </div>
+
+                            </div>
+                        </div>
+
+                    }
+                    countbreaking5++;
+                }
+
+            }
+        </div>
+        <div class="col-md-4">
+            @{
+                int countbreaking6 = 1;
+                foreach (var item5 in Model)
+                {
+                    if (countbreaking6 > 8 && countbreaking6 < 11)
+                    {
+                        <div data-aos="fade-up">
+                            <div class="row cardbg no-gutters mb-4 homecard">
+                                <div class="col-md-6 col-5">
+                                    @if (item5.PreviewPhotoUrl != null)
+                                    {
+                                        <a href="@Url.Action("ReadPost","Sinhala")/@item5.PostViewModelId">
+                                            <div class="img-hover-zoom">
+                                                <img data-lazysrc="@item5.PreviewPhotoUrl" alt="@item5.Title" class="img-fluid" />
+                                            </div>
+                                        </a>
+                                    }
+                                    @if (item5.PreviewPhotoUrl == null && item5.ImageSinhalaUrl != null)
+                                    {
+                                        <a href="@Url.Action("ReadPost","Sinhala")/@item5.PostViewModelId">
+                                            <div class="img-hover-zoom">
+                                                <img data-lazysrc="@item5.PreviewPhotoUrl" alt="@item5.Title" class="img-fluid" />
+                                            </div>
+                                        </a>
+                                    }
+
+                                </div>
+                                <div class="col-md-6 col-7 p-3">
+                                    <a href="@Url.Action("ReadPost","Sinhala")/@item5.PostViewModelId">
+                                        <h4 class="h4 card-title pointer">@item5.Title</h4>
+                                    </a>
+                                    @if (@item5.PostDateNew != null)
+                                    {
+                                        <div class="small">@item5.PostDateNew</div>
+                                    }
+                                    @if (@item5.Time != null)
+                                    {
+                                        <div class="small">@item5.PostDate | @item5.Time</div>
+                                    }
+                                </div>
+
+                            </div>
+                        </div>
+
+                    }
+                    countbreaking6++;
+                }
+
+            }
+        </div>
+        <div class="col-md-4">
+            @{
+                int countbreaking7 = 1;
+                foreach (var item5 in Model)
+                {
+                    if (countbreaking7 > 8 && countbreaking7 < 11)
+                    {
+                        <div data-aos="fade-up">
+                            <div class="row cardbg no-gutters mb-4 homecard">
+                                <div class="col-md-6 col-5">
+                                    @if (item5.PreviewPhotoUrl != null)
+                                    {
+                                        <a href="@Url.Action("ReadPost","Sinhala")/@item5.PostViewModelId">
+                                            <div class="img-hover-zoom">
+                                                <img data-lazysrc="@item5.PreviewPhotoUrl" alt="@item5.Title" class="img-fluid" />
+                                            </div>
+                                        </a>
+                                    }
+                                    @if (item5.PreviewPhotoUrl == null && item5.ImageSinhalaUrl != null)
+                                    {
+                                        <a href="@Url.Action("ReadPost","Sinhala")/@item5.PostViewModelId">
+                                            <div class="img-hover-zoom">
+                                                <img data-lazysrc="@item5.PreviewPhotoUrl" alt="@item5.Title" class="img-fluid" />
+                                            </div>
+                                        </a>
+                                    }
+
+                                </div>
+                                <div class="col-md-6 col-7 p-3">
+                                    <a href="@Url.Action("ReadPost","Sinhala")/@item5.PostViewModelId">
+                                        <h4 class="h4 card-title pointer">@item5.Title</h4>
+                                    </a>
+                                    @if (@item5.PostDateNew != null)
+                                    {
+                                        <div class="small">@item5.PostDateNew</div>
+                                    }
+                                    @if (@item5.Time != null)
+                                    {
+                                        <div class="small">@item5.PostDate | @item5.Time</div>
+                                    }
+                                </div>
+
+                            </div>
+                        </div>
+
+                    }
+                    countbreaking7++;
+                }
+
+            }
+        </div>
+    </div>
+
+    <div class="pb-4 pt-2 text-center">
+        <a href="@Url.Action("Search", "Sinhala")?CategoryId=50&CatTitle=Features&Title=empty" class="h5 text-alert">-- Read More --</a>
+    </div>
+</div>
+
+
+<div class="container containernew">
+    <div class="alert marquebar mb-4 text-center h4">
+        <strong>Features</strong>
+    </div>
+    <div class="row mt-4">
+        @foreach (var item10 in ViewBag.Features)
+            {
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    @if (item10.PreviewPhotoUrl != null)
+                    {
+                        <a href="@Url.Action("ReadPost","Sinhala")/@item10.PostViewModelId">
+                            <div class="img-hover-zoom">
+                                <img data-lazysrc="@item10.PreviewPhotoUrl" alt="@item10.Title" class="img-fluid" />
+                            </div>
+                        </a>
+                    }
+                    @if (item10.PreviewPhotoUrl == null && item10.ImageSinhalaUrl != null)
+                    {
+                        <a href="@Url.Action("ReadPost","Sinhala")/@item10.PostViewModelId">
+                            <div class="img-hover-zoom">
+                                <img data-lazysrc="@item10.PreviewPhotoUrl" alt="@item10.Title" class="img-fluid" />
+                            </div>
+                        </a>
+                    }
+
+
+                    <div class="card-body cardbg">
+                        <a href="@Url.Action("ReadPost","Sinhala")/@item10.PostViewModelId">
+                            <h4 class="h4 card-title pointer">@item10.Title</h4>
+                        </a>
+                        <a href="@Url.Action("ReadPost","Sinhala")/@item10.PostViewModelId">
+                            <small class="pointer">Read More</small>
+                        </a>
+                        @if (@item10.PostDateNew != null)
+                        {
+                            <small>@item10.PostDateNew</small>
+                        }
+                        @if (@item10.Time != null)
+                        {
+                            <small>@item10.PostDate | @item10.Time</small>
+                        }
+                    </div>
+                </div>
+
+            </div>
+
+        }
+    </div>
+
+    <div class="pb-4 pt-2 text-center">
+        <a href="@Url.Action("Search", "Sinhala")?CategoryId=50&CatTitle=Features&Title=empty" class="h5 text-alert">-- Read More --</a>
+    </div>
+</div>
+
+<div class="container containernew">
+    <div class="alert marquebar mb-4 text-center h4">
+        <strong>Sample Heading</strong>
+    </div>
+    <div class="row">
+        <div class="col-md-12 mb-4">
+            <div class="jumbotron ipcs">
+                <h1 class="h4 text-white">LOREM IPSUM</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="jumbotron ipcs">
+                <h2 class="h4 text-white">LOREM IPSUM</h2>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="jumbotron ipcs">
+                <h3 class="h4 text-white">LOREM IPSUM</h3>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="jumbotron ipcs">
+                <h3 class="h4 text-white">LOREM IPSUM</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container containernew">
+    <div class="alert marquebar mb-4 text-center h4">
+        <strong>Features</strong>
+    </div>
+    <div class="row mt-4">
+        @foreach (var item10 in ViewBag.Features)
+            {
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    @if (item10.PreviewPhotoUrl != null)
+                    {
+                        <a href="@Url.Action("ReadPost","Sinhala")/@item10.PostViewModelId">
+                            <div class="img-hover-zoom">
+                                <img data-lazysrc="@item10.PreviewPhotoUrl" alt="@item10.Title" class="img-fluid" />
+                            </div>
+                        </a>
+                    }
+                    @if (item10.PreviewPhotoUrl == null && item10.ImageSinhalaUrl != null)
+                    {
+                        <a href="@Url.Action("ReadPost","Sinhala")/@item10.PostViewModelId">
+                            <div class="img-hover-zoom">
+                                <img data-lazysrc="@item10.PreviewPhotoUrl" alt="@item10.Title" class="img-fluid" />
+                            </div>
+                        </a>
+                    }
+
+
+                    <div class="card-body cardbg">
+                        <a href="@Url.Action("ReadPost","Sinhala")/@item10.PostViewModelId">
+                            <h4 class="h4 card-title pointer">@item10.Title</h4>
+                        </a>
+                        <a href="@Url.Action("ReadPost","Sinhala")/@item10.PostViewModelId">
+                            <small class="pointer">Read More</small>
+                        </a>
+                        @if (@item10.PostDateNew != null)
+                        {
+                            <small>@item10.PostDateNew</small>
+                        }
+                        @if (@item10.Time != null)
+                        {
+                            <small>@item10.PostDate | @item10.Time</small>
+                        }
+                    </div>
+                </div>
+
+            </div>
+
+        }
+    </div>
+
+    <div class="pb-4 pt-2 text-center">
+        <a href="@Url.Action("Search", "Sinhala")?CategoryId=50&CatTitle=Features&Title=empty" class="h5 text-alert">-- Read More --</a>
+    </div>
+</div>
+
+<div class="container-fluid marquebar py-1">
+    <div class="row no-gutters">
+        @foreach (var cat in ViewBag.Categories)
+        {
+            <div class="col-md-2 col-6 text-center">
+                <div data-aos="zoom-in">
+                    <a href="@Url.Action("Search","Sinhala")?CategoryId=@cat.CategoryId&CatTitle=@cat.Name&Title=empty" class="text-white link">@cat.Name</a>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<div class="modal" id="readpost">
+    <div class="modal-dialog modal-lg modal-lgnew modal-dialog-centered">
+        <div class="modal-content">
+
+            <div id="progresspost" style="display:none" class="glow pt-3 text-center">
+                <img data-lazysrc="https://cdn.dribbble.com/users/107759/screenshots/2436386/copper-loader.gif" class="img-fluid" alt="loader" />
+            </div>
+            <div id="ajaxresultreadpost"></div>
+
+
+
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="clearurl()">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="modal" id="loadmorepost">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+
+            <!-- Modal body -->
+            <div class="modal-body p-3 navigationcolor">
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6"><button id="loadmoremodel" onclick="load()" class="btn btn-danger btn-user btn-block glow">More Post (Click Here)</button></div>
+                    <div class="col-md-3"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+@*<div id="myModalCorona" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="alert alert-primary mb-2 text-center h4">
+                        <strong class="codiv">COVID-19 Situation Report in Sri Lanka</strong>
+                    </div>
+                    <div class="row pt-3">
+                        <div class="col-md-3 col-6 text-center mb-2 text-primary">
+                            <strong class="h4">@ViewBag.HomeNotification.TotalCases</strong><br /> Suspected Patients
+                        </div>
+                        <div class="col-md-3 col-6 text-center mb-2 text-secondary">
+                            <strong class="h4">@ViewBag.HomeNotification.ActiveCases</strong><br /> Confirmed Cases
+                        </div>
+                        <div class="col-md-3 col-6 text-center mb-2 text-danger">
+                            <strong class="h4">@ViewBag.HomeNotification.Deaths</strong><br /> Confirmed Deaths
+                        </div>
+                        <div class="col-md-3 col-6 text-center mb-2 text-success">
+                            <strong class="h4">@ViewBag.HomeNotification.Recovered</strong><br /> Cured Patients
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default border" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>*@
+@section scripts{
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        function market() {
+            location.href = "https://medialk.com/?CategoryId=51&CatTitle=Market%20Price&Title=empty";
+        }
+        function mguru() {
+            location.href = "https://www.youtube.com/channel/UC-JBetvuq3pnk8of8PWiNkw";
+        }
+        function mtravel() {
+            location.href = "https://www.youtube.com/channel/UC3Ox72FWYTIQwXI15Yxx0MQ";
+        }
+        function mexplorer() {
+            location.href = "https://www.youtube.com/channel/UCpIwINUxN3mZKb82o_LQyTA";
+        }
+        function mcraft() {
+            location.href = "https://www.youtube.com/channel/UCVKDHGka3p4tP5lTELUYBVw";
+        }
+        function mrti() {
+            location.href = "@Url.Action("Search", "Sinhala")?CategoryId=55&CatTitle=RTI&Title=empty";
+        }
+        function ia() {
+            location.href = "https://docs.google.com/forms/u/2/d/e/1FAIpQLSfGArShiBdtpEhjWilHKV4VmWEKyWfbY9HXEt6vKzokio-dVg/viewform";
+        }
+        function ado() {
+            location.href = "https://docs.google.com/forms/d/e/1FAIpQLSdsR91Mnsze3yact_N07ukjMO2NLhIwmxVTqyCoa9oG3aRL_Q/viewform";
+        }
+        function arc() {
+            location.href = "#";
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+    <script>
+        $('#readpost').on('hidden.bs.modal', function () {
+            if (history.pushState) {
+                window.history.pushState("Medialk", "Title", "/");
+            } else {
+                document.location.href = "/";
+            }
+        })
+    </script>
+    @*<script>
+            var container containernew = $('.sidebar-inner');
+            var element = $('.filter-panel');
+            var ScrollTop = 0;
+            var lastScrollVal = 0;
+            var headerHeight = $('.header').height();
+
+            $(window).scroll(function (event) {
+
+                var scrollVal = $(this).scrollTop();
+                if (scrollVal > lastScrollVal) {
+
+                    if (scrollVal == $(element).offset().top) {
+                        $(element).css({
+                            'top': $(element).offset().top - $(container containernew).offset().top,
+                            'left': 'auto',
+                            'bottom': 'auto',
+                            'width': '100%',
+                            'position': 'absolute'
+                        });
+                    }
+
+                    if (scrollVal > element.offset().top + element.height() - $(window).height()) {
+                        $(element).css({
+                            'top': 'auto',
+                            'left': $(element).offset().left,
+                            'bottom': 0,
+                            'width': $(container containernew).innerWidth(),
+                            'position': 'fixed'
+                        });
+                    }
+                } else {
+                    //if (scrollVal != $(element).offset().top) {
+                    //    $(element).css({
+                    //        'top': $(element).offset().top - $(container containernew).offset().top,
+                    //        'left': 'auto',
+                    //        'bottom': 'auto',
+                    //        'width': '100%',
+                    //        'position': 'absolute'
+                    //    });
+                    //}
+                    if (scrollVal < $(element).offset().top) {
+                        $(element).css({
+                            'top': headerHeight,
+                            'left': $(element).offset().left,
+                            'bottom': 'auto',
+                            'width': $(container containernew).innerWidth(),
+                            'position': 'fixed'
+                        });
+
+                    }
+                    if (scrollVal < $(container containernew).offset().top) {
+                        $(element).css({
+                            'top': '',
+                            'left': '',
+                            'bottom': '',
+                            'width': '',
+                            'position': ''
+                        });
+                    }
+                }
+                lastScrollVal = scrollVal;
+            });
+
+        </script>*@
+
+    <script>
+        function myFunction() {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+    @*<script>
+            window.onscroll = function(ev) {
+                if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
+                   load();
+                }
+            };
+        </script>*@
+
+
+
+    @*<script>
+            $.ajax({
+                url: '@Url.Action("GetCategories", "Home")',
+                type: 'GET',
+                cache: false,
+            }).done(function (result) {
+                $('#ajaxresult').html(result);
+            });
+        </script>*@
+
+
+
+    <script>
+        function loadpost(pid) {
+
+            $('#readpost').modal('show');
+            $("#progresspost").show();
+            $.ajax({
+                data: { "id": pid },
+                url: '@Url.Action("GetPost", "Home")',
+                type: 'GET',
+                cache: true,
+            }).done(function (result) {
+                $('#ajaxresultreadpost').html(result);
+                $("#progresspost").hide();
+            });
+        }
+
+    </script>
+    @*<script data-lazysrc="~/Scripts/slippry.min.js"></script>*@
+    <script>
+        jQuery('#news-demo').slippry({
+            // general elements & wrapper
+            slippryWrapper: '<div class="sy-box news-slider" />', // wrapper to wrap everything, including pager
+            elements: 'article', // elments cointaining slide content
+
+            // options
+            adaptiveHeight: false, // height of the sliders adapts to current
+            captions: false,
+
+            // pager
+            pager: false,
+            pagerClass: 'news-pager',
+
+            // transitions
+            transition: 'horizontal', // fade, horizontal, kenburns, false
+            speed: 2500,
+            pause: 1200,
+
+            // slideshow
+            autoDirection: 'prev'
+        });
+    </script>
+    <script async>
+        $.ajax({
+            url: '@Url.Action("GetHighAlert", "Home")',
+            type: 'GET',
+            cache: true,
+        }).done(function (result) {
+            $('#highalert').html(result);
+            $('#myModalalert').modal('show');
+            $("#progressalert").hide();
+        });
+        //function highalert() {
+
+
+        //}
+        function alertrefresh() {
+            $.ajax({
+                url: '@Url.Action("GetHighAlert", "Home")',
+                type: 'GET',
+                cache: true,
+            }).done(function (result) {
+                $("#progressalert").hide();
+                $('#highalert').html(result);
+            });
+        }
+
+    </script>
+    @*<script>
+            $('#myModalCorona').modal('show');
+        </script>*@
+    @*@if (@HttpContext.Current.Request.QueryString.Get("Title") == null)
+        {
+            <script type="text/javascript" async>
+                $.ajax({
+                    url: '@Url.Action("GetSlider", "Home")',
+                    type: 'GET',
+                    cache: true,
+                }).done(function (result) {
+                    $('#slider').html(result);
+                });
+            </script>
+        }*@
+
+    @*<script type="text/javascript" async>
+            $.ajax({
+                url: '@Url.Action("GetHomeAdvertistment", "Home")',
+                type: 'GET',
+                cache: true,
+            }).done(function (result) {
+                $('#HomeAdvertistment').html(result);
+            });
+        </script>*@
+
+}

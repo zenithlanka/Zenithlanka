@@ -1,0 +1,177 @@
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\obj\Debug\AirTechnics.csproj.CoreCompileInputs.cache
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\ApplicationInsights.config
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\roslyn\csc.exe
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\roslyn\System.Collections.Immutable.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\roslyn\System.Reflection.Metadata.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\roslyn\vbc.exe
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\roslyn\VBCSCompiler.exe
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\roslyn\VBCSCompiler.exe.config
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\ZenithLanka.dll.config
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\ZenithLanka.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\ZenithLanka.pdb
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Antlr3.Runtime.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\BouncyCastle.Crypto.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\CloudinaryDotNet.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\EntityFramework.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\EntityFramework.SqlServer.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Microsoft.AI.DependencyCollector.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Microsoft.AI.Web.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Microsoft.AI.WindowsServer.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Microsoft.ApplicationInsights.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Google.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Microsoft.Web.Infrastructure.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\MimeKit.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Newtonsoft.Json.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Owin.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\System.Web.Helpers.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\System.Web.Mvc.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\System.Web.Optimization.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\System.Web.Razor.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\System.Web.WebPages.Deployment.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\System.Web.WebPages.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\System.Web.WebPages.Razor.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\WebGrease.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Microsoft.AI.DependencyCollector.xml
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Microsoft.AI.Web.xml
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Microsoft.AI.WindowsServer.xml
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Microsoft.ApplicationInsights.xml
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.xml
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.xml
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Google.xml
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\MimeKit.xml
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\System.Web.Helpers.xml
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\System.Web.Mvc.xml
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\System.Web.Optimization.xml
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\System.Web.Razor.xml
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\System.Web.WebPages.xml
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\System.Web.WebPages.Deployment.xml
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\System.Web.WebPages.Razor.xml
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Antlr3.Runtime.pdb
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\EntityFramework.xml
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\EntityFramework.SqlServer.xml
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\obj\Debug\AirTechnics.csproj.CopyComplete
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\obj\Debug\ZenithLanka.dll
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\obj\Debug\ZenithLanka.pdb
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\obj\Debug\ZenithLanka.Migrations.initial.resources
+D:\Zenith Lanka Company\zenithlanka\projects\Ait Tech\server\ZenithLanka\ZenithLanka\obj\Debug\AirTechnics.csproj.GenerateResource.cache
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\ApplicationInsights.config
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\roslyn\csc.exe
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\roslyn\System.Collections.Immutable.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\roslyn\System.Reflection.Metadata.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\roslyn\vbc.exe
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\roslyn\VBCSCompiler.exe
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\roslyn\VBCSCompiler.exe.config
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\ZenithLanka.dll.config
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\ZenithLanka.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\ZenithLanka.pdb
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Antlr3.Runtime.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\BouncyCastle.Crypto.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\CloudinaryDotNet.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\EntityFramework.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\EntityFramework.SqlServer.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Microsoft.AI.DependencyCollector.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Microsoft.AI.Web.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Microsoft.AI.WindowsServer.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Microsoft.ApplicationInsights.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Google.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Microsoft.Web.Infrastructure.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\MimeKit.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Newtonsoft.Json.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Owin.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\System.Web.Helpers.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\System.Web.Mvc.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\System.Web.Optimization.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\System.Web.Razor.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\System.Web.WebPages.Deployment.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\System.Web.WebPages.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\System.Web.WebPages.Razor.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\WebGrease.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Microsoft.AI.DependencyCollector.xml
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Microsoft.AI.Web.xml
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Microsoft.AI.WindowsServer.xml
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Microsoft.ApplicationInsights.xml
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.xml
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.xml
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Google.xml
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\MimeKit.xml
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\System.Web.Helpers.xml
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\System.Web.Mvc.xml
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\System.Web.Optimization.xml
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\System.Web.Razor.xml
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\System.Web.WebPages.xml
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\System.Web.WebPages.Deployment.xml
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\System.Web.WebPages.Razor.xml
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Antlr3.Runtime.pdb
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\EntityFramework.xml
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\EntityFramework.SqlServer.xml
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\obj\Debug\AirTechnics.csprojAssemblyReference.cache
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\obj\Debug\ZenithLanka.Migrations.initial.resources
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\obj\Debug\AirTechnics.csproj.GenerateResource.cache
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\obj\Debug\AirTechnics.csproj.CoreCompileInputs.cache
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\obj\Debug\AirTechnics.csproj.CopyComplete
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\obj\Debug\ZenithLanka.dll
+D:\Zenith Lanka Company\zenithlanka\projects\zenith project\startup template\ZenithLanka\ZenithLanka\obj\Debug\ZenithLanka.pdb

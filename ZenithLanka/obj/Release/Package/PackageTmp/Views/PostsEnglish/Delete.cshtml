@@ -1,0 +1,50 @@
+﻿@model ZenithLanka.Models.Post
+
+@{
+    ViewBag.Title = "Post English Delete";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@section Styles{
+    <style>
+        .card {
+            border: 2px solid rgba(0,0,0,.125);
+        }
+
+        .admin {
+            display: none;
+        }
+
+        .penglish {
+            margin-top: 0rem !important;
+        }
+
+        .psinhala {
+            display: none;
+        }
+
+        .ptamil {
+            display: none;
+        }
+    </style>
+
+}
+
+<div>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.PostId)
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <h3>Are you sure you want to delete this?</h3>
+                <div class="form-actions no-color">
+                    <input type="submit" value="Delete" class="btn btn-dark text-white" /> |
+                    @Html.ActionLink("Back to List", "Index")
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    }
+</div>

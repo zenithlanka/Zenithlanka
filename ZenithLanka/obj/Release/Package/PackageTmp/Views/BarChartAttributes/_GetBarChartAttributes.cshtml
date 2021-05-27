@@ -1,0 +1,131 @@
+﻿@model IEnumerable<ZenithLanka.Models.BarChartAttribute>
+
+@using (Ajax.BeginForm("AddBarChartAttribute", "BarChartAttributes", new AjaxOptions
+{
+    HttpMethod = "POST",
+    OnSuccess = "SuccessMessage",
+    OnFailure = "FailMessage"
+}, new { @class = "col-md-12" }))
+{
+    @Html.AntiForgeryToken()
+    <input type="hidden" name="BarChartId" value="@ViewBag.BarChartId" />
+    <div class="pt-4 h4">Add Values</div>
+    <label class="control-label pt-3">XTitle</label>
+    <input type="text" name="XTitle" class="form-control col-md-12" required />
+    <br />
+    <label class="control-label">YValue</label>
+    <input type="number" name="YValue" class="form-control col-md-12" step="0.001" min="0" max="100000" required />
+    <br />
+    <select name="Color" class="form-control col-md-12" required>
+        <option value="Red">Red</option>
+        <option value="Blue">Blue</option>
+        <option value="Purple">Purple</option>
+        <option value="Orange">Orange</option>
+        <option value="Green">Green</option>
+        <option value="Black">Black</option>
+        <option value="Yellow">Yellow</option>
+    </select>
+    <input type="submit" value="Add" class="btn btn-primary btn-user btn-block col-md-4 mt-3 mb-3" />
+
+}
+                   
+
+
+@foreach (var item in Model)
+{
+    <div class="p-2 mb-2">
+        <div class="card border p-3">
+            <div class="card-title y-2">
+               <b>XTitle - @item.XTitle</b>
+            </div>
+            <div class="card-title y-2">
+                YValue - @item.YValue
+            </div>
+            <div class="card-title y-2">
+                Bar Color - @item.Color
+            </div>
+           <button id="btn_@item.BarChartAttributeId">Edit</button> 
+            <div id="edit_@item.BarChartAttributeId" style="display:none">
+                @using (Ajax.BeginForm("EditBarChartAttribute", "BarChartAttributes", new AjaxOptions
+                {
+                    HttpMethod = "POST",
+                    OnSuccess = "EditSuccessMessage",
+                    OnFailure = "EditFailMessage"
+                }, new { @class = "col-md-12" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" name="BarChartId" value="@ViewBag.BarChartId" />
+                    <input type="hidden" name="BarChartAttributeId" value="@item.BarChartAttributeId" />
+                    <div class="pt-4 h4">Add Values</div>
+                    <label class="control-label pt-3">XTitle</label>
+                    <input type="text" name="XTitle" class="form-control col-md-12" value="@item.XTitle" required />
+                    <br />
+                    <label class="control-label">YValue</label>
+                    <input type="number" name="YValue" class="form-control col-md-12" value="@item.YValue" step="0.001" min="0" max="100000" required />
+                    <br />
+                    <select name="Color" class="form-control col-md-12" required>
+                        <option value="@item.Color">@item.Color</option>
+                        <option value="Red">Red</option>
+                        <option value="Blue">Blue</option>
+                        <option value="Purple">Purple</option>
+                        <option value="Orange">Orange</option>
+                        <option value="Green">Green</option>
+                        <option value="Black">Black</option>
+                        <option value="Yellow">Yellow</option>
+                    </select>
+                    <input type="submit" value="Edit" class="btn btn-primary btn-user btn-block col-md-4 mt-3 mb-3" />
+
+                }
+            </div>
+            
+            @using (Ajax.BeginForm("DeleteBarChartAttribute", "BarChartAttributes", new AjaxOptions
+            {
+                HttpMethod = "POST",
+                OnSuccess = "DeleteSuccessMessage",
+                OnFailure = "DeleteFailMessage"
+
+            }, new { @class = "" }))
+            {
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="BarChartAttributeId" value="@item.BarChartAttributeId" />
+                <input type="submit" value="Delete" class="btn btn-danger btn-block mt-3 mb-3" onclick="confirm('Are you sure?');"/>
+            }
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('#btn_' + @item.BarChartAttributeId).click(function () {
+                $('#edit_' + @item.BarChartAttributeId).toggle(1000);
+            });
+        });
+    </script>
+}
+
+<script>
+    function SuccessMessage() {
+        alert("Done");
+                loadattribute(@ViewBag.BarChartId)
+            }
+        function FailMessage() {
+                alert("error");
+            }
+</script>
+<script>
+    function EditSuccessMessage() {
+        alert("Done");
+                loadattribute(@ViewBag.BarChartId)
+            }
+    function EditFailMessage() {
+                alert("error");
+            }
+</script>
+<script>
+    function DeleteSuccessMessage() {
+        alert("Done");
+                loadattribute(@ViewBag.BarChartId)
+            }
+    function DeleteFailMessage() {
+                alert("error");
+            }
+</script>
+

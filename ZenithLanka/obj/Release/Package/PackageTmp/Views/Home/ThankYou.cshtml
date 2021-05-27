@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "ThankYou";
+}
+<div class="container py-3">
+    <div class="py-2 h4">Medialk Powerd by Zenith Lanka</div>
+    <img class="img-fluid" src="https://res.cloudinary.com/zenithlanka/image/upload/v1526033951/logo.png" alt="logo" />
+
+    <h1 class="py-3 text-center">Thank you. We will respond as soon as possible generally within a few hours. If you do not hear from us within 24 hours, kindly give us a call at 071 299 2078 as your message did not get to us.</h1>
+    @*<p class="py-2 text-center">Thank You! Thank you for your payment. Your transaction has been completed and a receipt for your purchase has been emailed to you.(If you payed)</p>*@
+    <address class="py-3 text-center">
+        <strong>Address:</strong>   22/3/B,<br />
+        4th Lane, Abagahalandawaththa,<br />
+        Yakkala<br />
+        Sri Lanka<br />
+        <abbr title="Phone">P:</abbr>
+        +94 71 706 7118
+    </address>
+
+    <address class="py-3 text-center">
+        <strong>Support:</strong> <a href="info@zenithlanka.com">info@zenithlanka.com</a><br />
+        <strong>Marketing:</strong> <a href="info@zenithlanka.com">info@zenithlanka.com</a>
+    </address>
+
+</div>
+
+@section scripts{
+    
+    <script>
+        window.setTimeout(function () {
+            window.location.href = "@Url.Action("Index","Home")";
+        }, 6000);
+    </script>
+}
+

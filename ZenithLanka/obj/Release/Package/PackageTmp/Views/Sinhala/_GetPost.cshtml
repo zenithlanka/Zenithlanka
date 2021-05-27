@@ -1,0 +1,299 @@
+﻿@model ZenithLanka.Models.Post
+
+<style>
+    canvas{
+        display:none;
+    }
+    p {
+        /*font-size: 1.2rem !important;*/
+        font-family: 'Livvic', sans-serif !important;
+        line-height: 1.6 !important;
+    }
+
+    span {
+        /*font-size: 1.2rem !important;*/
+        font-family: 'Livvic', sans-serif !important;
+        line-height: 1.6 !important;
+    }
+
+    .fa {
+        padding: 5px;
+        font-size: 15px;
+        width: 25px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+        color: #4267b2;
+        background-color: #ffffff;
+        border-radius: 12px;
+    }
+
+    ul.timeline {
+        list-style-type: none;
+        position: relative;
+    }
+
+        ul.timeline:before {
+            content: ' ';
+            background: #d4d9df;
+            display: inline-block;
+            position: absolute;
+            left: 29px;
+            width: 2px;
+            height: 100%;
+            z-index: 400;
+        }
+
+        ul.timeline > li {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+
+            ul.timeline > li:before {
+                content: ' ';
+                background: white;
+                display: inline-block;
+                position: absolute;
+                border-radius: 50%;
+                border: 3px solid #22c0e8;
+                left: 20px;
+                width: 20px;
+                height: 20px;
+                z-index: 400;
+            }
+
+    .tooltip {
+        position: relative;
+        display: inline-block;
+    }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 140px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 150%;
+            left: 50%;
+            margin-left: -75px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+            .tooltip .tooltiptext::after {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                margin-left: -5px;
+                border-width: 5px;
+                border-style: solid;
+                border-color: #555 transparent transparent transparent;
+            }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+         @@media (max-width: 700px) {
+            .h3, h3 {
+                font-size: 1.2rem !important;
+            }
+
+            p {
+                font-size: 1rem !important;
+                line-height: 1.7 !important;
+                word-wrap: break-word !important;
+            }
+
+            span {
+                font-size: 1rem !important;
+                font-family: 'Livvic', sans-serif !important;
+                line-height: 1.8 !important;
+                word-wrap: break-word !important;
+            }
+        }
+         @@media (min-width: 1360px) {
+            
+            #logo{
+                max-width:100% !important;
+            }
+              .h3, h3 {
+                font-size: 1.6rem !important;
+            }
+
+            p {
+                font-size: 1.3rem !important;
+                line-height: 1.7 !important;
+                word-wrap: break-word !important;
+            }
+
+            span {
+                font-size: 1.3rem !important;
+                font-family: 'Livvic', sans-serif !important;
+                line-height: 1.8 !important;
+                word-wrap: break-word !important;
+            }
+        }
+        @@media (min-width: 1400px) {
+            .h3, h3 {
+                font-size: 1.5rem !important;
+            }
+
+            p {
+                font-size: 1.1rem !important;
+                line-height: 1.7 !important;
+                word-wrap: break-word !important;
+            }
+
+            span {
+                font-size: 1.1rem !important;
+                font-family: 'Livvic', sans-serif !important;
+                line-height: 1.8 !important;
+                word-wrap: break-word !important;
+            }
+        }
+
+</style>
+
+
+<div class="modal-header">
+    <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="clearurl()">Close</button>
+    <button type="button" class="close" data-dismiss="modal" onclick="clearurl()">&times;</button>
+</div>
+
+
+<div class="modal-body modal-bodynew modal-bodynopadding">
+    @if (Model.Title != null || Model != null)
+    {
+        <div class="container">
+            <h1 class="h4 py-2"><b>@Html.DisplayFor(model => model.Title)</b></h1>
+            <div class="lead">
+                <a href="https://www.youtube.com/channel/UCpIwINUxN3mZKb82o_LQyTA/featured" class="fa fa-youtube" target="_blank"></a>
+                <a href="https://www.instagram.com/medialkdotcom/" class="fa fa-instagram"></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://medialk.com/Home/ReadPost/@Model.PostId?@ViewBag.ShareUrl" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                <a href="https://twitter.com/intent/tweet?text=@Model.ShortDescription Read More - https://medialk.com/Home/ReadPost/@Model.PostId?@ViewBag.ShareUrl"
+                   data-size="large"
+                   target="_blank">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                @if (Model.Time != null)
+                {
+                    @*| <i class="fa fa-eye" aria-hidden='true'></i> @Model.NoView*@
+                    <small><i class="fa fa-calendar" aria-hidden='true'></i>@Model.PostDate.Value.ToString("dd. MM. yyyy") | <i class="fa fa-clock-o" aria-hidden='true'></i>@Model.Time</small>
+                }
+                @if (Model.PostDateNew != null)
+                {
+                    @*| <i class="fa fa-eye" aria-hidden='true'></i> @Model.NoView*@
+                    <small><i class="fa fa-calendar" aria-hidden='true'></i>@Model.PostDateNew<i class="fa fa-clock-o" aria-hidden='true'></i></small>
+                }
+                
+            </div>
+            <section class="clearfix">
+                <img src="@Html.DisplayFor(model => model.PreviewPhotoUrl)" alt="@Html.DisplayFor(model => model.Title)" class="img-fluid float-right float-sm-right float-md-right float-lg-right float-xl-right p-3 col-md-6" />
+                <div class="pt-2 description">@Html.Raw(Model.Description)</div>
+            </section>
+            @if (ViewBag.authorname != null)
+            {
+                <div class="card mb-4 pointer">
+                    <div class="row no-gutters">
+                        <div class="col-md-2 col-5">
+                            <a href="https://www.medialk.com/Home/Team/@ViewBag.authorid">
+                                <img class="card-img-top" src="@ViewBag.authorphoto" alt="@ViewBag.authorname">
+                            </a>
+                        </div>
+                        <div class="col-md-5 col-7 border">
+                            <a href="https://www.medialk.com/Home/Team/@ViewBag.authorid">
+                                <div class="card-body">
+                                    <h4 class="h5 card-title"><b>@ViewBag.authorname</b></h4>
+                                    <small>Author</small>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            }
+            <div class="row">
+               
+                <div class="col-md-12">
+                    @if (ViewBag.Link == null)
+                    {
+                        if (ViewBag.Advertisementdescription != null)
+                        {
+                            <small>Sponsored</small><br />
+                            @Html.Raw(ViewBag.Advertisementdescription)
+                        }
+                    }
+                    @if (ViewBag.Link != null)
+                    {
+                        if (ViewBag.Advertisementdescription != null)
+                        {
+                            <small>Sponsored</small><br />
+                            <a href="@ViewBag.Link" target="_blank" onclick="noofclick()" style="text-decoration:none">
+                                @Html.Raw(ViewBag.Advertisementdescription)
+                            </a>
+                        }
+                    }
+                </div>
+            </div>
+           
+
+        </div>
+
+
+
+    }
+    @if (Model.Title == null || Model == null)
+    {
+        <h1 class="text-center py-2">No Translation</h1>
+    }
+</div>
+
+
+
+
+<script>
+    function noofclick(){
+        $.ajax({
+
+            url: '/Sinhala/NumberofClick/@Model.AdvertisementId',
+            type: 'GET',
+            cache: false,
+        }).done(function (result) {
+
+        });
+    }
+
+</script>
+<script>
+    if (history.pushState) {
+        window.history.pushState("Medialk", "Title", "/Sinhala/ReadPost/@Model.PostId");
+    } else {
+        document.location.href = "/";
+    }
+</script>
+<script>
+    function clearurl(){
+        if (history.pushState) {
+            window.history.pushState("Medialk", "Title", "/");
+        } else {
+            document.location.href = "/";
+        }
+    }
+</script>
+
+<script>
+    var images = document.getElementsByTagName("img");
+    var i;
+
+    for (i = 0; i < images.length; i++) {
+        images[i].className += " img-fluid";
+    }
+</script>
+
+

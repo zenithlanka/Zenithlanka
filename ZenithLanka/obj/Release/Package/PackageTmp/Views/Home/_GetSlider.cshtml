@@ -1,0 +1,44 @@
+﻿@model IEnumerable<ZenithLanka.ViewModels.PostViewModel>
+<link href="~/Content/slippry.css" rel="stylesheet" />
+
+
+<section id="news-demo" class="pointer">
+    @foreach (var item in Model)
+    {
+        <article  onclick="redirect(@item.PostViewModelId)">
+            @if (@item.Title != null)
+            {
+                <div class="text-content">
+                    <h2 class="h4">@item.Title</h2><small> - Read More</small>
+                </div>
+            }
+            
+            <div class="image-content"><img src="@item.PreviewPhotoUrl" alt="@item.Title" style="width:100%"></div>
+        </article>
+    }
+    
+</section>
+<script src="~/Scripts/slippry.min.js"></script>
+    <script>
+        jQuery('#news-demo').slippry({
+            // general elements & wrapper
+            slippryWrapper: '<div class="sy-box news-slider" />', // wrapper to wrap everything, including pager
+            elements: 'article', // elments cointaining slide content
+
+            // options
+            adaptiveHeight: false, // height of the sliders adapts to current
+            captions: false,
+
+            // pager
+            pager: false,
+            pagerClass: 'news-pager',
+
+            // transitions
+            transition: 'horizontal', // fade, horizontal, kenburns, false
+            speed: 2500,
+            pause: 1200,
+
+            // slideshow
+            autoDirection: 'prev'
+        });
+    </script>

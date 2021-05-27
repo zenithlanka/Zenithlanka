@@ -1,0 +1,41 @@
+﻿@model ZenithLanka.ViewModels.AdvertisementViewModel
+
+<div class="row pt-3">
+    <div class="col-md-7 pb-2">
+        @if (Model.Description != null)
+        {
+            @Html.Raw(Model.Description)
+        }
+       
+    </div>
+    <div class="col-md-5 pb-2">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="h3 py-1">@Model.Title</h4>
+                <div class="py-1">Number of views - @Model.NoViews</div>
+                <div class="py-1">Number of clicks - @Model.NoClick</div>
+                @if (Model.IsActive == true)
+                {
+                    <small class="text-success">Active</small>
+                }
+                @if (Model.IsActive == false)
+                {
+                    <small class="text-danger">InActive</small>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@*<div id="ajaxadvertistmentreportposts"></div>
+
+<script>
+    $.ajax({
+        url: '@Url.Action("GetAdvertistmentPosts", "Reports")',
+        data: { "id": @Model.AdvertisementId },
+        type: 'GET',
+        cache: false,
+    }).done(function (result) {
+        $('#ajaxadvertistmentreportposts').html(result);
+    });
+</script>*@

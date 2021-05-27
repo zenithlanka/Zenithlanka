@@ -1,0 +1,784 @@
+﻿@model ZenithLanka.Models.Post
+@{
+    Layout = "~/Views/Shared/_ReadPostLayout.cshtml";
+}
+@section Styles
+{
+    
+    <link href="~/Content/amplify.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <style>
+   
+
+    p {
+        font-size: 1.3rem !important;
+        font-family: 'Livvic', sans-serif !important;
+        line-height: 1.6 !important;
+        word-wrap: break-word !important;
+    }
+
+    span {
+        font-size: 1.3rem !important;
+        font-family: 'Livvic', sans-serif !important;
+        line-height: 1.6 !important;
+        word-wrap: break-word !important;
+    }
+
+    .fa {
+        padding: 5px;
+        font-size: 15px;
+        width: 25px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+        color: #4267b2;
+        background-color: #fff;
+        border-radius: 12px;
+    }
+
+        .fa:hover {
+            opacity: 0.9;
+        }
+
+    .fa-facebook-square {
+        background: #3B5998;
+        color: white;
+    }
+
+    .fa-twitter {
+        background: #55ACEE;
+        color: white;
+    }
+
+    .fa-youtube {
+        background: #bb0000;
+        color: white;
+    }
+
+    .fa-instagram {
+        background: #de810e;
+        color: white;
+    }
+
+    ul.timeline {
+        list-style-type: none;
+        position: relative;
+    }
+
+        ul.timeline:before {
+            content: ' ';
+            background: #d4d9df;
+            display: inline-block;
+            position: absolute;
+            left: 29px;
+            width: 2px;
+            height: 100%;
+            z-index: 400;
+        }
+
+        ul.timeline > li {
+            margin: 20px 0;
+            padding-left: 51px;
+        }
+
+            ul.timeline > li:before {
+                content: ' ';
+                background: white;
+                display: inline-block;
+                position: absolute;
+                border-radius: 50%;
+                border: 3px solid #22c0e8;
+                left: 20px;
+                width: 20px;
+                height: 20px;
+                z-index: 400;
+            }
+
+    @@media (max-width: 992px) {
+        .h2, h2 {
+            font-size: 1.3rem !important;
+            font-weight: 600;
+        }
+
+        .h3, h3 {
+            font-size: 1.3rem !important;
+            font-weight: 600;
+        }
+
+        .h4, h4 {
+            font-size: 1.3rem !important;
+            font-weight: 600;
+        }
+
+        .h5, h5 {
+            font-size: 1.3rem !important;
+            font-weight: 600;
+        }
+
+        .h6, h6 {
+            font-size: 1.3rem !important;
+            font-weight: 600;
+        }
+
+        h2 span strong {
+            font-size: 1.3rem !important;
+            font-weight: 600;
+        }
+
+        h3 span strong {
+            font-size: 1.3rem !important;
+            font-weight: 600;
+        }
+
+        h4 span strong {
+            font-size: 1.3rem !important;
+            font-weight: 600;
+        }
+
+        h5 span strong {
+            font-size: 1.3rem !important;
+            font-weight: 600;
+        }
+
+        h6 span strong {
+            font-size: 1.3rem !important;
+            font-weight: 600;
+        }
+
+        h2 strong span {
+            font-size: 1.3rem !important;
+            font-weight: 600;
+        }
+
+        h3 strong span {
+            font-size: 1.3rem !important;
+            font-weight: 600;
+        }
+
+        h4 strong span {
+            font-size: 1.3rem !important;
+            font-weight: 600;
+        }
+
+        h5 strong span {
+            font-size: 1.3rem !important;
+            font-weight: 600;
+        }
+
+        h6 strong span {
+            font-size: 1.3rem !important;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1.2rem !important;
+            line-height: 1.7 !important;
+            word-wrap: break-word !important;
+        }
+
+        ol li {
+            font-size: 1rem !important;
+        }
+
+        span {
+            font-size: 1rem !important;
+            font-family: 'Livvic', sans-serif !important;
+            line-height: 1.8 !important;
+            word-wrap: break-word !important;
+        }
+    }
+
+    @@media (min-width: 1360px) {
+        .img-fluid {
+            max-width: 50%;
+        }
+
+        .img-fluidNew {
+            max-width: 100% !important;
+        }
+
+        #logo {
+            max-width: 100% !important;
+        }
+
+        .h2, h2 {
+            font-size: 1.6rem !important;
+            font-weight: 600;
+        }
+
+        .h3, h3 {
+            font-size: 1.6rem !important;
+            font-weight: 600;
+        }
+
+        .h4, h4 {
+            font-size: 1.6rem !important;
+            font-weight: 600;
+        }
+
+        .h5, h5 {
+            font-size: 1.6rem !important;
+            font-weight: 600;
+        }
+
+        .h6, h6 {
+            font-size: 1.6rem !important;
+            font-weight: 600;
+        }
+
+
+        h2 span strong {
+            font-size: 1.6rem !important;
+            font-weight: 600;
+        }
+
+        h3 span strong {
+            font-size: 1.6rem !important;
+            font-weight: 600;
+        }
+
+        h4 span strong {
+            font-size: 1.6rem !important;
+            font-weight: 600;
+        }
+
+        h5 span strong {
+            font-size: 1.6rem !important;
+            font-weight: 600;
+        }
+
+        h6 span strong {
+            font-size: 1.6rem !important;
+            font-weight: 600;
+        }
+
+        h2 strong span {
+            font-size: 1.6rem !important;
+            font-weight: 600;
+        }
+
+        h3 strong span {
+            font-size: 1.6rem !important;
+            font-weight: 600;
+        }
+
+        h4 strong span {
+            font-size: 1.6rem !important;
+            font-weight: 600;
+        }
+
+        h5 strong span {
+            font-size: 1.6rem !important;
+            font-weight: 600;
+        }
+
+        h6 strong span {
+            font-size: 1.6rem !important;
+            font-weight: 600;
+        }
+
+
+        p {
+            font-size: 1.3rem !important;
+            line-height: 1.7 !important;
+            word-wrap: break-word !important;
+            margin-bottom: 1.5rem !important;
+        }
+
+        ol li {
+            font-size: 1.3rem !important;
+        }
+
+        span {
+            font-size: 1.3rem !important;
+            font-family: 'Livvic', sans-serif !important;
+            line-height: 1.8 !important;
+            word-wrap: break-word !important;
+        }
+    }
+
+    @@media (min-width: 1400px) {
+        .h2, h2 {
+            font-size: 1.5rem !important;
+            font-weight: 600;
+        }
+
+        .h3, h3 {
+            font-size: 1.5rem !important;
+            font-weight: 600;
+        }
+
+        .h4, h4 {
+            font-size: 1.5rem !important;
+            font-weight: 600;
+        }
+
+        .h5, h5 {
+            font-size: 1.5rem !important;
+            font-weight: 600;
+        }
+
+        .h6, h6 {
+            font-size: 1.5rem !important;
+            font-weight: 600;
+        }
+
+        h2 span strong {
+            font-size: 1.5rem !important;
+            font-weight: 600;
+        }
+
+        h3 span strong {
+            font-size: 1.5rem !important;
+            font-weight: 600;
+        }
+
+        h4 span strong {
+            font-size: 1.5rem !important;
+            font-weight: 600;
+        }
+
+        h5 span strong {
+            font-size: 1.5rem !important;
+            font-weight: 600;
+        }
+
+        h6 span strong {
+            font-size: 1.5rem !important;
+            font-weight: 600;
+        }
+
+        h2 strong span {
+            font-size: 1.5rem !important;
+            font-weight: 600;
+        }
+
+        h3 strong span {
+            font-size: 1.5rem !important;
+            font-weight: 600;
+        }
+
+        h4 strong span {
+            font-size: 1.5rem !important;
+            font-weight: 600;
+        }
+
+        h5 strong span {
+            font-size: 1.5rem !important;
+            font-weight: 600;
+        }
+
+        h6 strong span {
+            font-size: 1.5rem !important;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1.1rem !important;
+            line-height: 1.7 !important;
+            word-wrap: break-word !important;
+            margin-bottom: 1.5rem !important;
+        }
+
+        ol li {
+            font-size: 1.1rem !important;
+        }
+
+        span {
+            font-size: 1.1rem !important;
+            font-family: 'Livvic', sans-serif !important;
+            line-height: 1.8 !important;
+            word-wrap: break-word !important;
+        }
+    }
+
+    .navbar {
+        z-index: 11111 !important;
+    }
+
+    .modal {
+        z-index: 111111 !important;
+    }
+
+    .admin {
+        display: none;
+    }
+</style>
+
+}
+@*<div class="container-fluid marquebar py-1">
+    <marquee direction="left" scrollamount="5">
+        @foreach (var item0 in ViewBag.Article)
+        {
+            <span class="pointer text-white" onclick="redirect(@item0.PostViewModelId)">@item0.Title |</span>
+        }
+        @foreach (var item1 in ViewBag.BreakingNews)
+        {
+            <span class="pointer text-white" onclick="redirect(@item1.PostViewModelId)">@item1.Title |</span>
+        }
+    </marquee>
+</div>*@
+@if (Model.Title == null || Model == null)
+{
+    <div class="container bg-white">
+        <h1 class="text-center py-2">No Translation</h1>
+    </div>
+}
+@if (Model.Title != null || Model != null)
+{
+    <div class="container bg-white">
+        
+        <div class="row">
+            <div class="col-md-8">
+                <h1 class="h3 pt-3">@Html.DisplayFor(model => model.Title)</h1>
+                <div class="lead text-centercustom">
+                   @if (ViewBag.authorname != null)
+                   {
+                    <small>
+                        <a href="https://www.medialk.com/Home/Team/@ViewBag.authorid">@ViewBag.authorname</a>
+                    </small>
+                    <small>
+                        . පරිවර්තනය කරන්න <a href="@Url.Action("ReadPost","Sinhala")/@Url.RequestContext.RouteData.Values["id"]" onclick="changesinhala()">සිංහල</a> හෝ <a href="@Url.Action("ReadPost","Tamil")/@Url.RequestContext.RouteData.Values["id"]" onclick="changetamil()">தமிழ்</a>
+                        @if (Model.Time != null)
+                        {
+                            <small><i class="fa fa-calendar" aria-hidden='true'></i>@Model.PostDate.Value.ToString("dd. MM. yyyy") | <i class="fa fa-clock-o" aria-hidden='true'></i>@Model.Time</small>
+                        }
+                        @if (Model.PostDateNew != null)
+                        {
+                            <small><i class="fa fa-calendar" aria-hidden='true'></i>@Model.PostDateNew<i class="fa fa-clock-o" aria-hidden='true'></i></small>
+                        }
+                    </small>
+                   }
+                </div>
+               
+                <div class="clearfix">
+                    @if (Model.PreviewPhotoUrl != null)
+                    {
+                        <img data-lazysrc="@Html.DisplayFor(model => model.PreviewPhotoUrl)" alt="@Html.DisplayFor(model => model.Title)" class="img-fluid img-fluidNew" />
+                        <div class="text-center">
+                            <small class="text-muted">@Model.ImageCaptionEnglish</small>
+                        </div>
+                    }
+                    @if (Model.PreviewPhotoUrl == null && Model.ImageEnglishUrl != null)
+                    {
+                        <img data-lazysrc="@Html.DisplayFor(model => model.ImageEnglishUrl)" alt="@Html.DisplayFor(model => model.Title)" class="img-fluid img-fluidNew" />
+                        <div class="text-center">
+                            <small class="text-muted">@Model.ImageCaptionEnglish</small>
+                        </div>
+                    }
+                   
+                <div class="mt-3 description">
+                    @Html.Raw(Model.Description)
+                </div>
+                </div>
+              
+                <div class="mb-4">
+                    <div class="h4 text-center">Share</div>
+                    <hr />
+                    <div class="sharethis-inline-share-buttons"></div>
+                </div>
+                
+            
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="fb-page" data-href="https://www.facebook.com/medialkdotcom" data-tabs="timeline" data-width="300" data-height="70" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/medialkdotcom" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/medialkdotcom">Medialk</a></blockquote></div>
+                    </div>
+                </div>
+
+                <div class="fb-comments" data-href="https://www.medialk.com/Sinhala/ReadPost/@Url.RequestContext.RouteData.Values["id"]" data-numposts="10" data-width=""></div>
+
+            </div>
+            <div class="col-md-4 mt-2">
+                @foreach (var readmore in ViewBag.moreNews)
+                {
+                    <div class="mb-4">
+                        <div class="card h-100 border">
+                            @if (readmore.PreviewPhotoUrl != null)
+                            {
+                                <a href="https://medialk.com/Home/ReadPost/@readmore.PostViewModelId">
+                                    <div class="img-hover-zoom">
+                                        <img class="card-img-top zoom pointer" data-lazysrc="@readmore.PreviewPhotoUrl" alt="@readmore.Title">
+                                    </div>
+                                </a>
+                            }
+                            <div class="card-body">
+                                <a href="https://medialk.com/Home/ReadPost/@readmore.PostViewModelId">
+                                    <h4 class="card-title pointer" style="font-size: 16px !important;">@readmore.Title</h4>
+                                </a>
+                                <a href="https://medialk.com/Home/ReadPost/@readmore.PostViewModelId">
+                                    <small>Read More</small>
+                                </a>
+
+                                @if (@readmore.PostDateNew != null)
+                                {
+                                    <small>@readmore.PostDateNew</small>
+                                }
+                                @if (@readmore.Time != null)
+                                {
+                                    <small>@readmore.PostDate | @readmore.Time</small>
+                                }
+                            </div>
+
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+}
+
+
+<div id="overlay"></div>
+
+<div class="modal" id="loadmorepost">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-body p-3 navigationcolor">
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <a href="@Url.Action("Index","Home")" class="btn btn-danger btn-user btn-block col-md-12 glow">
+                            Home (Click Here)
+                        </a>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="container mt-3">
+   <div class="row">
+       @foreach (var readmore in ViewBag.moreNews)
+       {
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border">
+                @if (readmore.PreviewPhotoUrl != null)
+                {
+                    <a href="https://medialk.com/Home/ReadPost/@readmore.PostViewModelId">
+                        <div class="img-hover-zoom">
+                            <img class="card-img-top zoom pointer" data-lazysrc="@readmore.PreviewPhotoUrl" alt="@readmore.Title">
+                        </div>
+                    </a>
+                }
+                <div class="card-body">
+                    <a href="https://medialk.com/Home/ReadPost/@readmore.PostViewModelId">
+                        <h4 class="card-title pointer" style="font-size: 16px !important;">@readmore.Title</h4>
+                    </a>
+                    <a href="https://medialk.com/Home/ReadPost/@readmore.PostViewModelId">
+                        <small>Read More</small>
+                    </a>
+
+                    @if (@readmore.PostDateNew != null)
+                    {
+                        <small>@readmore.PostDateNew</small>
+                    }
+                    @if (@readmore.Time != null)
+                    {
+                        <small>@readmore.PostDate | @readmore.Time</small>
+                    }
+                </div>
+
+            </div>
+        </div>
+       }
+   </div>
+</div>
+<div class="container-fluid marquebar py-1">
+    <div class="row no-gutters">
+        @foreach (var cat in ViewBag.Categories)
+        {
+            <div class="col-md-2 col-6 text-center">
+                <a href="@Url.Action("Search","Home")?CategoryId=@cat.CategoryId&CatTitle=@cat.Name&Title=empty" class="text-white">@cat.Name</a>
+            </div>
+        }
+    </div>
+</div>
+@section scripts{
+@if (Model.isBarChart == true)
+{
+    int i = 0;
+    foreach (var x in ViewBag.BarChart)
+    {
+
+        if (x.isBarChart == true)
+        {
+            <script>
+                var ctx = document.getElementById('barChart_@x.BarChartId').getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: [@Html.Raw(ViewBag.labelsset[i])],
+                        datasets: [{
+                            label: '@x.Title',
+                            data: [@Html.Raw(ViewBag.dataset[i])],
+                            backgroundColor: [@Html.Raw(ViewBag.backgroundColorset[i])]
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        },
+                        animation: {
+                            duration: 3000
+                        }
+                    }
+                });
+            </script>
+        }
+        if (x.isPieChart == true)
+        {
+            <script>
+                var ctx = document.getElementById('barChart_@x.BarChartId').getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'pie',
+                    data: {
+                        labels: [@Html.Raw(ViewBag.labelsset[i])],
+                        datasets: [{
+                            label: '@x.Title',
+                            data: [@Html.Raw(ViewBag.dataset[i])],
+                            backgroundColor: [@Html.Raw(ViewBag.backgroundColorset[i])]
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        },
+                        animation: {
+                            duration: 3000
+                        }
+                    }
+                });
+            </script>
+        }
+        if (x.isLineChart == true)
+        {
+            <script>
+                var ctx = document.getElementById('barChart_@x.BarChartId').getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: [@Html.Raw(ViewBag.labelsset[i])],
+                        datasets: [{
+                            label: '@x.Title',
+                            data: [@Html.Raw(ViewBag.dataset[i])],
+                            backgroundColor: ['blue']
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        },
+                        animation: {
+                            duration: 3000
+                        }
+                    }
+                });
+            </script>
+        }
+        i++;
+    }
+}
+
+<script>
+
+        var today = new Date();
+        var expiry = new Date(today.getTime() + 1000 * 24 * 3600 * 1000); // plus 30 days
+
+        function setCookie(name, value) {
+            document.cookie = name + "=" + escape(value) + "; path=/; expires=" + expiry.toGMTString();
+        }
+        function readCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        function changesinhala() {
+            setCookie("language", "sinhala");
+        }
+        function changeenglish() {
+            setCookie("language", "english");
+        }
+        function changetamil() {
+            setCookie("language", "tamil");
+        }
+
+        var languageparameter = getParameterByName('Language');
+
+        if (languageparameter == "Sinhala" || value == null) {
+            setCookie("language", "sinhala");
+            location.href = "@Url.Action("ReadPost", "Sinhala")/@Model.PostId";
+        }
+        if (languageparameter == "Tamil") {
+
+            setCookie("language", "tamil");
+            location.href = "@Url.Action("ReadPost", "Tamil")/@Model.PostId";
+        }
+        if (languageparameter == "English" ) {
+            setCookie("language", "english");
+            location.href = "@Url.Action("ReadPost", "Home")/@Model.PostId";
+        }
+
+</script>
+
+
+@*<script>
+
+        (function () {
+            var v = document.createElement("script"); v.async = true;
+            v.src = "https://assets-prod.vicomi.com/vicomi.js?token=bef58e5486034ea0a4f7c2b7951294be";
+            var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(v, s);
+        })();
+</script>*@
+<script>
+        var images = document.getElementsByTagName("img");
+        var i;
+
+        for(i = 0; i < images.length; i++) {
+            images[i].className += " img-fluid js-amplify getfrontimage";
+        }
+
+</script>
+<script>
+        $(".js-amplify").css("width", "");
+</script>
+
+<script>
+        $('img').on('click', function() {
+            $('#overlay')
+              .css({backgroundImage: 'url(${this.src})'})
+              .addClass('open')
+              .one('click', function() { $(this).removeClass('open'); });
+        });
+</script>
+<script src="~/Scripts/amplify.min.js"></script>
+<script>
+        var element = document.getElementById("logo");
+        element.classList.remove("js-amplify");
+</script>
+
+
+
+}
